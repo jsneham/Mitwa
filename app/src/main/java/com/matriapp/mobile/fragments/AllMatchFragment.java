@@ -27,6 +27,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -82,10 +83,24 @@ public class AllMatchFragment extends Fragment implements AllMatchesAdapter.Item
             drink_id = "", incom_id = "", emp_id = "", eat_id = "", ocu_id = "";
     HashMap<String, String> param = new HashMap<>();
 
-    public AllMatchFragment(String mari_id) {
-        this.mari_id = mari_id;
+    public AllMatchFragment() {
     }
 
+    public static AllMatchFragment newInstance(String mari_id) {
+        AllMatchFragment fragment = new AllMatchFragment();
+        Bundle args = new Bundle();
+        args.putString("mari_id", mari_id);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mari_id = getArguments().getString("mari_id", "");
+        }
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

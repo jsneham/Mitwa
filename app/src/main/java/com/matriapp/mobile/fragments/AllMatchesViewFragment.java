@@ -41,11 +41,11 @@ public class AllMatchesViewFragment extends Fragment {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new AllMatchFragment("Never Married"), "Never Married");
-        adapter.addFragment(new AllMatchFragment("Widowed"), "Widowed");
-        adapter.addFragment(new AllMatchFragment("Divorced"), "Divorced");
-        adapter.addFragment(new AllMatchFragment("Separated"), "Separated");
-        adapter.addFragment(new AllMatchFragment("Annulled"), "Annulled");
+        adapter.addFragment(AllMatchFragment.newInstance("Never Married"), "Never Married");
+        adapter.addFragment(AllMatchFragment.newInstance("Widowed"), "Widowed");
+        adapter.addFragment(AllMatchFragment.newInstance("Divorced"), "Divorced");
+        adapter.addFragment(AllMatchFragment.newInstance("Separated"), "Separated");
+        adapter.addFragment(AllMatchFragment.newInstance("Annulled"), "Annulled");
 //        adapter.addFragment(new AllMatchFragment(""), "All");
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(2);
