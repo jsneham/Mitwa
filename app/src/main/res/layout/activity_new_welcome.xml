@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme.TransparentStatusBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_toolbar"
+    tools:context=".activities.NewWelcomeActivity">
+<!--    android:background="@drawable/welcomeimage_bg"-->
+
+    <TextView
+        android:id="@+id/tvOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/dp18"
+        android:fontFamily="@font/regular_slnt"
+        android:gravity="right"
+        android:text="Option"
+        android:textColor="@color/registration_hint_color"
+        android:textSize="@dimen/sp14"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="321dp"
+        android:layout_height="186dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/dp50"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="@dimen/dp50"
+        android:src="@drawable/logo_mega_fordarkbg"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnNewUser"
+            style="@style/secondary_action_button_fordarkbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/new_user_create_account"
+            android:textAllCaps="false"
+            />
+
+        <Button
+
+            android:id="@+id/btnExistingAccount"
+            style="@style/secondary_action_button_border_fordarkbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/already_have_an_account_login"
+            android:textAllCaps="false" />
+
+
+        <TextView
+            android:id="@+id/lblTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp36"
+            android:layout_marginRight="@dimen/dp18"
+            android:fontFamily="@font/regular_slnt"
+            android:gravity="center"
+            android:textSize="@dimen/sp11"
+            android:textColor="@color/llTerms_fordarkbg"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp5"
+            android:id="@+id/root"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular_slnt"
+                android:text="@string/app_version"
+                android:textColor="@color/AppVersion_fordarkbg"
+                android:textSize="@dimen/sp9" />
+
+
+            <TextView
+                android:id="@+id/tvBuild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular_slnt"
+                android:text="@string/built_version"
+                android:textColor="@color/AppVersion_fordarkbg"
+                android:textSize="@dimen/sp9" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

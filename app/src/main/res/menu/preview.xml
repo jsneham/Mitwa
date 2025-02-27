@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/view"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_seehowprofilelooks"
+        app:actionLayout="@layout/custom_action_bar_view"
+        android:title="Manage Photos" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/onepage"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_sticky_note_2_24"
+        android:title="Bio Data" />
+
+
+</menu>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llView"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp37"
+        android:background="@color/White"
+        android:gravity="center">
+
+        <TextView
+            style="@style/custom_subhead_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp18"
+            android:gravity="center"
+            android:text="@string/matches_based_on_your_set_preferences"></TextView>
+
+        <TextView
+            android:id="@+id/etEditPreference"
+            style="@style/edit_prefe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp18"
+            android:drawableLeft="@drawable/ic_preferencefilter"
+            android:drawablePadding="@dimen/dp6"
+            android:drawableTint="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/edit_preferences"></TextView>
+    </RelativeLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_marginTop="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/rlTop"
+        app:layout_anchorGravity="right|center">
+        <ListView
+            android:id="@+id/lv_match"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:fontFamily="@font/regular_slnt"
+        android:id="@+id/tv_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="No Data Available"
+        android:textColor="@color/actual_black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_anchor="@+id/lv_match"
+        app:layout_anchorGravity="right|center" />
+    <include
+        android:visibility="gone"
+        layout="@layout/custom_match_sheet" />
+    <include
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        layout="@layout/layout_loader" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

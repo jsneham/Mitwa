@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Android_SJ\SJ new\Milan\library\src\main\res"><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable\ic_close_db.xml" preprocessing="true" qualifiers=""><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxxhdpi\ic_close_db.png" qualifiers="xxxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-mdpi\ic_close_db.png" qualifiers="mdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-ldpi\ic_close_db.png" qualifiers="ldpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxhdpi\ic_close_db.png" qualifiers="xxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-hdpi\ic_close_db.png" qualifiers="hdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xhdpi\ic_close_db.png" qualifiers="xhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-anydpi-v24\ic_close_db.xml" qualifiers="anydpi-v24" type="drawable"/></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable\search_icon.xml" preprocessing="true" qualifiers=""><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxxhdpi\search_icon.png" qualifiers="xxxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-mdpi\search_icon.png" qualifiers="mdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-ldpi\search_icon.png" qualifiers="ldpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxhdpi\search_icon.png" qualifiers="xxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-hdpi\search_icon.png" qualifiers="hdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xhdpi\search_icon.png" qualifiers="xhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-anydpi-v21\search_icon.xml" qualifiers="anydpi-v21" type="drawable"/></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-anydpi\ic_close.xml" preprocessing="true" qualifiers="anydpi-v4"><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxxhdpi\ic_close.png" qualifiers="xxxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-mdpi\ic_close.png" qualifiers="mdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-ldpi\ic_close.png" qualifiers="ldpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxhdpi\ic_close.png" qualifiers="xxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-hdpi\ic_close.png" qualifiers="hdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xhdpi\ic_close.png" qualifiers="xhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-anydpi-v21\ic_close.xml" qualifiers="anydpi-v21" type="drawable"/></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-anydpi\ic_search.xml" preprocessing="true" qualifiers="anydpi-v4"><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxxhdpi\ic_search.png" qualifiers="xxxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-mdpi\ic_search.png" qualifiers="mdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-ldpi\ic_search.png" qualifiers="ldpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xxhdpi\ic_search.png" qualifiers="xxhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-hdpi\ic_search.png" qualifiers="hdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-xhdpi\ic_search.png" qualifiers="xhdpi-v4" type="drawable"/><generated-file path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\pngs\debug\drawable-anydpi-v21\ic_search.xml" qualifiers="anydpi-v21" type="drawable"/></file></source><source path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\rs\debug"/><source path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Android_SJ\SJ new\Milan\library\src\main\res"><file name="bg_square_edittext" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable\bg_square_edittext.xml" qualifiers="" type="drawable"/><file name="press_round" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable\press_round.xml" qualifiers="" type="drawable"/><file name="round_background" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable\round_background.xml" qualifiers="" type="drawable"/><file name="round_effect" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable\round_effect.xml" qualifiers="" type="drawable"/><file name="ic_close" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-hdpi\ic_close.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_search" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-hdpi\ic_search.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_close" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-mdpi\ic_close.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_search" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-mdpi\ic_search.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_close" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-xhdpi\ic_close.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_search" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-xhdpi\ic_search.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_close" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-xxhdpi\ic_close.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_search" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\drawable-xxhdpi\ic_search.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="black_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\black_slnt.ttf" qualifiers="" type="font"/><file name="bold_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\bold_slnt.ttf" qualifiers="" type="font"/><file name="extra_bold_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\extra_bold_slnt.ttf" qualifiers="" type="font"/><file name="extra_light_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\extra_light_slnt.ttf" qualifiers="" type="font"/><file name="light_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\light_slnt.ttf" qualifiers="" type="font"/><file name="medium_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\medium_slnt.ttf" qualifiers="" type="font"/><file name="regular_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\regular_slnt.ttf" qualifiers="" type="font"/><file name="roboto_file" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\roboto_file.xml" qualifiers="" type="font"/><file name="roboto_regular" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\roboto_regular.ttf" qualifiers="" type="font"/><file name="semi_bold_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\semi_bold_slnt.ttf" qualifiers="" type="font"/><file name="thin_slnt" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\font\thin_slnt.ttf" qualifiers="" type="font"/><file name="activity_main" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\layout\activity_main.xml" qualifiers="" type="layout"/><file name="alert_dialog_listview" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\layout\alert_dialog_listview.xml" qualifiers="" type="layout"/><file name="alert_dialog_listview_search" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\layout\alert_dialog_listview_search.xml" qualifiers="" type="layout"/><file name="dialog_full_screen" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\layout\dialog_full_screen.xml" qualifiers="" type="layout"/><file name="item_listview_multiple" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\layout\item_listview_multiple.xml" qualifiers="" type="layout"/><file name="item_listview_single" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\layout\item_listview_single.xml" qualifiers="" type="layout"/><file name="textview_for_spinner" path="D:\Android_SJ\SJ new\Milan\library\src\main\res\layout\textview_for_spinner.xml" qualifiers="" type="layout"/><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="MultiSpinnerSearch">
+        <attr format="string" name="hintText"/>
+    </declare-styleable></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\values\colors.xml" qualifiers=""><color name="ColorPrimary">#e11665</color><color name="ColorPrimaryDark">#e11665</color><color name="colorAccent">#fcb349</color><color name="ColorDarkGrey">#6e6e70</color><color name="colorWhite">#ffffff</color><color name="search_background_color">#f5f5f5</color><color name="black">#000000</color><color name="divider_gray">#6BC0C0C0</color><color name="colorYellow">#f4c508</color><color name="gradient_start_color">#006a4e</color><color name="gradient_center_color">#006a4e</color><color name="gradient_end_color">#006a4e</color><color name="registration_background1">#FAFAFA</color><color name="default_small_text_title1">#869BA9</color><color name="registration_hint_color">#869BA9</color><color name="medium_header_text_color">#000000</color><color name="seeting_title">#17313b</color><color name="gradient_color_1">#9599E2</color><color name="gradient_color_2">#8BC6EC</color></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\values\strings.xml" qualifiers=""><string name="type_to_search">Caută</string><string name="no_results" translatable="false">No available results</string></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\values\styles.xml" qualifiers=""><style name="MaterialSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="rd_style">@style/Material.Drawable.Ripple.Wave.Light</item>
+        <item name="spn_labelEnable">true</item>
+        <item name="spn_labelTextSize">18sp</item>
+        <item name="spn_arrowSwitchMode">true</item>
+        <item name="spn_arrowAnimDuration">@android:integer/config_shortAnimTime</item>
+        <item name="spn_arrowInterpolator">@android:anim/decelerate_interpolator</item>
+    </style><style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+    </style><style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+
+        
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        
+        <item name="android:windowBackground">@color/colorWhite</item>
+
+        
+        
+        
+    </style><style name="myDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowTitleStyle">@style/myDialogTitle</item>
+    </style><style name="myDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center_horizontal</item>
+    </style><style name="DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+    </style><style name="Widget.MyApp.ThemeButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="android:padding">13dp</item>
+    </style><style name="registration_header_text">
+        <item name="android:fontFamily">@font/bold_slnt</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/medium_header_text_color</item>
+        <item name="android:gravity">left</item>
+    </style></file><file path="D:\Android_SJ\SJ new\Milan\library\src\main\res\values-v21\styles.xml" qualifiers="v21"><style name="MaterialSpinner" parent="Material.Widget.Spinner">
+        <item name="rd_style">@style/Material.Drawable.Ripple.Wave.Light</item>
+        <item name="spn_labelEnable">true</item>
+        <item name="spn_labelTextSize">18sp</item>
+        <item name="spn_arrowSwitchMode">true</item>
+        <item name="spn_arrowAnimDuration">@android:integer/config_shortAnimTime</item>
+        <item name="spn_arrowInterpolator">@android:anim/decelerate_interpolator</item>
+    </style><style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style><style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/ColorPrimary</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+
+        
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        
+        <item name="android:windowBackground">@color/colorWhite</item>
+
+        
+        
+        
+    </style><style name="myDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowTitleStyle">@style/myDialogTitle</item>
+    </style><style name="myDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center_horizontal</item>
+    </style><style name="DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+    </style><style name="registration_header_text">
+        <item name="android:fontFamily">@font/bold_slnt</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/medium_header_text_color</item>
+        <item name="android:gravity">left</item>
+    </style></file></source><source path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\rs\debug"/><source path="D:\Android_SJ\SJ new\Milan\library\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Android_SJ\SJ new\Milan\library\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Android_SJ\SJ new\Milan\library\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"/><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"/><mergedItems><configuration qualifiers=""><declare-styleable name="MultiSpinnerSearch">
+        <attr format="string" name="hintText"/>
+    </declare-styleable></configuration></mergedItems></merger>

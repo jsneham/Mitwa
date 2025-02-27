@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F33E6D</color>
+    <color name="colorPrimaryDark">#F33E6D</color>
+<!--    <color name="colorAccent">#fcb349</color>-->
+    <color name="White">#ffffff</color>
+    <color name="red">@color/gradient_start_color</color>
+    <color name="green">#29d912</color>
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="gray_background">#757575</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="mark_background">#56c2063b</color>
+    <color name="unmark_background">#00ffffff</color>
+    <color name="llTerms_fordarkbg">#FFFFFF</color>
+    <color name="AppVersion_fordarkbg">#FFFFFF</color>
+
+    <color name="divider_color">#20778286</color>
+    <color name="bottom_divider_color">@color/divider_color</color>
+
+    <color name="transparent_color">#00ffffff</color>
+    <color name="transparent_color_1">#40ffffff</color>
+
+    <color name="gradient_start_color">@color/colorAccent</color>
+    <color name="gradient_center_color">@color/colorAccent</color>
+    <color name="gradient_end_color">@color/colorAccent</color>
+
+    <color name="blue_color">#169ee8</color>
+    <color name="blue_default">#169ee8</color>
+    <color name="blue_color1">#40169ee8</color>
+
+    <color name="send_chat_color">#F2F2F2</color>
+    <color name="received_chat_color">@color/colorAccent</color>
+
+    <!--gray-->
+    <color name="lighter_gray">#20778286</color>
+    <color name="light_gray">#dfdedb</color>
+    <color name="light_grey">#D5D5D5</color>
+    <color name="transparent_gray">#80808080</color>
+    <color name="grayStart">#adadad</color>
+    <color name="gray">#808080</color>
+    <color name="dark_grey">#5E5E5E</color>
+    <color name="dark_gray">#2e2e2e</color>
+    <color name="lbl_gray">#1e1e1e</color>
+    <color name="black">#000</color>
+
+    <!--Textview Related colors-->
+    <color name="details_bg_color">#051527</color>
+    <color name="title_text_color">#2e2e2e</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_white">#95ffffff</color>
+    <color name="transparent_white1">#30ffffff</color>
+    <color name="transparent_black">#99000000</color>
+    <color name="transparent_black50">#50000000</color>
+<!--    <color name="transparent_black50">#80FFFFFF</color>-->
+    <color name="light_blue">#42aae7</color>
+    <color name="register_divider_gray">#C0C0C0</color>
+    <color name="transparent_register_divider_gray">#50000000</color>
+
+    <color name="checked_star">#F9B704</color>
+
+    <color name="color_royal">#00fcdf</color>
+    <color name="color_luxury">#ED6917</color>
+    <color name="color_ultimate">#E601F3</color>
+    <color name="color_nri">#2bfc60</color>
+
+    <color name="bg_color_royal">#e8fffc</color>
+    <color name="bg_color_luxury">#fef6f1</color>
+    <color name="bg_color_ultimate">#fef4ff</color>
+    <color name="bg_color_nri">#ecfff1</color>
+    <color name="bg_scan_pay">@color/colorAccent</color>
+
+    <color name="colorGreen">#49bf1f</color>
+
+    <color name="start_color">#2967BE</color>
+    <color name="center_color">#7961A5</color>
+    <color name="end_color">#CE5A93</color>
+
+    <color name="color_drawer_section">#4C5352</color>
+    <color name="color_even_drawer_section">#F9F9F9</color>
+    <color name="positive_green">#49957B</color>
+    <color name="negative_red">#F35252</color>
+
+<!--    New Color ap per new design-->
+<!--    <color name="registration_hint_color">#869BA9</color>-->
+<!--    <color name="registration_active_color">#17313B</color>-->
+    <color name="colorAccent">#F33E6D</color>
+    <color name="tab_default_color">#869BA9</color>
+    <color name="tab_default_color_if_gradient">#80FFFFFF</color>
+    <color name="sub_tab_default_color">#869BA9</color>
+    <color name="sub_tab_active_color">#17313B</color>
+    <color name="nav_tab_default_color">#CDD1D2</color>
+    <color name="small_header_text_color">#404040</color>
+    <color name="medium_header_text_color">#000000</color>
+    <color name="dgreen">#2a803d</color>
+    <color name="black_transparent">#F2F2F2</color>
+    <color name="seeting_detail">#91a4b1</color>
+    <color name="actual_black">#000000</color>
+    <color name="seeting_title">#17313b</color>
+    <color name="title_color">#17313b</color>
+    <color name="description_text1">#869BA9</color>
+    <color name="profile_id1">#17313b</color>
+    <color name="profile_name1">@color/colorAccent</color>
+    <color name="default_small_text_title1">#869BA9</color>
+    <color name="active_small_text_title1">@color/colorAccent</color>
+    <color name="shortllist">#f39f3d</color>
+    <color name="toolbar_navigation_back">#17313B</color>
+    <color name="toolbar_text">#17313B</color>
+    <color name="online">#2A803D</color>
+    <color name="offline">#C4C4C4</color>
+    <!--    <color name="app_background">#E4E5E4</color>-->
+    <color name="app_background">#F5F5F5</color>
+    <color name="registration_background1">#FAFAFA</color>
+    <color name="registration_background2">#FFFFFF</color>
+    <color name="text_divider_line">#E4E5E4</color>
+    <color name="list_divider_line">#20778286</color>
+    <color name="registration_hint_color">#869BA9</color>
+    <color name="registration_active_color">#17313B</color>
+    <!--    <color name="chat_other">#feeff3</color>-->
+    <color name="chatmessage_background_member">#08F33E6D</color>
+    <color name="chatmessage_background_user">#0817313B</color>
+    <color name="msg_color">#ee3d6c</color>
+    <color name="icon_color">#ee3d6c</color>
+    <color name="gradient_color_1">#F33E6D</color>
+    <color name="gradient_color_2">#2581CD</color>
+<!--    //gradient_color_1 is used as primary color and //gradient_color_2 is used as Secondary Color //-->
+    <color name="gradient_color_1_fortoolbar">#F33E6D</color>
+    <color name="gradient_color_2_fortoolbar">#9F2545</color>
+
+    <color name="back_color_on_white_text">#80000000</color>
+    <color name="search_text">#869BA9</color>
+    <color name="view_other_profile">#F33E6D</color>
+    <color name="accept_icon">#49957B</color>
+    <color name="reject_icon">#F35252</color>
+    <color name="premium_color">#f39f3d</color>
+    <color name="view_color">#869ba9</color>
+    <color name="app_background_for_interest">#EEEFEB</color>
+    <color name="photos_stroke_color">#DBE1E5</color>
+    <color name="photos_stroke_color1">#6c90a9</color>
+<!--    <color name="skip_now">#869BA9</color>-->
+    <color name="skip_now">#169ee8</color>
+    <color name="conversation_bottom_sheet_text_color">#17313B</color>
+    <color name="plan_color">#08F33E6D</color>
+    <color name="one_pager_header_color">#869BA9</color>
+    <color name="one_pager_child_color">#17313B</color>
+
+    <color name="colorDarkGrey">#6e6e70</color>
+    <color name="divider_gray">#6BC0C0C0</color>
+    <color name="llTerms">#869BA9</color>
+    <color name="eyeIconPassword">#869BA9</color>
+    <color name="allRights">#869BA9</color>
+    <color name="editTextBorder">#DBE1E5</color>
+
+    <color name="shadow_view_foreground_color_light">#33ffffff</color>
+    <color name="shadow_view_default_shadow_color">#DCDDE0</color>
+    <color name="shadow_view_foreground_color_dark">#1f000000</color>
+
+    <color name="defaultTextColor">@android:color/black</color>
+    <color name="defaultBackgroundColor">@android:color/transparent</color>
+</resources>

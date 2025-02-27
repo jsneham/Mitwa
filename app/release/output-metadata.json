@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.matriapp.mobile",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 54,
+      "versionName": "1.0.54",
+      "outputFile": "Milan_Dec_17.apk"
+    }
+  ],
+  "elementType": "File"
+}

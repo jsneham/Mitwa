@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="18dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+
+                android:id="@+id/lblPlanName"
+                style="@style/plan_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="2" />
+
+
+            <TextView
+
+                android:id="@+id/lblPlanDuration"
+                style="@style/plan_duration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:maxLines="2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llsebo"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/linearLayout7"
+            android:layout_marginTop="13dp"
+            android:background="@color/plan_color"
+            android:gravity="center">
+
+            <TextView
+                style="@style/free_plan_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Subscribe to Premium Benefits!" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llsebo"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblPlanAmount"
+                style="@style/plan_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/round_corner_red"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv_org_prise"
+                    style="@style/plan_per_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_per_day"
+                style="@style/plan_per_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_one"
+            android:layout_marginBottom="18dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/lblViewProfile"
+                style="@style/plan_subtext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/plan_activie_check"
+                android:drawablePadding="11dp"
+                android:text="130 12sp" />
+
+
+            <TextView
+                android:id="@+id/lblContactsOffer"
+                style="@style/plan_subtext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableLeft="@drawable/plan_activie_check"
+                android:drawablePadding="11dp"
+                android:text="130 12sp" />
+
+            <TextView
+                android:id="@+id/lblMessages"
+                style="@style/plan_subtext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableLeft="@drawable/plan_activie_check"
+                android:drawablePadding="11dp"
+                android:text="130 12sp" />
+
+
+            <TextView
+                android:id="@+id/layChat"
+                style="@style/plan_subtext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableLeft="@drawable/plan_activie_check"
+                android:drawablePadding="11dp"
+                android:text="Live Chat" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_video"
+                style="@style/plan_subtext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableLeft="@drawable/plan_activie_check"
+                android:drawablePadding="10dp"
+                android:text="Video" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/lltwo"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+
+            android:id="@+id/foot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_slnt"
+                    android:inputType="textMultiLine"
+                    android:maxLines="20"
+                    android:text="100% Personalize \nService vgggfghchxchxccxcvbcv\nbcvxbcvxbcx\ngcvgcvgcvxccvxcg/n14sp"
+                    android:textColor="@color/actual_black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnContinue"
+            style="@style/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:text="Continue"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foot"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center"
+            android:visibility="gone">
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>

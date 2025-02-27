@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_photos"
+    android:background="@color/registration_background1"
+    android:layout_marginTop="@dimen/dp18"
+    android:layout_marginBottom="@dimen/dp18"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_alignParentLeft="true"
+            style="@style/small_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The smiling face"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:visibility="gone"
+            style="@style/small_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:autoLink="all"
+            android:clickable="true"
+            android:onClick="onSkipClickFromPhotos"
+            android:text="@string/skip_now"
+            android:textColor="@color/skip_now" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        style="@style/registration_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:text="Profile Photos\n"
+        android:textColor="@color/actual_black"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp92"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/photos_stroke_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp8">
+
+                    <ImageView
+                        android:id="@+id/img_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/add_image_shape" />
+
+                    <ImageView
+                        android:id="@+id/img_plus_one"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_gravity="bottom|left"
+                        android:background="@drawable/background_with_shadow"
+                        android:padding="@dimen/dp8"
+                        android:src="@drawable/about_pink"
+                        android:visibility="gone"
+                        app:tint="@color/colorAccent" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_one"
+                        android:layout_width="@dimen/dp21"
+                        android:layout_height="@dimen/dp21"
+                        android:layout_gravity="bottom|right"
+                        android:layout_margin="@dimen/dp8"
+                        android:src="@drawable/ic_group_more_hor"
+                        android:visibility="gone" />
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:visibility="gone"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/photos_stroke_color"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp8">
+
+                    <ImageView
+                        android:id="@+id/img_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/add_image_shape" />
+
+                    <ImageView
+                        android:id="@+id/img_plus_two"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_gravity="bottom|left"
+                        android:padding="@dimen/dp8"
+                        android:src="@drawable/about_pink"
+                        android:visibility="gone"
+                        app:tint="@color/colorAccent" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_two"
+                        android:layout_width="@dimen/dp21"
+                        android:layout_height="@dimen/dp21"
+                        android:layout_gravity="bottom|right"
+                        android:layout_margin="@dimen/dp8"
+                        android:src="@drawable/ic_group_more_hor"
+                        android:visibility="gone" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp92"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginBottom="@dimen/dp24"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/photos_stroke_color"
+                    android:id="@+id/cardView3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp8">
+
+                    <ImageView
+                        android:id="@+id/img_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/add_image_shape" />
+
+                    <ImageView
+                        android:id="@+id/img_plus_three"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_gravity="bottom|left"
+                        android:padding="@dimen/dp8"
+                        android:src="@drawable/about_pink"
+
+                        android:visibility="gone"
+                        app:tint="@color/colorAccent" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_three"
+                        android:layout_width="@dimen/dp21"
+                        android:layout_height="@dimen/dp21"
+                        android:layout_gravity="bottom|right"
+                        android:layout_margin="@dimen/dp8"
+                        android:src="@drawable/ic_group_more_hor"
+                        android:visibility="gone" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/photos_stroke_color"
+                    android:id="@+id/cardView2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp18"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp8">
+
+                    <ImageView
+                        android:id="@+id/img_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/add_image_shape" />
+
+                    <ImageView
+                        android:id="@+id/img_plus_four"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_gravity="bottom|left"
+                        android:padding="@dimen/dp8"
+
+                        android:src="@drawable/about_pink"
+                        android:visibility="gone"
+                        app:tint="@color/colorAccent" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_four"
+                        android:layout_width="@dimen/dp21"
+                        android:layout_height="@dimen/dp21"
+                        android:layout_gravity="bottom|right"
+                        android:layout_margin="@dimen/dp8"
+                        android:src="@drawable/ic_group_more_hor"
+                        android:visibility="gone" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_photo_submit"
+                style="@style/primary_action_button"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:text="Done. Continue" />
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:buttonTint="@color/colorAccent"
+                    android:layout_marginLeft = "-6dp"
+                    android:id="@+id/checkBox"
+                    android:textColor="@color/actual_black"
+                    android:fontFamily="@font/medium_slnt"
+                    android:textSize="12sp"
+                    android:text="@string/i_have_read_amp_understood_the_photo_guidelines"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginTop="@dimen/dp10"
+                    android:textColor="@color/actual_black"
+                    android:text="Photo Guidelines "
+                    android:fontFamily="@font/bold_slnt"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    /> <TextView
+                android:layout_marginTop="2dp"
+                android:text="@string/photo_guidelines"
+                android:fontFamily="@font/regular_slnt"
+                android:textSize="13sp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

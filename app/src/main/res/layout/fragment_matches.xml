@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:strokeWidth="2dp"-->
+    <!--        app:strokeColor="@color/sub_tab_default_color"-->
+    <!--        app:cardCornerRadius="05dp">-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp47"
+        android:background="@drawable/gradient_toolbar"
+        app:tabGravity="fill"
+        app:tabMode="auto"
+        android:elevation="@dimen/dp1"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/tab_default_color_if_gradient" />
+    <!--    app:tabIndicatorGravity="stretch"-->
+    <!--    app:tabSelectedTextColor="@color/sub_tab_active_color"-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</LinearLayout>
+
+    <!--<com.google.android.material.tabs.TabLayout-->
+    <!--android:id="@+id/tabs"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="44dp"-->
+    <!--app:tabGravity="fill"-->
+    <!--app:tabMode="fixed"-->
+    <!--app:tabIndicator="@null"-->
+    <!--app:tabTextAppearance="@style/sub_tab_text"-->
+    <!--app:tabIndicatorColor="@color/sub_tab_active_color"-->
+    <!--app:tabSelectedTextColor="@color/sub_tab_active_color"-->
+    <!--app:tabTextColor="@color/sub_tab_default_color" />-->
+    <!--    </androidx.cardview.widget.CardView>-->

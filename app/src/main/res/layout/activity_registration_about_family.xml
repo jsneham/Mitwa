@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp18"
+
+    android:background="@color/registration_background1"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp12">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:onClick="goBack"
+        android:src="@drawable/back" />
+
+        <TextView
+            style="@style/skip_now_small_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:onClick="onSkipClick"
+            android:text="@string/skip_new"
+            android:textColor="@color/skip_now"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+            style="@style/small_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="Profile Details - Family"
+            android:textColor="@color/colorAccent" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        style="@style/registration_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp4"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp10"
+        android:text="About Family"
+        android:textColor="@color/actual_black"
+        android:textStyle="bold" />
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:fillViewport="true"-->
+    <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/registration_background2">
+        <RelativeLayout
+        android:layout_margin="@dimen/dp18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btn_first_submit"
+                android:background="@color/registration_background2"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/et_about"
+                    android:layout_width="match_parent"
+                android:layout_height="@dimen/dp350"
+                    android:layout_gravity="top"
+                    android:background="@drawable/login_text_background"
+                    android:fontFamily="@font/regular_slnt"
+                    android:gravity="top"
+                    android:hint="@string/about_family_describe_about_the_family_amp_its_members_you_can_also_mention_names_of_relatives_amp_community_members_last_names"
+                    android:inputType="textMultiLine"
+                    android:maxLength="250"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp15"
+                    android:textColorHint="@color/description_text1" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                    android:layout_below="@+id/et_about"
+                    android:background="@color/text_divider_line" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_first_submit"
+                android:onClick="validFirst"
+                android:text="Continue"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp18"
+                android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:background="@drawable/round_background"
+            android:fontFamily="@font/medium_slnt"
+            android:textSize="@dimen/sp15"
+            android:elevation="0dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/layout_loader"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+</LinearLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="0dp"
+        android:layout_marginTop="@dimen/dp6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_margin="@dimen/dp18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/dp12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95">
+
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp120">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.05"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="dshgfhjgfhfghfedgfhgdhf"
+                            android:gravity="center"
+                            android:layout_alignParentLeft="true"
+                            android:id="@+id/tvMaitId"
+                            style="@style/recently_small_header_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/dp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:layout_toRightOf="@+id/tvMaitId"
+                            android:src="@drawable/ic_verified" />
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tvVerified"
+                            style="@style/recently_verified_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp12"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:layout_toRightOf="@+id/tvMaitId"
+                            android:text="@string/verified" />
+
+                        <TextView  android:visibility="gone"
+                            android:layout_weight="2"
+                            android:id="@+id/tvPostedBy"
+                            style="@style/recently_posted_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView  android:visibility="gone"
+                            style="@style/recently_small_header_text"
+                            android:layout_weight="1"
+                            android:id="@+id/tv_view_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_remove_red_eye_24"
+                            app:drawableTint="@color/colorAccent" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:scaleType="fitEnd"
+                            android:layout_weight="1"
+                            android:id="@+id/img_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_more_vert_24_" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dp5"
+                        android:id="@+id/tv_name"
+                        style="@style/recently_medium_header_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_about"
+                        style="@style/recently_medium_details_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="10" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_gray">
+
+
+                <TextView
+                    android:layout_margin="@dimen/dp10"
+                    style="@style/interest_small_header_text"
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Interest Received"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llBottomMenu"
+                android:layout_marginTop="@dimen/dp12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="@dimen/dp6"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:gravity="center"
+                    android:background="@drawable/btn_short"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    >
+                    <ImageView
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_outline_star_border_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/btnDelete"
+                        android:text="@string/delete"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llShortlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:id="@+id/ivShortlist"
+                        app:srcCompat="@drawable/in_shortlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:fontFamily="@font/regular_slnt"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvShortlist"
+                        android:text="Shortlist"
+                        android:textAllCaps="false"
+                        android:textColor="@color/registration_hint_color"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        app:srcCompat="@drawable/ic_message_circle_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:fontFamily="@font/regular_slnt"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnMessge"
+                        android:text="Message"
+                        android:textAllCaps="false"
+                        android:textColor="@color/registration_hint_color"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llRejected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:id="@+id/ivReject"
+                        app:srcCompat="@drawable/ic_baseline_close_24_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:fontFamily="@font/regular_slnt"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnReject"
+                        android:text="Decline"
+                        android:textAllCaps="false"
+                        android:textColor="@color/registration_hint_color"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAccepted"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/ivAccept"
+                        app:srcCompat="@drawable/ic_baseline_check_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:fontFamily="@font/regular_slnt"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnInterest"
+                        android:text="@string/accept"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgPLanStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/dp18"
+        android:src="@drawable/ic_demo_platinum"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/delete"
+        android:title="Delete Request" />
+    <item android:id="@+id/view_profile"
+        android:title="View Profile" />
+    <item android:id="@+id/report"
+        app:itemTextAppearance="@style/customTextItems"
+        android:title="Report Misuse" />
+    <item android:id="@+id/block"
+        android:title="Block Profile" />
+    <item android:id="@+id/like"
+        android:visible="false"
+        android:title="Like Profile" />
+
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|center_vertical"
+
+    >
+
+
+
+
+    <ImageView
+        android:scaleType="fitCenter"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/imgEdit"
+        android:layout_width="@dimen/dp100"
+        android:layout_height="@dimen/dp50"
+        android:src="@drawable/ic_seehowprofilelooks"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:cardElevation="@dimen/dp12"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:ignore="MissingPrefix">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_cancel"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginBottom="@dimen/dp16"
+                style="@style/verify_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow Guidelines &amp; Upload Photo"  />
+
+            <ImageView
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp15"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/close_pop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/lighter_gray" />
+
+
+        <TextView
+
+            android:text="Please follow these guidelines to get photos approved."
+            android:id="@+id/tvMessageDescription"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp12"
+            android:layout_marginBottom="@dimen/dp12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/medium_slnt"
+            android:textColor="@color/llTerms"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivPhotoGuideInDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp16"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/photo_guidelines_image_one"
+
+            />
+
+        <LinearLayout
+            android:background="@drawable/round_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginLeft="@dimen/dp18"
+
+            android:layout_marginRight="@dimen/dp18"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--        <ImageView-->
+            <!--            android:layout_width="@dimen/dp20"-->
+            <!--            android:layout_height="@dimen/dp20"-->
+            <!--            android:src="@drawable/baseline_collections_24"-->
+            <!--            app:tint="@color/colorAccent" />-->
+
+            <TextView
+                android:gravity="center"
+                android:fontFamily="@font/medium_slnt"
+                android:textAllCaps="false"
+                android:id="@+id/tv_gallary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Photo From Gallery"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+<!--        <View-->
+<!--            android:background="@drawable/divider"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp1"/>-->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:src="@drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/tv_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp3"
+            android:text="Capture From Camera"
+            android:textColor="@color/sub_tab_active_color"
+            android:textSize="@dimen/sp17" />
+    </LinearLayout>
+
+
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:background="@color/bottom_divider_color" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp10"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp17" />
+
+</androidx.cardview.widget.CardView>
+

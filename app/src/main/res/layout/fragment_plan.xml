@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llView"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dp16"
+        android:orientation="horizontal"
+        android:id="@+id/viewPagerImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@color/white"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llNeedHelp"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_secondary_button_border"
+        android:paddingLeft="@dimen/dp5"
+        android:paddingRight="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:gravity="center_vertical|center">
+
+        <ImageView
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp5"
+            android:src="@drawable/whatsapp_logo" />
+
+        <TextView
+            android:id="@+id/btnNeedHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center"
+            android:text="@string/need_help_whatsapp_now"
+            android:textAllCaps="false"
+            android:textColor="@color/gradient_color_2"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/layout_progressbar" />
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--changed by Harshad-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:fitsSystemWindows="true"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/viewPagerImageSlider"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@color/colorWhite"-->
+<!--        />-->
+
+<!--    <include-->
+<!--        android:id="@+id/progressBar"-->
+<!--        layout="@layout/layout_progressbar" />-->
+<!--</RelativeLayout>-->
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/llProfileCreate"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp18"
+    android:fitsSystemWindows="true"
+    android:background="@color/registration_background1"
+    android:orientation="vertical"
+    android:visibility="visible">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView android:onClick="goBack"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp12"
+            android:src="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                android:gravity="center_vertical"
+                style="@style/small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/profile_details_education_amp_profession"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:gravity="center_vertical"
+                style="@style/small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onHaveAccountClick"
+                android:text=""
+                android:textColor="@color/skip_now"
+                android:textStyle="italic" />
+        </RelativeLayout>
+        <TextView
+            style="@style/registration_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp18"
+            android:text="Working Sector"
+            android:textColor="@color/actual_black"
+            android:textStyle="bold" />
+
+        <EditText        android:visibility="gone"
+
+            android:id="@+id/alertSearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/search_background"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="@dimen/dp10"
+            android:drawableTint="@color/registration_hint_color"
+            android:fontFamily="@font/regular_slnt"
+            android:gravity="center_vertical"
+            android:hint="Search"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/registration_hint_color"
+            android:textSize="16sp">
+
+        </EditText>
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/registration_background2"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:visibility="gone"
+        layout="@layout/layout_loader"
+        android:id="@+id/progressBar"/>
+</RelativeLayout>

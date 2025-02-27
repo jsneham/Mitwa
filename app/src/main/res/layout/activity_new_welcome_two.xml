@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.NewWelcomeActivity">
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/dp18"
+        android:gravity="right"
+        android:id="@+id/tvOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium_slnt"
+        android:text="Option 1"
+        android:textColor="@color/registration_hint_color"
+        android:textSize="@dimen/sp14" />
+    <ImageView
+        android:layout_below="@+id/tvOption"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp120"
+        android:layout_marginTop="@dimen/dp50"
+        android:src="@drawable/logo_mega" />
+
+
+    <LinearLayout
+        android:id="@+id/llc"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp18"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium_slnt"
+            android:text="New User? Don't have an account"
+            android:textColor="@color/registration_hint_color"
+            android:textSize="@dimen/sp15" />
+        <Button
+            android:elevation="@dimen/dp5"
+            android:id="@+id/btnNewUser"
+            style="@style/secondary_action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/create_account"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/llc"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium_slnt"
+            android:text="Existing User? Login with Password/OTP"
+            android:textColor="@color/registration_hint_color"
+            android:textSize="@dimen/sp15" />
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:elevation="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_weight="1"
+                android:id="@+id/btnPassword"
+                style="@style/secondary_action_button_with_border"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="With Password"
+                android:textAllCaps="false" />
+            <Button
+                android:elevation="@dimen/dp5"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_weight="1"
+                android:id="@+id/btnOtp"
+                style="@style/secondary_action_button_with_border"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="With OTP"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp36"
+            android:layout_marginRight="@dimen/dp18"
+            android:fontFamily="@font/regular_slnt"
+            android:gravity="center"
+            android:textSize="@dimen/sp11"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp5"
+            android:id="@+id/root"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium_slnt"
+                android:text="@string/app_version"
+                android:textColor="@color/registration_hint_color"
+                android:textSize="@dimen/sp12" />
+            <View
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_width="@dimen/dp1"
+                android:layout_height="@dimen/dp15" android:background="@color/registration_hint_color"/>
+            <TextView
+                android:id="@+id/tvBuild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium_slnt"
+                android:text="@string/built_version"
+                android:textColor="@color/registration_hint_color"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

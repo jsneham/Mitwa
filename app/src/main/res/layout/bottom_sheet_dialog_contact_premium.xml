@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Contact Info"
+            android:layout_alignParentLeft="true"
+            style="@style/verify_header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"/>
+        <ImageView
+            android:id="@+id/close"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close_pop"
+            android:scaleType="fitEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/lighter_gray"
+        android:layout_marginTop="@dimen/dp18"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp12"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/dp14"
+                android:src="@drawable/ic_callcontact_viewprofile"
+                app:tint="@color/view_other_profile" />
+
+            <TextView
+                android:id="@+id/tvContact"
+                style="@style/other_preview_data_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv1"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:padding="@dimen/dp5"
+            android:id="@+id/llcall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/callnow_background"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/dp2"
+                android:src="@drawable/ic_callnowicon"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/call_now_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp2"
+                android:text="Call Now"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginBottom="@dimen/dp12"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/dp14"
+            android:src="@drawable/ic_email_viewprofile"
+            app:tint="@color/view_other_profile" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            style="@style/other_preview_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivIcon"></TextView>
+    </LinearLayout>
+
+
+</LinearLayout>

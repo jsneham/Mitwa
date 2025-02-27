@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_loca"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@+id/btn_loca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_margin="@dimen/dp12"
+                android:clickable="false"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/spin_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:clickable="false"
+                    android:gravity="left"
+                    app:ccp_clickable="false" />
+
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    style="@style/register_dropdown"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.66"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="phone"
+                    android:maxLength="13" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/list_divider_line" />
+
+            <LinearLayout style="@style/edit_profile_parent_layout">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    style="@style/edit_profile_icon"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_country_viewprofile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblName1"
+                        style="@style/setting_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv1"
+                        android:gravity="left"
+                        android:text="Country"></TextView>
+
+                    <com.matriapp.mobile.multispinnerfilter.SingleSpinnerSearch
+
+                        android:id="@+id/spin_country"
+                        style="@style/register_dropdown"
+                        android:layout_below="@+id/lblName1"
+                        android:layout_toRightOf="@+id/iv1"
+                        android:gravity="left" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/list_divider_line" />
+
+            <LinearLayout style="@style/edit_profile_parent_layout">
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    style="@style/edit_profile_icon"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_state_viewprofile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblName2"
+                        style="@style/setting_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv2"
+                        android:gravity="left"
+                        android:text="State"></TextView>
+
+                    <com.matriapp.mobile.multispinnerfilter.SingleSpinnerSearch
+                        android:id="@+id/spin_state"
+                        style="@style/register_dropdown"
+                        android:layout_below="@+id/lblName2"
+                        android:layout_toRightOf="@+id/iv2"
+                        android:gravity="left" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/list_divider_line" />
+
+            <LinearLayout style="@style/edit_profile_parent_layout">
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    style="@style/edit_profile_icon"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_citylocation_viewprofile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblName3"
+                        style="@style/setting_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv3"
+                        android:gravity="left"
+                        android:text="City"></TextView>
+
+                    <com.matriapp.mobile.multispinnerfilter.SingleSpinnerSearch
+                        android:id="@+id/spin_city"
+                        style="@style/register_dropdown"
+                        android:layout_below="@+id/lblName3"
+                        android:layout_toRightOf="@+id/iv3"
+                        android:gravity="left" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/list_divider_line" />
+
+            <LinearLayout style="@style/edit_profile_parent_layout">
+
+                <ImageView
+                    android:id="@+id/iv4"
+                    style="@style/edit_profile_icon"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_address_viewprofile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblName4"
+                        style="@style/setting_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv4"
+                        android:gravity="left"
+                        android:text="Ancestral Origin (Native Place)"></TextView>
+
+                    <EditText
+                        android:id="@+id/et_address"
+                        style="@style/register_dropdown"
+                        android:layout_below="@+id/lblName4"
+                        android:layout_toRightOf="@+id/iv4"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="Enter Ancestral Origin (Native Place)" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/list_divider_line" />
+
+            <LinearLayout style="@style/edit_profile_parent_layout">
+
+                <ImageView
+                    android:id="@+id/iv11"
+                    style="@style/edit_profile_icon"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_phonecontact2_viewprofile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblName11"
+                        style="@style/setting_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv11"
+                        android:gravity="left"
+                        android:text="Alternate Phone"></TextView>
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        style="@style/register_dropdown"
+                        android:layout_below="@+id/lblName11"
+                        android:layout_toRightOf="@+id/iv11"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:gravity="left"
+                        android:hint="Enter Alternate Phone"
+                        android:inputType="phone"
+                        android:maxLength="13" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/list_divider_line" />
+
+            <LinearLayout style="@style/edit_profile_parent_layout">
+
+                <ImageView
+                    android:id="@+id/iv12"
+                    style="@style/edit_profile_icon"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_name_viewprofile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblName12"
+                        style="@style/setting_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv12"
+                        android:gravity="left"
+                        android:text="Matchmaker's Name"></TextView>
+
+                    <EditText
+                        android:id="@+id/et_time_call"
+                        style="@style/register_dropdown"
+                        android:layout_below="@+id/lblName12"
+                        android:layout_toRightOf="@+id/iv12"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:gravity="left"
+                        android:hint="Your Matchmaker's Name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/list_divider_line" />
+
+            <LinearLayout style="@style/edit_profile_parent_layout">
+
+                <ImageView
+                    android:id="@+id/iv5"
+                    style="@style/edit_profile_icon"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_citizenshipresidenttype_viewprofile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblName5"
+                        style="@style/setting_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv5"
+                        android:gravity="left"
+                        android:text="Residence Type"></TextView>
+
+                    <com.matriapp.mobile.multispinnerfilter.SingleSpinnerSearch
+                        android:id="@+id/spin_residence"
+                        style="@style/register_dropdown"
+                        android:layout_below="@+id/lblName5"
+                        android:layout_toRightOf="@+id/iv5"
+                        android:gravity="left" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_loca"
+        style="@style/primary_action_button"
+        android:layout_alignParentBottom="true"
+        android:text="Update" />
+
+</RelativeLayout>

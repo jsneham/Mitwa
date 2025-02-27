@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp18"
+    android:fitsSystemWindows="true"
+    android:background="@color/registration_background1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp12">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goBack"
+                android:src="@drawable/back" />
+
+            <TextView
+                style="@style/skip_now_small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:onClick="onHaveAccountClick"
+                android:text="New User? Create Account"
+                android:textColor="@color/skip_now"
+                android:textStyle="italic" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                style="@style/small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="Welcome, Existing User"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+
+
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/registration_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlMain"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp18"
+            android:text="Login with OTP"
+            android:textColor="@color/actual_black" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llOne"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/registration_background2"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutFirst"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dp18"
+                    android:layout_marginRight="@dimen/dp18"
+                    android:id="@+id/l6"
+                    style="@style/registration_text_last_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_centerInParent="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.matriapp.mobile.countrycodepicker.CountryCodePicker
+                        android:id="@+id/spin_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        app:ccp_defaultNameCode="IN"
+                        app:ccp_textColor="@color/registration_active_color"
+                        app:ccp_textFont="@font/medium_slnt" />
+
+                    <EditText
+                        android:id="@+id/txtMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp60"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:background="@null"
+                        android:hint="Mobile Number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/registration_active_color"
+                        android:textColorHint="@color/registration_hint_color"
+                        android:textSize="@dimen/sp17" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/registration_background2">
+                    <Button
+                        android:id="@+id/btnGenerateOtp"
+                        style="@style/primary_action_button_with_elevation"
+                        android:text="Send OTP" />
+
+                </LinearLayout>
+                <!--                <Button-->
+                <!--                    android:id="@+id/btnGenerateOtp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentBottom="true"-->
+                <!--                    android:layout_marginTop="@dimen/dp18"-->
+                <!--                    android:background="@drawable/round_background"-->
+                <!--                    android:elevation="0dp"-->
+                <!--                    android:fontFamily="@font/medium_slnt"-->
+                <!--                    android:text="Send OTP"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/White"-->
+                <!--                    android:textSize="@dimen/sp18" />-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutSecond"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/llOtpView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblVerifyNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/regular_slnt"
+                        android:gravity="center"
+                        android:text="@string/lbl_verify_otp_dialog"
+                        android:textColor="@color/description_text1"
+                        android:textSize="@dimen/sp14" />
+
+                    <com.mukesh.OtpView
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="true"
+                        android:id="@+id/otpView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:itemBackground="@color/white"
+                        android:textColor="@color/black"
+                        app:OtpItemCount="6"
+                        app:OtpItemHeight="@dimen/dp40"
+                        app:OtpItemWidth="@dimen/dp40"
+                        app:OtpLineColor="@color/colorPrimary"
+                        app:OtpViewType="rectangle" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llOtpView"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.matriapp.mobile.custom.TimerTextView
+                            android:id="@+id/timerTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/btnResend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text=" Resend OTP?"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/sp12"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llTwo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/registration_background2">
+                    <Button
+                        android:id="@+id/btnVerify"
+                        style="@style/primary_action_button_with_elevation"
+                        android:text="Verify" />
+
+                </LinearLayout>
+
+                <!--                <Button-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentBottom="true"-->
+                <!--                    android:layout_marginTop="@dimen/dp18"-->
+                <!--                    android:background="@drawable/round_background"-->
+                <!--                    android:elevation="0dp"-->
+                <!--                    android:fontFamily="@font/medium_slnt"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/White"-->
+                <!--                    android:textSize="@dimen/sp18"-->
+                <!--                    android:id="@+id/btnVerify"-->
+                <!--                    android:text="Verify"/>-->
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+
+    <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+    <!--        android:id="@+id/cdLayout"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <include layout="@layout/this_number_is_not_registered" />-->
+    <!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+</RelativeLayout>
+
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/app_background"-->
+    <!--    tools:context="com.matriapp.mobile.activities.LoginWithOtpActivity">-->
+
+    <!--    <com.google.android.material.appbar.AppBarLayout-->
+    <!--        android:id="@+id/app_bar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:theme="@style/AppTheme.AppBarOverlay"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/toolbar"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="?attr/actionBarSize"-->
+    <!--            android:background="@drawable/gradient_toolbar"-->
+    <!--            android:theme="@style/toolbar_theme"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_scrollFlags="scroll|enterAlways"-->
+    <!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+    <!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <!--    <LinearLayout-->
+    <!--        android:background="@color/white"-->
+    <!--        android:id="@+id/layoutFirst"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@+id/app_bar"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_margin="@dimen/dp18"-->
+    <!--            android:id="@+id/layoutMobileNumber"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <com.matriapp.mobile.countrycodepicker.CountryCodePicker-->
+    <!--                android:id="@+id/spin_code"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_marginTop="@dimen/dp10"-->
+    <!--                android:layout_weight="0.40"-->
+    <!--                android:background="@drawable/background_with_shadow"-->
+    <!--                android:gravity="center"-->
+    <!--                app:ccp_defaultNameCode="IN" />-->
+
+    <!--            <View-->
+    <!--                android:layout_width="@dimen/dp10"-->
+    <!--                android:layout_height="@dimen/dp10"/>-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/txtMobileNumber"-->
+    <!--                style="@style/register_edittext_style"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_weight=".60"-->
+    <!--                android:hint="Mobile Number*"-->
+    <!--                android:inputType="numberDecimal"-->
+    <!--                android:maxLength="12" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <Button-->
+    <!--            android:layout_margin="@dimen/dp18"-->
+    <!--            android:id="@+id/btnGenerateOtp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="30dp"-->
+    <!--            style="@style/primary_action_button"-->
+    <!--            android:text="Send OTP"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textColor="@color/White"/>-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layoutSecond"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/app_bar"-->
+    <!--        android:layout_marginTop="@dimen/dp20"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:paddingLeft="@dimen/dp20"-->
+    <!--        android:paddingRight="@dimen/dp20">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/lblVerifyNumber"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="@string/lbl_verify_otp_dialog"-->
+    <!--            android:textSize="@dimen/sp12" />-->
+
+    <!--        <com.mukesh.OtpView-->
+    <!--            android:id="@+id/otpView"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_marginTop="@dimen/dp20"-->
+    <!--            android:gravity="center"-->
+    <!--            android:inputType="number"-->
+    <!--            android:itemBackground="@color/white"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            app:OtpItemCount="6"-->
+    <!--            app:OtpItemWidth="@dimen/dp40"-->
+    <!--            app:OtpItemHeight="@dimen/dp40"-->
+    <!--            app:OtpLineColor="@color/colorPrimary"-->
+    <!--            app:OtpViewType="rectangle" />-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="@dimen/dp20"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <com.matriapp.mobile.custom.TimerTextView-->
+    <!--                android:id="@+id/timerTextView"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:textSize="@dimen/sp12" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/btnResend"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:text=" Resend OTP?"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:visibility="gone"-->
+    <!--                android:textColor="@color/colorAccent"-->
+    <!--                android:textSize="@dimen/sp12" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnVerify"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="@dimen/dp20"-->
+    <!--            style="@style/Widget.MyApp.ThemeButton"-->
+    <!--            android:text="Verify"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textColor="@color/White"/>-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <com.matriapp.mobile.avi.AVLoadingIndicatorView-->
+    <!--        android:id="@+id/progressBar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:indicatorColor="@color/colorAccent"-->
+    <!--        app:indicatorName="BallSpinFadeLoaderIndicator"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--     />-->
+
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:rotation="180"-->
+    <!--        android:scaleType="center"-->
+    <!--        android:src="@drawable/bg_vector"/>-->
+
+    <!--</RelativeLayout>-->

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/dp8"
+    app:cardElevation="@dimen/dp12"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/verify_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp16"
+            android:text="Logout" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp15"
+            android:src="@drawable/close_pop" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/lighter_gray" />
+
+    <TextView
+        android:text="Are you sure want to logout from the app?"
+        android:id="@+id/tvMessageDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp16"
+        android:fontFamily="@font/medium_slnt"
+        android:textColor="@color/llTerms"
+        android:textSize="@dimen/sp14"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp16"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnYes"
+            style="@style/popup_bottom_button"
+            android:layout_marginRight="@dimen/dp12"
+            android:layout_weight="1"
+            android:background="@drawable/round_primary_button_border"
+            android:text="@string/yes"
+            android:textColor="@color/colorAccent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNo"
+            style="@style/popup_bottom_button"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/error_round_primary_button"
+            android:text="@string/no"
+            android:textColor="@color/white" />
+        <!--        <Button-->
+        <!--            style="@style/popup_bottom_button"-->
+        <!--            android:id="@+id/btnTry"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@drawable/error_round_primary_button"-->
+        <!--            android:text="Try Again"-->
+        <!--            android:textColor="@color/white"/>-->
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/registration_background1"
+    tools:context=".activities.RegisterFirstActivity">
+
+    <!--    <ScrollView-->
+    <!--        android:id="@+id/ragi_scroll"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/account_created_by_layout"/>
+        <include layout="@layout/layout_register_step_one"/>
+        <include layout="@layout/layout_register_welcome_after_login"/>
+        <include layout="@layout/layout_register_photos"/>
+        <include layout="@layout/layout_register_state"/>
+        <!--        <include layout="@layout/layout_register_last_details"/>-->
+        <include layout="@layout/layout_register_complete"/>
+    </LinearLayout>
+    <!--    </ScrollView>-->
+
+    <include  layout="@layout/bottom_sheet_dialog_choose_image"/>
+
+    <include android:visibility="gone"
+        layout="@layout/layout_loader"
+        android:id="@+id/progressBar"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

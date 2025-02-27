@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/dp24"
+    android:layout_marginRight="@dimen/dp24"
+    android:layout_marginBottom="@dimen/dp10"
+    android:layout_marginTop="@dimen/dp18"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="@dimen/dp3"
+        android:layout_below="@+id/topLayout"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="visible"
+        android:background="@color/divider_color" />
+
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginRight="@dimen/dp9"
+            android:visibility="visible"
+            android:id="@+id/imgSection"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_name_viewprofile"/>
+
+        <TextView
+            android:fontFamily="@font/semi_bold_slnt"
+            android:id="@+id/lblSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text=" Basic Details"
+            android:textColor="@color/actual_black"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/colorAccent"
+            android:layout_gravity="center|center_vertical"
+            android:src="@drawable/edit_revised" />
+<!--            android:src="@drawable/ic_edit_icon" />-->
+
+
+    </LinearLayout>
+
+</RelativeLayout>

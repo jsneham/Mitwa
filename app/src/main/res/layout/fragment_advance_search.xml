@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llView"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/row"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp18"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/label_advance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=" Advance Search Criteria"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_margin="10dp"-->
+                <!--                    app:cardCornerRadius="5dp">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp9"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            style="@style/register_dropdown_icon_adv_serach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/ic_heightage_search" />
+
+                        <TextView
+                            android:id="@+id/tv_height_label"
+                            style="@style/register_dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/medium_slnt"
+                            android:gravity="center_vertical"
+                            android:text="Height"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginBottom="@dimen/dp12"
+                        android:clipChildren="false">
+
+                        <com.matriapp.mobile.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                            android:id="@+id/search_range_height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:bar_color="#b7b7b7"
+                            app:bar_highlight_color="@color/colorAccent"
+                            app:data_type="_integer"
+                            app:left_thumb_color="@color/colorAccent"
+                            app:left_thumb_color_pressed="@color/colorAccent"
+                            app:max_value="85"
+                            app:min_value="48"
+                            app:right_thumb_color="@color/colorAccent"
+                            app:right_thumb_color_pressed="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/search_tv_min_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_range_height"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:fontFamily="@font/regular_slnt"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/search_tv_max_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_range_height"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:fontFamily="@font/regular_slnt"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp9"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/register_dropdown_icon_adv_serach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/ic_birthdate_search" />
+
+                        <TextView
+                            android:id="@+id/tv_weight_label"
+                            style="@style/register_dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/medium_slnt"
+                            android:gravity="center_vertical"
+                            android:text="Age"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginBottom="@dimen/dp12"
+                        android:clipChildren="false">
+
+                        <com.matriapp.mobile.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                            android:id="@+id/search_range_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:bar_color="#b7b7b7"
+                            app:bar_highlight_color="@color/colorAccent"
+                            app:data_type="_integer"
+                            app:left_thumb_color="@color/colorAccent"
+                            app:left_thumb_color_pressed="@color/colorAccent"
+                            app:max_value="90"
+                            app:min_value="18"
+                            app:right_thumb_color="@color/colorAccent"
+                            app:right_thumb_color_pressed="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/search_tv_min_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_range_age"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:fontFamily="@font/regular_slnt"
+                            android:gravity="center"
+
+                            android:text="18 Years"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/search_tv_max_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_range_age"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:fontFamily="@font/regular_slnt"
+                            android:gravity="center"
+
+                            android:text="65 Years"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_maritalstatus_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_mari"
+                        style="@style/register_dropdown"
+                        android:layout_toRightOf="@+id/iv1"
+                        app:hintText="@string/app_name" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_religion_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_religion"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv2" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv3"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_caste_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_caste"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv3" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv4"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_mothertongue_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_tongue"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv4" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/label_loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp12"
+                    android:fontFamily="@font/medium_slnt"
+                    android:gravity="center"
+                    android:text=" Location Details"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv5"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_citizenshipresidenttype_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_country"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv5" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv6"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_state_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_state"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv6" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv7"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_citylocation_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_city"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv7" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/label_edu"
+                    style="@style/adv_search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_slnt"
+                    android:gravity="left"
+                    android:text="@string/education_amp_profession"
+                    android:textColor="@color/search_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dp24"/>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv8"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_education_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_edu"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv8" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv9"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_occupation_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_ocu"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv9" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv10"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_profession_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_emp"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv10" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv11"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_incomerupee_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_incom"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv11" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/label_eat"
+                    style="@style/adv_search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_slnt"
+                    android:gravity="left"
+                    android:text="Habits"
+                    android:textColor="@color/search_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dp24"/>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv12"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_food_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_eat"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv12" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv13"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_drinking_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_drink"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv13" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv14"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_smoking_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_smok"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv14" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/label_apper"
+                    style="@style/adv_search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_slnt"
+                    android:gravity="left"
+                    android:text="Physical Appearance"
+                    android:textColor="@color/search_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dp24"/>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv15"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_skincolor_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_complex"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv15" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_adv_search_layout">
+
+                    <ImageView
+                        android:id="@+id/iv16"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bodytype_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_bodytype"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv16" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/label_horo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_slnt"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Horosope Details"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    style="@style/register_dropdown_adv_search_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv17"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_star"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv17" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/register_dropdown_adv_search_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv18"
+                        style="@style/register_dropdown_icon_adv_serach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_manglik_search" />
+
+                    <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_manglik"
+                        style="@style/register_dropdown_adv_search"
+                        android:layout_toRightOf="@+id/iv18" />
+                </RelativeLayout>
+
+
+                <CheckBox
+                    android:id="@+id/chk_photo"
+                    style="@style/adv_search_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular_slnt"
+                    android:text="@string/do_not_show_profiles_without_photo"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginBottom="@dimen/dp12"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_save_search"
+                style="@style/save_search_action_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save Search"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn_search"
+                style="@style/search_primary_action_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_weight="1"
+                android:text="Search"
+                android:textAllCaps="false"
+                android:textColor="@color/White" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+
+</RelativeLayout>

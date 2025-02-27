@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llLastStep"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp18"
+    android:layout_marginBottom="@dimen/dp18"
+    android:background="@color/registration_background1"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+
+    <!--    <TextView-->
+    <!--        style="@style/small_header_text"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="@dimen/dp18"-->
+    <!--        android:layout_marginRight="@dimen/dp18"-->
+    <!--        android:text="Some Personal Details to complete profile"-->
+    <!--        android:textColor="@color/colorAccent" />-->
+
+    <!--    <TextView-->
+
+    <!--        style="@style/registration_header_text"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="@dimen/dp18"-->
+    <!--        android:layout_marginTop="@dimen/dp5"-->
+    <!--        android:layout_marginRight="@dimen/dp18"-->
+    <!--        android:text="                   "-->
+    <!--        android:textColor="@color/actual_black"-->
+    <!--        android:textStyle="bold" />-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/registration_background2"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/et_birth_time"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Enter Birth Time"
+                android:inputType="none"
+                android:textColor="@color/registration_active_color"
+                android:textColorHint="@color/registration_hint_color">
+
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+
+            <EditText
+                android:id="@+id/et_birth_place"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+
+                android:hint="Enter City of Birth"
+                android:inputType="text"
+                android:textColor="@color/registration_active_color"
+                android:textColorHint="@color/registration_hint_color"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+
+            <EditText
+                android:id="@+id/et_sub_caste"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+
+                android:hint="Enter Sub-Caste"
+                android:inputType="text"
+                android:textColor="@color/registration_active_color"
+                android:textColorHint="@color/registration_hint_color"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+            <EditText
+                android:id="@+id/et_gothra"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+                android:hint="Enter Gothra(m)"
+                android:inputType="text"
+                android:maxLength="20"
+                android:textColor="@color/registration_active_color"
+                android:textColorHint="@color/registration_hint_color"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+            <EditText
+                android:id="@+id/et_address"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+                android:maxLength="23"
+                android:hint="Enter Ancestral Origin (Native Place)"
+                android:inputType="text"
+                android:textColor="@color/registration_active_color"
+                android:textColorHint="@color/registration_hint_color"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+            <com.matriapp.mobile.multispinnerfilter.MultiSpinnerSearch
+                android:id="@+id/spin_lang"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+                tools:listitem="@layout/item_listview_single" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+            <com.matriapp.mobile.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_designation"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+                tools:listitem="@layout/item_listview_single" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+            <com.matriapp.mobile.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_residence"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@null"
+                tools:listitem="@layout/item_listview_single" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_divider_line" />
+
+
+            <Button
+                android:id="@+id/btn_last_submit"
+                style="@style/primary_action_button"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp9"
+                android:layout_marginRight="@dimen/dp18"
+                android:onClick="submitLastDetails"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/White" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

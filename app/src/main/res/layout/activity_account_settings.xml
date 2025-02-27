@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    android:id="@+id/llView"
+    android:focusable="true"
+    android:orientation="vertical">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/app_background"
+        tools:ignore="MissingPrefix">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:toolbarId="@+id/toolbar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/white"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <LinearLayout
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    tools:context=".fragments.SettingFragment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp24"
+                        android:layout_marginTop="@dimen/dp24"
+                        android:layout_marginRight="@dimen/dp24"
+                        android:layout_marginBottom="@dimen/dp24"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/dp60"
+                                android:layout_height="@dimen/dp75"
+                                android:layout_marginRight="@dimen/dp9"
+                                app:cardCornerRadius="@dimen/dp10">
+
+                                <ImageView
+                                    android:id="@+id/img_profile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/placeholder" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp9"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_name"
+                                    style="@style/setting_name_medium_header_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dp5" />
+
+
+                                <TextView
+                                    android:id="@+id/tvMaitId"
+                                    style="@style/setting_small_header_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginBottom="@dimen/dp5" />
+
+                                <ProgressBar
+
+                                    android:id="@+id/progressBar"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp2"
+                                    android:progress="25"
+                                    android:progressTint="@color/dgreen" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5">
+
+                                    <TextView
+                                        android:id="@+id/tvProgressBar"
+                                        style="@style/setting_small_header_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_edit_profile"
+                                            style="@style/setting_small_header_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:text="VIEW PROFILE" />
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="@dimen/dp5"
+                                            android:src="@drawable/ic_thinrightarrow_forviewprofile" />
+                                        <!--                                android:src="@drawable/ic_rightarrow_withoutpadding" />-->
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/dp24"
+                        android:layout_marginRight="@dimen/dp24"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp24"
+                        android:layout_marginRight="@dimen/dp24"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:gravity="center_vertical"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:id="@+id/tvPlan"
+                            style="@style/setting_small_header_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:maxLines="3"
+                            android:text=""
+                            />
+
+                        <Button
+                            android:id="@+id/tvPlansList"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp24"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="@dimen/dp3"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_getpremiumplan__1_"
+                            android:drawableTint="@color/colorAccent"
+                            android:padding="@dimen/dp5"></Button>
+
+                        <!--            android:background="@drawable/ic_getpremium"-->
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/tvPlansList"-->
+                        <!--                            style="@style/setting_small_header_text"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_alignParentRight="true"-->
+                        <!--                            android:layout_marginLeft="@dimen/dp3"-->
+                        <!--                            android:text="GET PREMIUM"-->
+                        <!--                            android:textColor="@color/colorAccent" />-->
+                    </LinearLayout>
+
+                    <View
+
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@color/black_transparent" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_gravity="top"
+                    app:layout_collapseMode="pin"
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/gradient_toolbar"
+                    android:theme="@style/toolbar_theme"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp37"
+                app:tabIndicatorGravity="stretch"
+                app:tabMaxWidth="0dp"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@style/sub_tab_text"
+                android:background="@drawable/gradient_toolbar_for_sub_tab"
+                app:tabIndicatorColor="@color/White"
+                app:tabSelectedTextColor="@color/sub_tab_active_color"
+                app:tabTextColor="@color/sub_tab_default_color"
+                app:tabRippleColor="@color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_marginLeft="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp24"
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@color/white"
+                />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

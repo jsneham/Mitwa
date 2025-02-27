@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp25"
+    android:background="@color/White"
+    android:foregroundGravity="fill_horizontal"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context=".activities.OnePageProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp24"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical|center"
+        android:background="@color/registration_background1"
+        android:gravity="center_vertical|center">
+
+        <ImageView
+            android:layout_width="@dimen/dp86"
+            android:layout_height="@dimen/dp24"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp8"
+            android:foregroundGravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_mega"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/play"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvMCall"
+                style="@style/one_pager_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_one_call"
+                android:gravity="center"
+                android:text="@string/not_mentioned" />
+
+            <TextView
+
+                style="@style/one_pager_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_one_url"
+                android:gravity="center"
+                android:text="@string/url" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp8"
+            android:scaleType="fitEnd"
+            android:src="@drawable/one_page_playstore">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:layout_marginTop="10dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp250"
+                    android:src="@drawable/logo_mega" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/extra_bold_slnt"
+                    android:text="@string/app_name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gradient_color_1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/extra_bold_slnt"
+                    android:textAllCaps="true"
+                    android:textColor="@color/one_pager_child_color"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/tv_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:fontFamily="@font/medium_slnt"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:textColor="@color/gradient_color_1"
+                    android:textSize="9sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp14"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi_bold_slnt"
+                    android:text="@string/basics"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp8" />
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Age" />
+
+                    <TextView
+                        android:id="@+id/tvAge"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Height" />
+
+                    <TextView
+                        android:id="@+id/tvHeight"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Religion" />
+
+                    <TextView
+                        android:id="@+id/tvReligion"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Caste" />
+
+                    <TextView
+                        android:id="@+id/tvCaste"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Marital Status" />
+
+                    <TextView
+                        android:id="@id/tvMarital"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llChild"
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Children" />
+
+                    <TextView
+                        android:id="@+id/tvChildren"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Lives" />
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Mother Tongue" />
+
+                    <TextView
+                        android:id="@+id/tvMtounge"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Weight &amp; Physique" />
+
+                    <TextView
+                        android:id="@+id/tvAppearnce"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Skin Color Tone" />
+
+                    <TextView
+                        android:id="@+id/tvSkin"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Food Preference" />
+
+                    <TextView
+                        android:id="@+id/tvFood"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Health Information" />
+
+                    <TextView
+                        android:id="@+id/tvHealthInfo"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi_bold_slnt"
+                    android:text="@string/edu_profes"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp8" />
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Highest Qualification" />
+
+                    <TextView
+                        android:id="@+id/tvEducation"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Work Sector" />
+
+                    <TextView
+                        android:id="@+id/tvProfession"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Annual Income" />
+
+                    <TextView
+                        android:id="@+id/tvIncome"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Occupation" />
+
+                    <TextView
+                        android:id="@+id/tvOccupation"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Designation" />
+
+                    <TextView
+                        android:id="@+id/tvDesignation"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Additional Info." />
+
+                    <TextView
+                        android:id="@+id/tvAddInfo"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp14"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi_bold_slnt"
+                    android:text="@string/religion_amp_astro_details"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp8" />
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Gothram" />
+
+                    <TextView
+                        android:id="@+id/tvGothram"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Horoscope belief" />
+
+                    <TextView
+                        android:id="@+id/tvHoroscope"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Raas (Moonsign)" />
+
+                    <TextView
+                        android:id="@+id/tvRaas"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Star" />
+
+                    <TextView
+                        android:id="@+id/tvStar"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Is Manglik?" />
+
+                    <TextView
+                        android:id="@+id/tvMangalik"
+                        style="@style/one_pager_child"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Group" />
+
+                    <TextView
+                        android:id="@+id/tvBloodGroup"
+                        style="@style/one_pager_child"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Born Place" />
+
+                    <TextView
+                        android:id="@+id/tvBirthPlace"
+                        style="@style/one_pager_child"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Born on" />
+
+                    <TextView
+                        android:id="@+id/tvBirthday"
+                        style="@style/one_pager_child"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp14"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi_bold_slnt"
+                    android:text="@string/family_info"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp8" />
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Ancestral Origin" />
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Family Affluence" />
+
+                    <TextView
+                        android:id="@+id/tvFStatus"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Family Type" />
+
+                    <TextView
+                        android:id="@+id/tvFType"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Father’s Name" />
+
+                    <TextView
+                        android:id="@+id/tvFather"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Father's Occupation" />
+
+                    <TextView
+                        android:id="@+id/tvFatherOcc"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Mother’s Name" />
+
+                    <TextView
+                        android:id="@+id/tvMother"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Mother's Occupation" />
+
+                    <TextView
+                        android:id="@+id/tvMotherOcc"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Brother(s)" />
+
+                    <TextView
+                        android:id="@+id/tvBrother"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Sister(s)" />
+
+                    <TextView
+                        android:id="@+id/tvSister"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/one_pager_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/one_pager_subtitle"
+                        android:layout_height="wrap_content"
+                        android:text="Additional Info." />
+
+                    <TextView
+                        android:id="@+id/tvAbout"
+                        style="@style/one_pager_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_one_about"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semi_bold_slnt"
+                    android:text="EXPECTATION FROM DESIREED PARTNER"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp8" />
+
+                <TextView
+                    android:id="@+id/tvLookinFor"
+                    style="@style/one_pager_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_one_looking" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/one_pager_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gradient_color_1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/regular_slnt"
+            android:gravity="center"
+            android:text="@string/bio_data_created_to_find_suitable_alliance_for_marriage_misuse_may_lead_to_legal_action"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="6sp"></TextView>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ivDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginEnd="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp18"
+        android:backgroundTint="@color/gradient_color_1"
+        android:onClick="downloadPdf"
+        android:src="@drawable/ic_baseline_file_download_24" />
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+</RelativeLayout>

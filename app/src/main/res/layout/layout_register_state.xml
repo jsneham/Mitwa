@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_state"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/registration_background1"
+    android:orientation="vertical"
+    android:visibility="gone"
+
+    >
+
+    <ProgressBar
+        android:id="@+id/pbState"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp2"
+        android:max="210"
+        android:progress="10"
+        android:progressTint="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp18"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvStateHeader"
+                style="@style/small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Few Basic Details"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+
+                android:id="@+id/skip"
+                style="@style/small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:autoLink="all"
+                android:clickable="true"
+                android:onClick="onSkipClickFromState"
+                android:text="@string/skip_now"
+                android:textColor="@color/skip_now"
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvStateTitle"
+            style="@style/registration_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp18"
+            android:textColor="@color/actual_black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llHeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp9"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/alertSearchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+
+                android:background="@drawable/search_background"
+                android:drawableStart="@drawable/search_icon"
+                android:drawablePadding="@dimen/dp10"
+                android:drawableTint="@color/registration_hint_color"
+                android:fontFamily="@font/regular_slnt"
+                android:gravity="center_vertical"
+                android:hint="Search"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/registration_hint_color"
+                android:textSize="16sp">
+
+                <requestFocus />
+            </EditText>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHeight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReligion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCaste"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvlanguage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCountry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEducation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFamilyStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFamilyType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEmployeedIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDesignation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIncome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWeight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEatingH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSmoking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDrinking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBodyType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSkinTone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMangalik"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHoroscope"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMoonSign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLifestyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNoOfBrother"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNoOfBrotherMarried"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNoOfSister"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNoOfSisterMarried"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBlood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/llAbout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginBottom="@dimen/dp18"
+                android:paddingBottom="@dimen/dp15"
+
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:background="@drawable/login_text_background"
+                    android:id="@+id/et_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="top"
+                    android:fontFamily="@font/regular_slnt"
+                    android:gravity="top"
+                    android:maxLength="250"
+                    android:hint="About the profile (Describe the profile in your own words. This will be visible to other members.)"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:textColorHint="@color/description_text1" />
+
+                <Button
+                    android:id="@+id/btnSubmitAbout"
+                    style="@style/primary_action_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_marginTop="@dimen/dp18"
+
+                    android:layout_marginBottom="@dimen/dp25"
+                    android:background="@drawable/round_effect"
+                    android:onClick="submitFromAboutPage"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingBottom="@dimen/dp15"
+                android:id="@+id/llHobby"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginBottom="@dimen/dp18"
+
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:background="@drawable/login_text_background"
+                    android:id="@+id/et_hoby"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="top"
+                    android:maxLength="250"
+                    android:fontFamily="@font/regular_slnt"
+                    android:gravity="top"
+                    android:hint="@string/hobbies_amp_interests_in_your_own_words"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:textColorHint="@color/description_text1" />
+
+                <Button
+                    android:id="@+id/btnSubmitHoby"
+                    style="@style/primary_action_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_marginTop="@dimen/dp18"
+
+                    android:layout_marginBottom="@dimen/dp18"
+                    android:background="@drawable/round_effect"
+                    android:onClick="submitFromHobyPage"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White" />
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/layout_register_last_details" />
+
+            <include layout="@layout/layout_register_family_details" />
+
+            <RelativeLayout
+                android:id="@+id/llFamilyAbout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginBottom="@dimen/dp18"
+                android:paddingBottom="@dimen/dp15"
+
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:background="@drawable/login_text_background"
+                    android:id="@+id/et_fabout"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="top"
+                    android:maxLength="250"
+                    android:fontFamily="@font/regular_slnt"
+                    android:gravity="top"
+                    android:hint="@string/about_family_describe_about_the_family_amp_its_members_you_can_also_mention_names_of_relatives_amp_community_members_last_names" android:inputType="textMultiLine"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:textColorHint="@color/description_text1" />
+
+                <Button
+
+                    style="@style/primary_action_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_marginTop="@dimen/dp18"
+
+                    android:layout_marginBottom="@dimen/dp18"
+                    android:background="@drawable/round_effect"
+                    android:onClick="submitFromAbotFamilyPage"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

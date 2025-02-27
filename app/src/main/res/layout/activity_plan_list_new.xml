@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/llView"
+    tools:context="com.matriapp.mobile.activities.PlanListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/gradient_toolbar"
+        android:theme="@style/toolbar_theme"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_toolbar_for_sub_tab"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/gradient_color_1"
+            app:tabIndicatorGravity="bottom"
+            app:tabMaxWidth="0dp"
+            app:tabMode="auto"
+            app:tabRippleColor="@color/white"
+            app:tabSelectedTextColor="@color/gradient_color_1"
+            app:tabTextAppearance="@style/plan_tab_text"
+            app:tabTextColor="@color/sub_tab_default_color" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="871dp"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp16"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:onClick="onWhatsAppCall"
+            android:id="@+id/llNeedHelp"
+            android:background="@drawable/round_secondary_button_border"
+            android:paddingLeft="@dimen/dp5"
+            android:paddingRight="@dimen/dp5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:gravity="center_vertical|center">
+
+            <ImageView
+                android:layout_width="@dimen/dp24"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp5"
+                android:src="@drawable/whatsapp_logo" />
+
+            <TextView
+                android:id="@+id/btnNeedHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center"
+                android:text="@string/need_help_whatsapp_now"
+                android:textAllCaps="false"
+                android:fontFamily="@font/regular_slnt"
+                android:textColor="@color/gradient_color_2"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="@dimen/dp10"
+            style="@style/small_header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="checkPlanHistory"
+            android:text="@string/view_current_plan_amp_plan_history"
+            android:textColor="@color/skip_now" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="No Plans Available"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_id"
+        style="@style/Widget.MyApp.ThemeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+
+
+
+<!--Changed by Harshad-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/white">-->
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@drawable/gradient_toolbar"-->
+<!--        android:theme="@style/toolbar_theme"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:layout_scrollFlags="scroll|enterAlways"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_marginRight="@dimen/dp18"-->
+<!--        android:layout_marginLeft="@dimen/dp18"-->
+<!--        android:layout_below="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/tabs"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:tabIndicatorGravity="bottom"-->
+<!--            app:tabMaxWidth="0dp"-->
+<!--            app:tabGravity="fill"-->
+<!--            app:tabMode="auto"-->
+<!--            app:tabTextAppearance="@style/plan_tab_text"-->
+<!--            android:background="@drawable/gradient_toolbar_for_sub_tab"-->
+<!--            app:tabIndicatorColor="@color/gradient_color_1"-->
+<!--            app:tabSelectedTextColor="@color/gradient_color_1"-->
+<!--            app:tabTextColor="@color/sub_tab_default_color"-->
+<!--            app:tabRippleColor="@color/white"-->
+<!--            />-->
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:layout_marginTop="@dimen/dp28"-->
+<!--            android:layout_marginBottom="@dimen/dp28"-->
+<!--            android:id="@+id/viewpager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+
+<!--    </LinearLayout>-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_no_data"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="No Plans Available"-->
+<!--        android:textColor="@color/red"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:visibility="gone"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_id"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        style="@style/Widget.MyApp.ThemeButton"-->
+<!--        android:text="Continue"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/White"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"/>-->
+
+<!--    <include-->
+<!--        layout="@layout/layout_loader"-->
+<!--        android:visibility="gone"/>-->
+
+<!--</RelativeLayout>-->

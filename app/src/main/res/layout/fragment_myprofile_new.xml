@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llView"
+    android:background="@color/app_background">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <!--                    android:scaleType="centerCrop"-->
+
+
+                    <!--                    <androidx.cardview.widget.CardView-->
+                    <!--android:id="@+id/card"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        app:cardCornerRadius="@dimen/dp10"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="@id/guideline"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="@id/vguideline"-->
+                    <!--                        app:layout_constraintStart_toStartOf="@id/vguideline"-->
+                    <!--                        app:layout_constraintTop_toTopOf="@id/guideline">-->
+
+
+                    <ImageView
+
+                        android:id="@+id/imgCover"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp47"
+                        android:src="@drawable/gradient_toolbar"
+                        app:layout_constraintBottom_toTopOf="@id/guideline"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgProfile1"
+                        android:layout_width="@dimen/dp85"
+                        android:layout_height="@dimen/dp85"
+                        android:src="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/guideline"
+                        app:layout_constraintEnd_toEndOf="@id/vguideline"
+                        app:layout_constraintStart_toStartOf="@id/vguideline"
+                        app:layout_constraintTop_toTopOf="@id/guideline"
+
+                        />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="@dimen/dp80"
+                        android:layout_height="@dimen/dp80"
+                        android:src="@drawable/male"
+                        android:outlineAmbientShadowColor="@color/colorAccent"
+                        app:layout_constraintBottom_toBottomOf="@id/guideline"
+                        app:layout_constraintEnd_toEndOf="@id/vguideline"
+                        app:layout_constraintStart_toStartOf="@id/vguideline"
+                        app:layout_constraintTop_toTopOf="@id/guideline"
+
+                        />
+
+                    <!--                    </androidx.cardview.widget.CardView>-->
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/vguideline"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.50" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.33" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp18"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:orientation="vertical"
+
+                        app:layout_constraintTop_toBottomOf="@id/imgProfile">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            style="@style/profile_medium_header_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center" />
+
+                        <ProgressBar
+                            android:id="@+id/circularProgressbar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:progressTint="@color/dgreen" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvPreview"
+                                style="@style/profile_subtext_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="@string/preview_amp_edit_profile"></TextView>
+
+                            <TextView
+                                android:id="@+id/tvMaitId"
+                                style="@style/profile_small_header_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true" />
+
+
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@color/divider_gray" />
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:weightSum="2"
+                    android:id="@+id/lllabels"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp18"
+                    android:layout_marginTop="@dimen/dp18"
+                    android:layout_marginRight="@dimen/dp18"
+                    android:layout_marginBottom="@dimen/dp18"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/llData">
+                    <TextView
+                        android:text="Free Plan"
+                        android:layout_weight="1"
+                        android:id="@+id/tvPlan"
+                        style="@style/profile_small_header_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="20" />
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/tvPlansList"
+                        style="@style/profile_primium_text"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_gravity="right"
+                        android:background="@drawable/ic_getpremiumplan__1_"
+                        android:drawableTint="@color/colorAccent"
+                        android:padding="@dimen/dp5"></Button>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@color/divider_gray" />
+                <LinearLayout
+                    android:background="@color/white"
+                    android:id="@+id/llNewly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/lllabels">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp18"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/myprofile_header_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/newly_joined" />
+
+                        <TextView
+                            android:id="@+id/btnAll"
+                            style="@style/see_all_action_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="See All"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:adjustViewBounds="true"
+                        android:id="@+id/lv_discover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:layout_marginBottom="@dimen/dp18"
+                        android:divider="@null" />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@color/divider_gray" />
+                <LinearLayout
+                    android:background="@color/white"
+                    android:id="@+id/llRecently"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/lllabels">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp18"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/myprofile_header_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Recently Logged In" />
+
+                        <TextView
+                            android:id="@+id/btnShowAll"
+                            style="@style/see_all_action_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:text="See All"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:adjustViewBounds="true"
+                        android:id="@+id/lv_recent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:layout_marginBottom="@dimen/dp18"
+                        android:divider="@null" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@color/divider_gray" />
+                <LinearLayout
+                    android:background="@color/white"
+                    android:id="@+id/llProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/lllabels">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp18"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/myprofile_header_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Profile Visitors" />
+
+
+                        <TextView
+                            android:id="@+id/btnProfileShowAll"
+                            style="@style/see_all_action_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:text="See All"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:visibility="gone"
+                        android:id="@+id/tvNoProfileData"
+                        style="@style/profile_visitor_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Members who viewed your profile will appear here." />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:adjustViewBounds="true"
+                        android:id="@+id/lv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:layout_marginBottom="@dimen/dp18"
+                        android:divider="@null" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@color/divider_gray" />
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:id="@+id/llPRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/llNewly">
+
+                    <TextView
+                        style="@style/myprofile_header_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp18"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:text="Photo Requests"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp18"
+                        android:layout_marginTop="@dimen/dp18"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:layout_marginBottom="@dimen/dp18"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvRRequestPhoto"
+                            style="@style/photo_subtext_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp18"
+                            android:drawableLeft="@drawable/ic_photorequestreceivedgrey"
+                            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                            android:drawablePadding="@dimen/dp12"
+                            android:gravity="center_vertical"
+                            android:text="Members who requested my photos"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvSRequestPhoto"
+                            style="@style/photo_subtext_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_photorequestsentgrey"
+                            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                            android:drawablePadding="@dimen/dp12"
+                            android:gravity="center_vertical"
+                            android:text="Whose photos I requested"></TextView>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        layout="@layout/layout_loader"/>
+
+</RelativeLayout>

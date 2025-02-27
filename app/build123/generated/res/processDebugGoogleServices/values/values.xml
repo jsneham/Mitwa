@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">886297380981-qm5koptpqj0nkr63lv8ks6p8k4uocpt8.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">886297380981</string>
+    <string name="google_api_key" translatable="false">AIzaSyA5uwr6sKZSglsLYf74RL94Z7dEO5f87lA</string>
+    <string name="google_app_id" translatable="false">1:886297380981:android:74b2174d1604423a58d03c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA5uwr6sKZSglsLYf74RL94Z7dEO5f87lA</string>
+    <string name="google_storage_bucket" translatable="false">milan-abf4c.firebasestorage.app</string>
+    <string name="project_id" translatable="false">milan-abf4c</string>
+</resources>

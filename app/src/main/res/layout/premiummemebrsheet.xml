@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/dp18"
+    android:layout_marginRight="@dimen/dp18"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv"
+            style="@style/conversation_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/dp25"
+            android:maxLines="5"
+            android:text="Your plan does not allow this action. Upgrade to Premium." />
+        <ImageView
+            android:id="@+id/close"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close_pop"
+            android:scaleType="fitEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:fontFamily="@font/medium_slnt"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp18"
+        android:id="@+id/btnUpgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upgrade_to_primium"
+        android:text="Upgrade to Premium Membership"
+        android:textColor="@color/premium_color" />
+
+</LinearLayout>

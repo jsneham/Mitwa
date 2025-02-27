@@ -1,0 +1,257 @@
+<resources>
+    <string name="app_name" translatable="false">Mitwa</string>
+    <string name="facebook_app_id" translatable="false">306163406693480</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb306163406693480</string>
+    <string name="lbl_read_more" translatable="false"><![CDATA[<font color=\'red\'> read more</font>]]></string>
+
+    <string name="str_loading" translatable="false">Loading&#8230;</string>
+
+    <string name="lbl_verify_otp_dialog" translatable="false">Please enter OTP sent to %s.</string>
+
+    <string name="status_sign_in_failed" translatable="false">Sign-in failed</string>
+    <string name="instant_validation" translatable="false">(instant validation)</string>
+    <string name="firebase_status_fmt" translatable="false">Firebase User: %s</string>
+    <string name="hint_success_message" translatable="false">Tell us how you meet each other.</string>
+    <string name="login_with_otp" translatable="false">Login with OTP</string>
+
+    <string name="login" translatable="false">Login</string>
+    <string name="signup" translatable="false">Register Free</string>
+    <string name="title_activity_deshboard" translatable="false">Dashboard</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="section_format" translatable="false">Hello World from section: %1$d</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="default_font" translatable="false">serif</string>
+    <string name="player_error" translatable="false">Error initializing YouTube player: %s</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
+    <string name="error_player" translatable="false">There was an error initializing the YouTubePlayer (%1$s)</string>
+
+    <string name="lbl_welcome_slide_1" translatable="false">Welcome to\nJeevanjodidar Matrimony</string>
+    <string name="lbl_welcome_slide_2" translatable="false">Marriages are made in\nheaven but celebrated on \nearth</string>
+    <string name="lbl_welcome_slide_3" translatable="false">We provide the best\nmatch making service</string>
+
+    <string name="err_msg_for_contact_details" translatable="false">This member only shows his/her contact details if you have already sent him/her express interest, and he/she has accepted it.</string>
+
+    <string name="err_msg_no_intenet_connection" translatable="false">Please check your internet connection!</string>
+    <string name="err_msg_try_again_later" translatable="false">Something went wrong, Please try again later!!!</string>
+    <string name="err_msg_something_went_wrong" translatable="false">Something went wrong. Please logout and signin again.</string>
+    <string name="lbl_not_available" translatable="false">N/A</string>
+    <string name="btn_update" translatable="false">Update</string>
+    <string name="lbl_all_rights_reserved" translatable="false">© All Rights Reserved</string>
+    <!--    Jamegi Jodi -->
+    <string name="shortlist" translatable="false">Shortlist</string>
+    <string name="message" translatable="false">Messages</string>
+    <string name="chat" translatable="false">Message</string>
+    <string name="send_interest" translatable="false">Connect</string>
+    <string name="title_activity_dashboard" translatable="false">MainActivity</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="matches" translatable="false">Matches</string>
+    <string name="interest" translatable="false">Interests</string>
+    <string name="account" translatable="false">Home</string>
+    <string name="recent" translatable="false">Recent</string>
+    <string name="preferred" translatable="false">Preferred</string>
+    <string name="viewed" translatable="false">Viewed</string>
+    <string name="more" translatable="false">More</string>
+    <!--    <string name="matches_based_on_your_set_preferences" translatable="false">Based on your set preferences</string>-->
+    <string name="matches_based_on_your_set_preferences" translatable="false">According to preferences</string>
+    <!--    <string name="edit_preferences" translatable="false">Edit Preferences</string>-->
+    <string name="edit_preferences" translatable="false">Set Partner Preferences</string>
+    <!--    <string name="requested" translatable="false">Requested</string>-->
+    <string name="requested" translatable="false">Interest Sent</string>
+    <string name="verified" translatable="false">VERIFIED</string>
+    <string name="postedby" translatable="false">Posted By </string>
+    <string name="delete" translatable="false">Delete</string>
+    <string name="accept" translatable="false">Accept</string>
+    <string name="reject" translatable="false">Reject</string>
+    <string name="preview_amp_edit_profile" translatable="false"><![CDATA[Preview & Edit Profile]]></string>
+    <string name="get_premium" translatable="false">GET PREMIUM</string>
+    <string name="filter" translatable="false">Filter</string>
+    <string name="preferred_new" translatable="false">Preferred New</string>
+    <string name="account_creation_tip_screen" translatable="false">The account has been created.\nAn email has been sent to the email address you entered while creating the account.
+        Please check the email and activate your account. In case you are unable to find the email, please check your Junk / Spam folders.
+        \nAfter activation, you should be able to login to the account with the registered email address &amp; the password you set for the account.
+        \nOnce you login to your account, go the Settings Section to complete your profile, set your app settings &amp; set your partner preferences.\n\nWe wish you all the best to find your soul mate.</string>
+    <string name="photo_guidelines" translatable="false"><b>Important</b>\n1. Your Photo should be front facing and Your full face should be visible.\n2. Photo uploaded should be very recent solo photo and not a group photo.\n3. Avoid photos with Sunglasses, Goggles, and way too fancy photos.\n4. Try to showcase the best of you. But be the real you.\n5. The most important - Smiling faces are the best. Have your best smile photo.\n\n<b>Very Important</b>\n1. Photo will be approved only after verification and screening.\n2. Photos showing any personal information will be rejected.\n3. Photos having watermark will be rejected.\n4. Photos which are morphed or digitally enhanced will be rejected.\n5. Photos which seem to be irrelevant will be rejected and will lead to suspension of account and membership.\n\n
+    </string>
+    <string name="upload_photo" translatable="false">Photo uploaded successfully. Photo will be approved only after verification.</string>
+    <string name="dummy" translatable="false">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</string>
+    <string name="default_freemium_plan" translatable="false">Default Freemium Plan</string>
+    <string name="view_premium_plans_upgrade" translatable="false">View Premium Plans</string>
+    <string name="refresh_reload" translatable="false"><![CDATA[Refresh & Reload]]></string>
+    <string name="misuse" translatable="false">We are sorry for the inconvenience.\nPlease mention the member\'s Profile ID who misused your profile along with as much as detailed information which you can give us about the misuse. That will help us to intervene well into the matter.\nIn case, you have observed some other member doing some irrelevant or fraudulent activity on this platform, you can mention their Profile ID and write to us in detail about your observation.\nYou can also reach us via the Contact Us section.</string>
+    <string name="delete_profile" translatable="false">Please mention the reason you want to delete your account.\nWe would be glad to know if you are getting married and sad to know if you are leaving this platform for some other reason.
+</string>
+    <string name="newly_joined" translatable="false">Newly Joined</string>
+    <string name="welcome_register" translatable="false">Welcome! Register</string>
+    <string name="who_is_creating_the_account" translatable="false">Who is creating the Account</string>
+    <string name="date_of_birth_dd_mm_yyyy" translatable="false">Date Of Birth (DD/MM/YYYY)</string>
+    <string name="no_pending" translatable="false">No Pending Requests found</string>
+    <string name="no_req_found" translatable="false">No Requests found.</string>
+    <string name="no_messages_found" translatable="false">No Messages found. \nUse the message icon on a any profile to start chat messaging.\n Only Premium Membership can use the chat messaging service.</string>
+    <string name="separete_family" translatable="false">A Nuclear family system is a family of two parents living with their children, also sometimes referred as Separate Family</string>
+    <string name="joint_family" translatable="false">A Joint family system is family which extends beyond the nuclear family as it may include Grandparents, Uncles, Aunts, &amp; Cousins</string>
+    <string name="error_send_msg" translatable="false">Your plan does not allow messaging. Please consider subscribing to other membership plans to send messages and connect to matches faster.</string>
+    <string name="skip_now" translatable="false"><u>Skip Now</u></string>
+    <string name="skip_new" translatable="false"><u>Skip </u></string>
+    <string name="not_mentioned" translatable="false"><i><font color="#CDD1D2" translatable="false">Not Mentioned</font></i></string>
+    <string name="app_version" translatable="false">App Version </string>
+    <string name="built_version" translatable="false">Built Version </string>
+    <string name="comming_version" translatable="false">Coming Soon</string>
+    <string name="terms_version" translatable="false">Kanyadaan Matrimony (the "App") is operated by Kanyadaan Matrimony Services LLC ("Kanyadaan Matrimony Services"). You need to register to be a user of the App ("User"). The Terms of Service given below are binding on all Users of the App.
+
+\n\nKanyadaan Matrimony Services may revise these Terms of Service for this App at any time without notice. By using this App you agree to be bound by the then current version of Terms of Service.
+
+\n\nKanyadaan Matrimony Services reserves the right, at its sole discretion, to deny further or continuing access to the App to any User that it determines has violated any aspect of these Terms of Service.
+
+\n\nKanyadaan Matrimony Services reserves the right, at its sole discretion, to seek and obtain any other remedies available to it pursuant to any applicable laws and regulations or at equity as a result of your breach of these Terms of Service or any other act or omission by you that gives rise to a claim by Kanyadaan Matrimony Services.
+        \n\n<b>Eligibility:</b>
+\n\nThis App is intended for Users between the ages of 18 and 88. By using this App, you represent and warrant that you have the right, authority, and legal capacity to use this site. If at any time Kanyadaan Matrimony Services (in its sole discretion) has any reason to believe that you are not eligible to be a User or that you have made any misrepresentation, it reserves the right to deny you access to the App.
+        \n\n<b>Personal Safety:</b>
+\n\nWe collect a lot of personally identifiable information from Users. However, all such information is safe with us. We will not disclose any of it to anybody, without your consent.
+
+\n\nSimilarly, we caution you to be extremely careful in exchanging personal and contact information with other Users.
+
+\n\nIf any User of this App is harassing you or is using personal information about you for unlawful purposes, we encourage you to first inform local law enforcement authorities and then to alert us using our Contact Us form so that we may take appropriate action to block that User.
+
+\n\nBy accessing this App, you agree to use any personal information provided to you by other Users of this App in a lawful and responsible manner. You further agree that you will not use personal information about other Users of this App for any reason, without the express prior consent of the User(s) who has provided such information to you.
+        \n\n<b>Access and Proprietary Rights:</b>
+\n\nKanyadaan Matrimony Services owns and retains all proprietary rights in the App and the service it provides. The App contains copyrighted material, trademarks, and other such proprietary information.
+
+\n\nUsers are free to access only the information that is provided to them by the App, according to their membership status. The pages and content on this App may not be copied, distributed, modified, published, or transmitted in any other manner, including use for creative work or to sell or promote other products.
+
+\n\nAny such act or attempted act on your part shall constitute a violation of these Terms of Service, and your membership is liable to be terminated by Kanyadaan Matrimony Services without refund of any of your unused Subscription fees.
+
+
+\n\n<b>Cancellations and Refunds:</b>
+\n\nUsers who no longer need the App\'s service can submit a profile deletion request form at any time. The request will be processed within five business days, subsequent to which the user\'s profile and account will be deleted from the Web site.
+
+\n\nKanyadaan Matrimony Services does not offer any refund of fees paid by users for access to value-added services, such as for premium subscription plans, contact packs, Talk Time packs, and Personal Introduction packs. Once a purchase is made, it is final and non-refundable, so as to deter abuse of the App.
+        \n\n<b>Links:</b>
+\n\nUsers who no longer need the App\'s service can submit a profile deletion request form at any time. The request Kanyadaan Matrimony Services may contain links to other Apps. Kanyadaan Matrimony Services is not responsible for the accuracy, reliability or quality of any information or services provided or products sold at such sites. These links are featured here merely for your convenience. Kanyadaan Matrimony Services does not endorse any site not owned by it.
+        \n\n<b>Notices and disclaimers:</b>
+\n\nThe products and services mentioned or promoted on the App, including password-protected information, may be changed by Kanyadaan Matrimony Services at any time, without notice.
+\nInformation about products or services offered by third parties is referred to on the App for information purposes only. The presence of any such information on the App does not mean that Kanyadaan Matrimony Services endorses or recommends such products or services.
+\nKanyadaan Matrimony Services is not responsible for any incorrect or inaccurate content posted on the App.
+\nKanyadaan Matrimony Services cannot be held responsible for any error, omission, interruption, deletion, defect, delay in operation or transmission, communications line failure, theft or destruction or unauthorized access to, or alteration of, any communications.
+\nKanyadaan Matrimony Services is not responsible for any problems or technical malfunction of any computer software, systems, servers or equipment; disruption in any telephone network or lines; traffic congestion on the Internet or at any App; or a combination of all.
+\nUnder no circumstances will Kanyadaan Matrimony Services be responsible for any loss or damage resulting from anyone\'s use of the App or the service provided by it.
+\nThe App and the service provided are "as-is" and Kanyadaan Matrimony Services expressly disclaims any warranty of fitness for a particular purpose or non-infringement.
+\nKanyadaan Matrimony Services cannot guarantee and does not promise any specific results from use of the App and/or the service provided by it.
+\nKanyadaan Matrimony Services does not assume any responsibility or liability for any illegal content posted on the App by any Users. All liability, whether civil or criminal, arising out of any such content that is posted on the App by any User(s) will be that of the User(s). Kanyadaan Matrimony Services reserves its right to claim damages, which it may suffer as a result of such actions, from such User(s).
+\nKanyadaan Matrimony Services expressly disclaims any responsibility or liability for any transactions or interactions between its Users.
+        \n\n<b>Laws and regulations:</b>
+\n\nThese Terms of Service shall be governed by and construed and enforced in accordance with the laws of the State of Delaware, U.S., without regard to its conflict of law provisions.
+
+\n\nIf there is any dispute about or involving the App and/or the service provided, you unconditionally agree that all such disputes and/or differences will be governed by the laws of the State of Delaware and shall be subject to the exclusive jurisdiction of the courts of the State of Delaware only.
+        \n\n<b>Unique and bona fide profile:</b>
+\n\nBy joining the App, you agree that you are a User for bona fide matchmaking purposes, either for yourself or somebody else.
+
+\n\nKanyadaan Matrimony Services closely monitors the activities at the App to ensure its integrity.
+        \n\n<b>Commercial use prohibited:</b>
+\n\nAny commercial endeavors on the App are strictly prohibited. This App is for your personal use only. Organizations, companies, and/or businesses may not join and use the App for any purpose.
+
+        \n\n<b>No User would be allowed to do the following for commercial purposes:</b>
+       \ncollect usernames and/or email addresses by any means
+       \nsend unsolicited email or use personally identifying information
+       \nlink to the App
+\n\nAll such actions will be deemed illegal and/or unauthorized and investigated. Appropriate legal action will be taken, including without limitation, civil, criminal, and injunctive redress. Kanyadaan Matrimony Services may take reasonable steps, at its sole discretion, including limiting the numbers of emails you send or receive and electronically controlling or terminating your e-mail.
+
+\n\nKanyadaan Matrimony Services also reserves the right to deny use of the site at any time, for any reason, at its sole discretion.
+        \n\n<b>Conduct:</b>
+\n\nYou are solely responsible for your interactions with other Users; you should conduct yourself civilly and respectfully. You agree that you shall not under any circumstances harass or make mischief against any other User of the App.
+
+\n\nKanyadaan Matrimony Services reserves the right to determine, at its sole discretion, what constitutes harassment or mischief, and where that has occurred. It may also at its sole discretion, partially or completely deny service to any User who harasses others. However, Kanyadaan Matrimony Services reserves the right to disclose such action to other members, including complainants.
+
+        \n\n<b><u>IF YOU ARE A USER OF THIS APP, IT MEANS YOU ACCEPT THE TERMS OF SERVICE OF THE APP.</u></b>
+
+
+</string>
+    <string name="url" translatable="false">kanyadaan.com</string>
+
+
+    <string name="your_matchmaker_s_name" translatable="false">Your Matchmaker\'s Name</string>
+    <string name="hobbies_amp_interests_in_your_own_words" translatable="false"><![CDATA[Hobbies & Interests (In your own words)]]></string>
+    <string name="i_have_read_amp_understood_the_photo_guidelines" translatable="false"><![CDATA[I have read & understood the photo guidelines.]]></string>
+    <string name="profile_details_education_amp_profession" translatable="false"><![CDATA[Profile Details - Education & Profession]]></string>
+    <string name="profile_details_lifestyle_amp_appearance" translatable="false"><![CDATA[Profile Details - Lifestyle & Appearance]]></string>
+    <string name="hobbies_amp_interest_s" translatable="false"><![CDATA[Hobbies & Interest(s)]]></string>
+    <string name="hobbies_amp_interest_s_in_own_words" translatable="false"><![CDATA[Hobbies & Interest(s) in own words]]></string>
+    <string name="register_amp_create_account_for_free" translatable="false"><![CDATA[Register & Create Account for FREE]]></string>
+    <string name="scan_pay" translatable="false"><![CDATA[Scan & Pay]]></string>
+    <string name="edu_profes" translatable="false"><u>EDUCATION &amp; CAREER</u></string>
+    <string name="religion_amp_astro_details" translatable="false"><u>RELIGION &amp; ASTRO DETAILS</u></string>
+    <string name="religion_amp_horoscope" translatable="false"><![CDATA[Religion & Horoscope]]></string>
+    <string name="to_unlock_contact_no_amp_email_id" translatable="false"><![CDATA[To unlock Contact no.]]></string>
+    <string name="about_family_describe_about_the_family_amp_its_members_you_can_also_mention_names_of_relatives_amp_community_members_last_names" translatable="false"><![CDATA[About Family\n\nDescribe about the family & its members. \nYou can also mention names or last names of Relatives & Community Members]]></string>
+    <string name="birth_amp_other_info" translatable="false"><![CDATA[Birth & Other Info]]></string>
+    <string name="to_unlock_contact_no_amp_email_go_premium" translatable="false"><![CDATA[To Unlock Contact No. Go Premium]]></string>
+    <string name="education_amp_profession" translatable="false"><![CDATA[Education & Profession]]></string>
+    <string name="profile_details_added" translatable="false">Profile Details added successfully.</string>
+    <string name="photo_settings_updated" translatable="false">Photo Settings updated</string>
+    <string name="do_not_show_profiles_without_photo" translatable="false">Do not show profiles without photo</string>
+    <string name="profile_details_astro_more" translatable="false"><![CDATA[Profile Details - Astro & More]]></string>
+    <string name="female_pic" translatable="false">http://www.milann.in/assets/front_end/img/default-photo/female.png</string>
+    <string name="male_pic" translatable="false">http://www.milann.in/assets/front_end/img/default-photo/male.png</string>
+    <string name="family_info" translatable="false"><u>FAMILY INFO</u></string>
+    <string name="basics" translatable="false"><u>BASICS</u></string>
+    <string name="bio_data_created_to_find_suitable_alliance_for_marriage_misuse_may_lead_to_legal_action" translatable="false">Bio-Data created to find suitable alliance for marriage. Misuse may lead to legal action.</string>
+    <string name="minimum_height" translatable="false">Minimum Height</string>
+    <string name="maximum_height" translatable="false">Maximum Height</string>
+    <string name="minimum_age" translatable="false">Minimum Age</string>
+    <string name="maximum_age" translatable="false">Maximum Age</string>
+    <string name="no_results" translatable="false">No available results</string>
+    <string name="new_user_create_account" translatable="false">New User? Create Account</string>
+    <string name="new_user_create_account_login" translatable="false">New User?<font color="#1581CD" translatable="false"> Create Account</font> </string>
+    <string name="new_user_sign_up" translatable="false">New User?<font color="#F33E6D" translatable="false"> Create Account</font> </string>
+    <string name="already_have_an_account_login" translatable="false">Already have an account? Login</string>
+    <string name="create_account" translatable="false">Create Account</string>
+    <string name="okay" translatable="false">Okay</string>
+    <!--    <string name="welcome_text" translatable="false">You can login to your account once your account is verified and approved. After login, please go to the settings section, update your profile and set your partner preferences. \nWishing you the best in your partner search.</string>-->
+    <string name="welcome_text" translatable="false">Account is under review and will be verified in 1-2 days.\n\nAccount can be rejected if any information is found incorrect. Photos will be rejected if photos have not followed the photo guidelines.\n\nOnce the account is verified, you can login to your account with the registered Mobile No. or Profile ID and the password you had set while creating the account. \n\nAfter login, go to Account Settings and update profile.</string>
+    <string name="congrats_account_created_successfully" translatable="false">Congrats!\nAccount created successfully.</string>
+    <string name="great_looks_good" translatable="false">Great! Looks Good.</string>
+    <string name="upload_photo_reg" translatable="false">Upload photo (atleast 1)</string>
+    <string name="mobile_no_profile_id_email_id" translatable="false">Mobile no. / Profile ID / Email ID</string>
+    <string name="item_name" translatable="false">Item Name</string>
+    <string name="view_current_plan_amp_plan_history" translatable="false"><u>View Current Plan &amp; Plan History</u></string>
+    <string name="need_help_whatsapp_now" translatable="false">Need help? WhatsApp Now</string>
+    <string name="phone_number_help" translatable="false">9076094316</string>
+    <string name="whatsapp" translatable="false">https://api.whatsapp.com/send?phone=</string>
+    <string name="welcome" translatable="false">Welcome</string>
+    <string name="need_help" translatable="false">Need Help?</string>
+    <string name="this_number_is_not_registered" translatable="false">"The Mobile number you entered is not registered.\n\nPlease Try Again with another number you may have registered.\nIf you are a New User and don't have an account, Sign Up and Create Account first."</string>
+    <string name="have_an_account_login" translatable="false">Have an account? Login    </string>
+    <string name="no_plan_available" translatable="false">No Plan Available</string>
+    <string name="upgrade_plan" translatable="false">Upgrade Plan</string>
+    <string name="alert" translatable="false">Alert</string>
+    <string name="forgot_password_error" translatable="false">Please use the Need Help? button to talk with support team.\n\nYou can try using the login with OTP by using your registered Mobile Number</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="verification_underProcess" translatable="false">Working....</string>
+    <string name="aadhar_or_pan" translatable="false">Aadhar or PAN</string>
+    <string name="upload_a_clearly_visible_photo_of_your_aadhar_card_or_pan_n_other_members_cannot_see_this_photo" translatable="false">Upload a clearly visible photo of your Aadhar Card or PAN.\nOther members cannot see this photo.</string>
+    <string name="email_verification" translatable="false">Please verify your email address to keep your account more secure and help you recover your password</string>
+    <string name="current_plan" translatable="false">Current Plan</string>
+    <string name="membership" translatable="false">Membership</string>
+    <string name="login_register" translatable="false">Login / Register</string>
+    <string name="id_62" translatable="false">(ID) +62</string>
+
+    <string name="phone_code" translatable="false">+%s</string>
+    <string name="country_name_and_code" translatable="false">%1$s (%2$s)</string>
+    <string name="search_hint">Search…</string>
+    <string name="no_result_found">No result found</string>
+    <string name="select_country">Select Country</string>
+    <string name="country_code_and_phone_code" translatable="false">(%1$s) +%2$s</string>
+    <string name="country_full_name_and_phone_code" translatable="false">%1$s +%2$s</string>
+    <string name="country_full_name_and_name_code" translatable="false">%1$s (%2$s)</string>
+    <string name="country_full_name_name_code_and_phone_code" translatable="false">%1$s (%2$s) +%3$s</string>
+    <string name="error_unregister_carrier_number" translatable="false">EditText for carrier number is not registered. Register it using registerPhoneNumberTextView() before getFullNumber() or setFullNumber().</string>
+
+</resources>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/registration_background2">
+
+    <LinearLayout
+        android:layout_margin="@dimen/dp18"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/alertTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Item Name"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/default_small_text_title1"
+            android:fontFamily="@font/medium_slnt"
+            />
+        <TextView
+            android:maxLines="3"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dp18"
+            android:paddingRight="@dimen/dp18"
+            android:paddingBottom="@dimen/dp5"
+            android:layout_gravity="center"
+            android:id="@+id/label"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Item Name"
+            android:textSize="11sp"
+            android:textColor="@color/registration_hint_color"
+            android:fontFamily="@font/regular_slnt"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+    android:id="@+id/tvMessageOne"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/dp18"
+    android:layout_marginRight="@dimen/dp18">
+    <TextView
+        style="@style/verify_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp16"
+        android:text="Upgrade Membership"
+        android:scaleType="fitEnd"
+        />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/close_pop"
+        android:scaleType="fitEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"/>
+</RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/lighter_gray" />
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18">
+
+        <TextView
+            android:id="@+id/tv"
+            style="@style/conversation_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/dp25"
+            android:maxLines="5"
+            android:text="Upgrade to a Premium Membership plan to unlock contact number and other details." />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/close"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close_pop"
+            android:scaleType="fitEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:fontFamily="@font/medium_slnt"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp18"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:id="@+id/btnUpgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upgrade_to_primium"
+        android:text="Upgrade to Premium Membership"
+        android:textColor="@color/premium_color" />
+
+</LinearLayout>

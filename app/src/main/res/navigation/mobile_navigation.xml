@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_account">
+
+    <fragment
+        android:id="@+id/navigation_matches"
+        android:name="com.matriapp.mobile.fragments.MatchesFragment"
+        android:label="@string/matches"
+        tools:layout="@layout/fragment_matches" />
+
+    <fragment
+        android:id="@+id/navigation_interest"
+        android:name="com.matriapp.mobile.fragments.InterestsFragment"
+        android:label="@string/interest"
+        tools:layout="@layout/fragment_interest" />
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.matriapp.mobile.fragments.MessagesFragment"
+        android:label="@string/message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.matriapp.mobile.fragments.MyProfileFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/navigation_currentPlan"
+        android:name="com.matriapp.mobile.fragments.CurrentPlanFragment"
+        android:label="@string/current_plan"
+        tools:layout="@layout/fragment_current_plan" />
+</navigation>

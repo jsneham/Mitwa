@@ -1,0 +1,17 @@
+com.matriapp.mobile.multispinnerfilter.test.library-recyclerview-1.0.0-0 C:\Users\hp\.gradle\caches\transforms-3\261df384b217b3bd33d7ba50c5e9cfd8\transformed\recyclerview-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-coordinatorlayout-1.0.0-1 C:\Users\hp\.gradle\caches\transforms-3\2d5ab0ff3aa768100fcab88b228bdc9a\transformed\coordinatorlayout-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-transition-1.0.0-2 C:\Users\hp\.gradle\caches\transforms-3\39e1aa690786e4fdd0dbbd76e521f3ec\transformed\transition-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-material-1.0.0-3 C:\Users\hp\.gradle\caches\transforms-3\60dcd9da2706bb79422222bbde9ed01c\transformed\material-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-jetified-material-1.2.2-4 C:\Users\hp\.gradle\caches\transforms-3\84099064c9fb2f1ff79447dc53116427\transformed\jetified-material-1.2.2\res
+com.matriapp.mobile.multispinnerfilter.test.library-core-1.0.0-5 C:\Users\hp\.gradle\caches\transforms-3\86d5db60e39cdd168aad6fdfa830608d\transformed\core-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-appcompat-1.0.0-6 C:\Users\hp\.gradle\caches\transforms-3\afda58f991b9da9d710438da2bc56f89\transformed\appcompat-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-cardview-1.0.0-7 C:\Users\hp\.gradle\caches\transforms-3\c166df0480713fd375893084aa23c069\transformed\cardview-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-media-1.0.0-8 C:\Users\hp\.gradle\caches\transforms-3\f1c543089bd7d94eb6fb8f51ab439772\transformed\media-1.0.0\res
+com.matriapp.mobile.multispinnerfilter.test.library-androidTest-9 D:\Android_SJ\SJ new\Milan\library\build\generated\res\resValues\androidTest\debug
+com.matriapp.mobile.multispinnerfilter.test.library-androidTest-10 D:\Android_SJ\SJ new\Milan\library\build\generated\res\rs\androidTest\debug
+com.matriapp.mobile.multispinnerfilter.test.library-mergeDebugAndroidTestResources-11 D:\Android_SJ\SJ new\Milan\library\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.matriapp.mobile.multispinnerfilter.test.library-mergeDebugAndroidTestResources-12 D:\Android_SJ\SJ new\Milan\library\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.matriapp.mobile.multispinnerfilter.test.library-merged_res-13 D:\Android_SJ\SJ new\Milan\library\build\intermediates\merged_res\debugAndroidTest
+com.matriapp.mobile.multispinnerfilter.test.library-packaged_res-14 D:\Android_SJ\SJ new\Milan\library\build\intermediates\packaged_res\debug
+com.matriapp.mobile.multispinnerfilter.test.library-androidTest-15 D:\Android_SJ\SJ new\Milan\library\src\androidTest\res
+com.matriapp.mobile.multispinnerfilter.test.library-androidTestDebug-16 D:\Android_SJ\SJ new\Milan\library\src\androidTestDebug\res

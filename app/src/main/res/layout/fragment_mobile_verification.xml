@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llView"
+    tools:context=".fragments.ProfileVerification.MobileVerificationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/dp16"
+            android:background="@drawable/verification_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp16">
+
+                <ImageView
+                    android:id="@+id/ivIconPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/profileverification_primaryphone" />
+
+                <TextView
+                    android:id="@+id/tvTitlePrimary"
+                    style="@style/adhar_pan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@+id/ivIconPrimary"
+                    android:text="Primary Contact Number" />
+
+                <TextView
+                    android:id="@+id/tvDetailsPrimary"
+                    style="@style/adhar_pan_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDescription"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:textColor="@color/negative_red"
+                    android:fontFamily="@font/semi_bold_slnt"
+                    android:layout_toRightOf="@+id/ivIconPrimary"
+                    android:text="Verify Now" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    style="@style/adhar_pan_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitlePrimary"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@+id/ivIconPrimary"
+                    android:text="Please verify your mobile number to communicate with members, keep your account safe &amp; secure."
+                    android:layout_marginBottom="@dimen/dp12"/>
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp16"
+            android:background="@drawable/verification_background">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivIconSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/profileverification_primaryphone" />
+
+                <TextView
+                    android:id="@+id/tvTitleSecondary"
+                    style="@style/adhar_pan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp6"
+                    android:layout_toRightOf="@+id/ivIconSecondary"
+                    android:text="Secondary Contact Number"></TextView>
+
+                <TextView
+                    android:id="@+id/tvDetailsSecondary"
+                    style="@style/adhar_pan_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleSecondary"
+                    android:layout_marginLeft="@dimen/dp6"
+                    android:layout_toRightOf="@+id/ivIconSecondary"
+                    android:text="Verify Now"></TextView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/dp16"
+            android:background="@drawable/verification_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivIconWhatsApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/profileverification_whatsapp" />
+
+                <TextView
+                    android:id="@+id/tvTitleWhatsApp"
+                    style="@style/adhar_pan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@+id/ivIconWhatsApp"
+                    android:text="WhatsApp Number"></TextView>
+
+
+
+                <TextView
+                    android:id="@+id/tvWhatsappDesc"
+                    style="@style/adhar_pan_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleWhatsApp"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@+id/ivIconWhatsApp"
+                    android:text="Please verify your WhatsApp number"
+                    android:layout_marginBottom="@dimen/dp12"/>
+
+                <TextView
+                    android:id="@+id/tvDetailsWhatsApp"
+                    style="@style/adhar_pan_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvWhatsappDesc"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@+id/ivIconWhatsApp"
+                    android:text="Verify Now"
+                    android:textColor="@color/negative_red"
+                    android:fontFamily="@font/semi_bold_slnt">
+                </TextView>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+</RelativeLayout>

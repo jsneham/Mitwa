@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/registration_background2">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <CheckBox
+            android:buttonTint="@color/default_small_text_title1"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginLeft="@dimen/dp18"
+            android:paddingTop="@dimen/dp18"
+            android:paddingBottom="@dimen/dp18"
+            android:paddingLeft="@dimen/dp10"
+            android:layout_gravity="center"
+            android:id="@+id/alertTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:text="@string/app_name"
+            android:textColor="@color/default_small_text_title1"
+            android:fontFamily="@font/medium_slnt"
+            />
+        <TextView
+
+            android:maxLines="3"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/label"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Item Name"
+            android:textSize="18sp"
+            android:textColor="@color/default_small_text_title1"
+            android:fontFamily="@font/medium_slnt"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

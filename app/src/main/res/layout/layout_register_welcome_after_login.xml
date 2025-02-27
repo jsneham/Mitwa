@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_welcome_after_basic_regis"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+    <!--    android:background="@drawable/splash1"-->
+
+
+    <TextView
+        android:id="@+id/textView17"
+        style="@style/registration_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:text="Great!"
+        android:textColor="@color/actual_black"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView17"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp18"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/semi_bold_slnt"
+            android:gravity="left"
+            android:text="Thank you for registering.\n\nPlease continue to fill the information and create your account.\n\nThis will be quick and easy. \n\n"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView188"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/semi_bold_slnt"
+            android:gravity="left"
+            android:text="The account has been created.\n\nAn email has been sent to the email address you entered while creating the account.\n\nPlease check the email and activate your account. In case you are unable to find the email, please check your Junk / Spam folders.
+        \n\nAfter activation, you should be able to login to the account with the registered email address &amp; the password you set for the account.
+        \n\Once you login to your account, go to the Settings Section to complete your profile, set your app settings &amp; set your partner preferences.\n\nWe wish you all the best to find your soul mate. "
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            style="@style/primary_action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_effect"
+            android:onClick="continueRegister"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/White" />
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@null"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+            android:fontFamily="@font/medium_slnt"
+            android:gravity="center"
+            android:onClick="OpenLoginScreen"
+            android:text="I will do this later, Login Now"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

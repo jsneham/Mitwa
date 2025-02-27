@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+    <gradient
+        android:startColor="@color/gradient_color_1_fortoolbar"
+        android:endColor="@color/gradient_color_2_fortoolbar"
+        android:angle="0" />
+</shape>
+

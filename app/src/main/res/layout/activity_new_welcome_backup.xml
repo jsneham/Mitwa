@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.NewWelcomeActivity">
+
+    <TextView
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/dp18"
+        android:gravity="right"
+        android:id="@+id/tvOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium_slnt"
+        android:text="Option"
+        android:textColor="@color/registration_hint_color"
+        android:textSize="@dimen/sp14" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp120"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginEnd="@dimen/dp50"
+        android:src="@drawable/logo_mega"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnNewUser"
+            style="@style/secondary_action_button"
+            android:textSize="@dimen/sp16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/new_user_create_account"
+            android:textAllCaps="false" />
+
+        <Button
+            android:textSize="@dimen/sp16"
+            android:id="@+id/btnExistingAccount"
+            style="@style/secondary_action_button_with_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/already_have_an_account_login"
+            android:textAllCaps="false" />
+
+
+        <TextView
+            android:id="@+id/lblTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp36"
+            android:layout_marginRight="@dimen/dp18"
+            android:fontFamily="@font/regular_slnt"
+            android:gravity="center"
+            android:textSize="@dimen/sp11"
+
+            android:textColor="@color/llTerms"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp5"
+            android:id="@+id/root"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium_slnt"
+                android:text="@string/app_version"
+                android:textColor="@color/registration_hint_color"
+                android:textSize="@dimen/sp11" />
+            <TextView
+                android:id="@+id/tvBuild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium_slnt"
+                android:text="@string/built_version"
+                android:textColor="@color/registration_hint_color"
+                android:textSize="@dimen/sp11" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

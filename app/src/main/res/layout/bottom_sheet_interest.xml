@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    >
+    <!--app:layout_behavior="@string/bottom_sheet_behavior"-->
+<!--    app:behavior_hideable="false"-->
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+    <RelativeLayout
+        android:id="@+id/tvMessageOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18">
+
+        <TextView
+            style="@style/verify_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp16"
+            android:text="Express Interest &amp; Connect!"
+            android:scaleType="fitEnd"
+            />
+
+        <ImageView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp16"
+            android:scaleType="fitEnd"
+            android:src="@drawable/close_pop" />
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/lighter_gray" />
+
+            <RelativeLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              >
+
+            <RadioGroup
+                android:id="@+id/grp_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="I am interested in your profile. Please 'Accept' if you are interested."
+                    android:fontFamily="@font/medium_slnt"
+                    android:layout_marginRight="@dimen/dp18"
+                    android:layout_marginLeft="@dimen/dp18"
+                    android:layout_marginTop="@dimen/dp9" />
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="You are the kind of person we have been looking for. Please respond to proceed further."-->
+<!--                    android:fontFamily="@font/medium_slnt"-->
+<!--                    android:layout_marginRight="@dimen/dp18"-->
+<!--                    android:layout_marginLeft="@dimen/dp18"-->
+<!--                    android:layout_marginTop="@dimen/dp9" />-->
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="We liked your profile and interested to take it forward. Please reply at the earliest."
+                    android:fontFamily="@font/medium_slnt"
+                    android:layout_marginRight="@dimen/dp18"
+                    android:layout_marginLeft="@dimen/dp18"
+                    android:layout_marginTop="@dimen/dp9" />
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="You seem to be the kind of person who suits our family. We would like to contact your parents to proceed further."-->
+<!--                    android:fontFamily="@font/medium_slnt"-->
+<!--                    android:layout_marginRight="@dimen/dp18"-->
+<!--                    android:layout_marginLeft="@dimen/dp18"-->
+<!--                    android:layout_marginTop="@dimen/dp9" />-->
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="Your profile matches my sister's/brother's profile. Please 'Accept' if you are interested."-->
+<!--                    android:fontFamily="@font/medium_slnt"-->
+<!--                    android:layout_marginRight="@dimen/dp18"-->
+<!--                    android:layout_marginLeft="@dimen/dp18"-->
+<!--                    android:layout_marginTop="@dimen/dp9" />-->
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="Our children's profile seems to match. Please reply to proceed further."-->
+<!--                    android:fontFamily="@font/medium_slnt"-->
+<!--                    android:layout_marginRight="@dimen/dp18"-->
+<!--                    android:layout_marginLeft="@dimen/dp18"-->
+<!--                    android:layout_marginTop="@dimen/dp9" />-->
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="We find a good life partner in you for our friend. Please reply to proceed further."-->
+<!--                    android:fontFamily="@font/medium_slnt"-->
+<!--                    android:layout_marginRight="@dimen/dp18"-->
+<!--                    android:layout_marginLeft="@dimen/dp18"-->
+<!--                    android:layout_marginTop="@dimen/dp9" />-->
+
+
+            </RadioGroup>
+            </RelativeLayout>
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_send_intr"-->
+<!--                style="@style/primary_action_button_with_elevation"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginTop="@dimen/dp18"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:background="@drawable/round_background"-->
+<!--                android:elevation="0dp"-->
+<!--                android:fontFamily="@font/medium_slnt"-->
+<!--                android:text="Send Interest"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/White"-->
+<!--                android:foreground="?attr/selectableItemBackground"-->
+<!--                />-->
+<!--                style="@style/Widget.MyApp.ThemeButton"-->
+
+        </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send_intr"
+        style="@style/primary_action_button_with_elevation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp12"
+        android:background="@drawable/round_background"
+        android:elevation="0dp"
+        android:fontFamily="@font/medium_slnt"
+        android:text="Send Interest"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        />
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+</LinearLayout>

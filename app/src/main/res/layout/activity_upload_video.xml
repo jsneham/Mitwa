@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="false"
+    android:id="@+id/llProfileCreate"
+    android:focusableInTouchMode="true"
+    tools:context="com.matriapp.mobile.activities.UploadVideoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_toolbar"
+        android:theme="@style/toolbar_theme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_alignParentTop="true"
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <!--                <com.google.android.youtube.player.YouTubePlayerView-->
+            <!--                    android:id="@+id/youTubePlayerView"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="250dp" />-->
+
+            <VideoView
+                android:id="@+id/videoview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <VideoView
+                android:id="@+id/videoview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <!--            <Button-->
+        <!--                android:id="@+id/btn_embd"-->
+        <!--                style="@style/Widget.MyApp.ThemeButton"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="15dp"-->
+        <!--                android:layout_marginTop="16dp"-->
+        <!--                android:layout_marginEnd="15dp"-->
+        <!--                android:layout_marginBottom="10dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:paddingLeft="20dp"-->
+        <!--                android:paddingRight="20dp"-->
+        <!--                android:visibility="visible"-->
+        <!--                android:elevation="5dp"-->
+        <!--                android:text="Upload Youtube"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/white" />-->
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/lay_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/et_url"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="100dp"-->
+            <!--                    android:background="@drawable/shadow_no_radious"-->
+            <!--                    android:ems="10"-->
+            <!--                    android:gravity="top"-->
+            <!--                    android:hint="Paste youtube link"-->
+            <!--                    android:inputType="textMultiLine"-->
+            <!--                    android:paddingLeft="15dp"-->
+            <!--                    android:paddingTop="10dp"-->
+            <!--                    android:visibility="gone"-->
+            <!--                    android:paddingRight="15dp" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/btn_upload"-->
+            <!--                    style="@style/Widget.MyApp.ThemeButton"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:paddingLeft="20dp"-->
+            <!--                    android:paddingRight="20dp"-->
+            <!--                    android:text="Upload Video"-->
+            <!--                    android:textAllCaps="false"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:visibility="visible" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/btn_delete"-->
+            <!--                    style="@style/Widget.MyApp.ThemeButton"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:paddingLeft="20dp"-->
+            <!--                    android:paddingRight="20dp"-->
+            <!--                    android:text="Delete Video"-->
+            <!--                    android:textColor="@color/white" />-->
+
+            <TextView
+                android:id="@+id/tv_delete_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="Delete Video"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_upload"
+                style="@style/Widget.MyApp.ThemeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Upload Video"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"/>
+
+
+            <!--                <Button-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:paddingLeft="20dp"-->
+            <!--                    android:paddingRight="20dp"-->
+            <!--                    android:text="Upload Video"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:id="@+id/btn_upload"-->
+            <!--                    style="@style/Widget.MyApp.ThemeButton"-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+
+</RelativeLayout>

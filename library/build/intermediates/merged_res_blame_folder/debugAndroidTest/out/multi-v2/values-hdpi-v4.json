@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.matriapp.mobile.multispinnerfilter.test.library-mergeDebugAndroidTestResources-11:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\afda58f991b9da9d710438da2bc56f89\\transformed\\appcompat-1.0.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

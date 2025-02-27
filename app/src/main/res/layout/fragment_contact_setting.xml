@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <RelativeLayout
+        android:id="@+id/llPVisibility"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/lbl_contact_visi"
+            android:layout_alignParentTop="true"
+            style="@style/photo_header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp24"
+            android:text="Contact Visibility"></TextView>
+
+        <TextView
+            android:id="@+id/description_text1"
+            android:layout_below="@+id/lbl_contact_visi"
+            android:textSize="13sp"
+            android:layout_marginTop="@dimen/dp18"
+            android:textColor="@color/description_text1"
+            android:fontFamily="@font/regular_slnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginBottom="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp24"
+            android:text="Choose which members can see your contact information.
+Premium members means members who have subscribed to paid membership plans and hence indicate they are serious about the marriage and prefer our service(s)." />
+
+        <LinearLayout
+            android:layout_below="@+id/description_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp24"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvShowPaid"
+                style="@style/photo_subtext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp24"
+                android:drawableLeft="@drawable/ic_active_checked_stroke"
+                android:drawablePadding="@dimen/dp12"
+                android:gravity="center_vertical"
+                android:text="Show to all premium members"></TextView>
+
+            <TextView
+                android:id="@+id/tvShowOnly"
+                style="@style/photo_subtext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp24"
+                android:drawableLeft="@drawable/ic_active_checked_stroke"
+                android:drawablePadding="@dimen/dp12"
+                android:drawableTint="@color/sub_tab_default_color"
+                android:gravity="center_vertical"
+                android:text="Show to all premium members &amp; also show to members whose Interest is accepted"></TextView>
+        </LinearLayout>
+
+        <Button
+            style="@style/primary_action_button"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp24"
+            />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_line_gray"
+            android:padding="10dp"
+            android:text="Limit your visibility to others by selecting from three options below.You can password protect your photos so that only those to whom you send password can view them." />
+
+        <TextView
+            android:id="@+id/lbl_photo_visi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_line_gray"
+            android:padding="10dp"
+            app:drawableTint="@color/colorAccent"
+            android:text=" Photo Visibility"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/grp_visi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Hide for All" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Visible to All" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Visible to only paid members" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

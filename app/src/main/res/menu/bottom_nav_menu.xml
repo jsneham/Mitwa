@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:orderInCategory="1"
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/ic_home_new__1_"
+        android:title="@string/account" />
+
+    <item
+        android:orderInCategory="2"
+        android:id="@+id/navigation_matches"
+        android:icon="@drawable/ic_matches_set_1"
+        android:title="@string/matches" />
+
+    <item
+        android:orderInCategory="3"
+        android:id="@+id/navigation_interest"
+        android:icon="@drawable/ic_interests_set_1"
+        android:title="@string/interest" />
+
+    <item
+        android:orderInCategory="4"
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/ic_messages_set_1"
+        android:title="@string/message" />
+    <item
+        android:orderInCategory="5"
+        android:id="@+id/navigation_currentPlan"
+        android:icon="@drawable/ic_membership_set_1_"
+        android:title="@string/membership" />
+
+
+</menu>

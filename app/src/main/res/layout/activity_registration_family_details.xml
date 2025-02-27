@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp18"
+    android:background="@color/registration_background1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp12">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goBack"
+                android:src="@drawable/back" />
+
+            <TextView
+                style="@style/skip_now_small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:onClick="onSkipClick"
+                android:text="@string/skip_new"
+                android:textColor="@color/skip_now"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                style="@style/small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="Profile Details - Family"
+                android:textColor="@color/colorAccent" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/registration_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlMain"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp18"
+            android:text="Family Details"
+            android:textColor="@color/actual_black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llTwo"
+        android:layout_below="@+id/llOne"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/registration_background2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/registration_background2"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:layout_marginTop="@dimen/dp20"
+                android:id="@+id/et_father_name"
+                style="@style/registration_text_with_editText_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:hint="Enter Father's Name"
+
+                />
+
+
+            <EditText
+                android:id="@+id/et_father_ocu"
+                style="@style/registration_text_with_editText_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_below="@+id/et_father_name"
+                android:hint="Enter Father's Occupation"
+
+                />
+
+
+            <EditText
+                android:id="@+id/et_mother_name"
+                style="@style/registration_text_with_editText_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_below="@+id/et_father_ocu"
+                android:hint="Enter Mother's Name"
+
+                />
+
+
+            <EditText
+                android:id="@+id/et_mother_ocu"
+                style="@style/registration_text_with_editText_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_below="@+id/et_mother_name"
+                android:hint="Enter Mother's Occupation"
+
+                />
+
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/layout_loader"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/registration_background2">
+        <Button
+            android:onClick="validFirst"
+            android:id="@+id/btn_first_submit"
+            style="@style/primary_action_button_with_elevation"
+            android:text="Continue" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

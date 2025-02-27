@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:orderInCategory="50"
+        android:iconTint="@color/black"
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_toolbar_withoutbg__1_"
+        android:title="@string/search_hint"
+        app:showAsAction="always" />
+
+
+
+    <!--    android:icon="@drawable/ic_group_1718"-->
+
+    <item
+        android:id="@+id/action_notifications"
+        android:orderInCategory="50"
+        android:icon="@drawable/ic_menu_notification"
+        app:showAsAction="always"
+        android:title="Notifications"/>
+
+
+    <item
+        android:orderInCategory="50"
+        app:showAsAction="always"
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/user_setting"
+        android:title="@string/action_settings" />
+
+
+    <item
+        android:visible="false"
+        app:showAsAction="always"
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/star_gray_fill"
+        android:title="@string/action_settings" />
+</menu>

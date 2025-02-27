@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:visibility="visible">
+
+
+    <TextView
+        android:id="@+id/textView17"
+        style="@style/registration_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="@dimen/dp18"
+        android:text="@string/congrats_account_created_successfully"
+        android:textColor="@color/actual_black"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView17"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp18"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp15"
+            android:fontFamily="@font/bold_slnt"
+            android:gravity="left"
+            android:text="@string/congrats_account_created_successfully"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp18" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="80dp"
+            android:fontFamily="@font/medium_slnt"
+            android:gravity="left"
+            android:text="@string/welcome_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp18" />
+
+
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnSkip"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/dp20"-->
+        <!--            android:layout_marginBottom="@dimen/dp5"-->
+        <!--            android:background="@drawable/round_background"-->
+        <!--            android:elevation="0dp"-->
+        <!--            android:fontFamily="@font/medium_slnt"-->
+        <!--            android:onClick="OpenLoginScreen"-->
+
+        <!--            android:text="@string/okay"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textColor="@color/White"-->
+        <!--            android:textSize="@dimen/sp18" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/registration_background2">
+
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnSkip"-->
+        <!--            style="@style/primary_action_button_with_elevation"-->
+        <!--            android:onClick="OpenLoginScreen"-->
+        <!--            android:text="Okay! Understood." />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp16"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="onWhatsAppCall"
+                android:id="@+id/llNeedHelp"
+                style="@style/popup_bottom_button"
+                android:layout_marginRight="@dimen/dp12"
+                android:layout_weight="1"
+                android:background="@drawable/round_primary_button_border"
+                android:text="Need Help?"
+                android:textColor="@color/colorAccent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSkip"
+                style="@style/popup_bottom_button"
+                android:onClick="OpenLoginScreen"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@drawable/error_round_primary_button"
+                android:text="Okay, Got it!"
+                android:textColor="@color/white" />
+            <!--        <Button-->
+            <!--            style="@style/popup_bottom_button"-->
+            <!--            android:id="@+id/btnTry"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:background="@drawable/error_round_primary_button"-->
+            <!--            android:text="Try Again"-->
+            <!--            android:textColor="@color/white"/>-->
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+<!--Changed by Harshad-->
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:visibility="visible"-->
+<!--    android:id="@+id/lay_second"-->
+<!--    android:fitsSystemWindows="true"-->
+<!--    >-->
+<!--    &lt;!&ndash;    android:background="@drawable/splashone_new"&ndash;&gt;-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView17"-->
+<!--        style="@style/registration_header_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginLeft="@dimen/dp18"-->
+<!--        android:layout_marginTop="@dimen/dp18"-->
+<!--        android:layout_marginRight="@dimen/dp18"-->
+<!--        android:text="Great! Looks Good."-->
+<!--        android:textColor="@color/actual_black"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_below="@+id/textView17"-->
+<!--        android:id="@+id/linearLayout8"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/dp18"-->
+<!--        android:layout_marginEnd="@dimen/dp18"-->
+<!--        android:layout_marginLeft="@dimen/dp18"-->
+<!--        android:layout_marginTop="@dimen/dp18"-->
+<!--        android:layout_marginRight="@dimen/dp18"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:textSize="18sp"-->
+<!--            android:id="@+id/textView18"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:fontFamily="@font/semi_bold_slnt"-->
+<!--            android:gravity="left"-->
+<!--            android:text="You can login to your account once your account is verified and approved. After login, please go to the settings section, update your profile and set your partner preferences.-->
+<!--            \nWishing you the best in your partner search."-->
+<!--            android:textColor="@color/black" />-->
+<!--        <Button-->
+<!--            style="@style/primary_action_button"-->
+<!--            android:id="@+id/btnSkip"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:background="@drawable/round_effect"-->
+<!--            android:text="@string/login"-->
+<!--            android:textColor="@color/White"-->
+<!--            android:onClick="OpenLoginScreen"-->
+<!--            />-->
+<!--    </LinearLayout>-->
+
+
+
+<!--</RelativeLayout>-->

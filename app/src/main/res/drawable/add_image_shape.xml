@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/ic_baseline_add_24"
+        android:bottom="40dp"
+        android:left="40dp"
+        android:right="40dp"
+        android:top="40dp"/>
+</layer-list>
+
+
+
+<!--<item>-->
+<!--<shape android:shape="rectangle">-->
+<!--    <stroke android:color="#869BA9" android:width="1dp"/>-->
+<!--    <corners android:radius="8dp"/>-->
+<!--    &lt;!&ndash;            <solid android:color="#e6ebed"/>&ndash;&gt;-->
+<!--</shape>-->
+<!--</item>-->

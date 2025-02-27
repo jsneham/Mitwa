@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- App hardware permission -->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+
+    <!-- Devices running Android 12L (API level 32) or lower  -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+
+    <!-- Devices running Android 13 (API level 33) or higher -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- To handle the reselection within the app on devices running Android 14
+         or higher if your app targets Android 14 (API level 34) or higher.  -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.ProfileVerificationActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"  />
+        <activity
+            android:name=".activities.NewWelcomeTwoActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+<!--        <activity-->
+<!--            android:name=".activities.NewWelcomeActivity"-->
+<!--            android:exported="false"-->
+<!--            android:theme="@style/AppTheme.NoActionBar_registration" />-->
+        <activity
+            android:name=".activities.NewWelcomeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
+
+<!--        <activity-->
+<!--            android:name=".activities.Registration.RegisterWelcomeActivity"-->
+<!--            android:exported="false"-->
+<!--            android:theme="@style/AppTheme.NoActionBar" />-->
+        <activity
+            android:name=".activities.Registration.RegisterWelcomeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
+
+
+
+
+        <activity
+            android:name=".activities.Registration.RegistrationTotalChildrenActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationChildrenStatusActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationLastActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationAboutFamilyActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationSistersMarriedActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationNoOfSistersActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationBrotherMarriedActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationNoOFBrothersActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationFamilyDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationFamilyTypeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationFamilyStatusActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationResidentActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationBirthActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationMoonActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationStarActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationHoroscopeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationLanguageActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationHobbyActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationAboutActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationBloodGroupActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationDrinkingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationSmokingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationEatingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationWeightActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationBodyActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationSkinActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationHealthActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationAdditionProfessionActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationDesignationActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationAnnualIncomeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationProfessionActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationWorkingSectorActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationHighEducationActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationCityActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationStateActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationCountryActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationPhotoActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationPartnerActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationMotherToungeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationSubCasteActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationCasteActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationReligionActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationHeightActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationMaritalStatusActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationEmailActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationMainActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Registration.RegistrationCreatedByActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.Registration.RegistrationReferredByActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration" />
+        <activity
+            android:name=".activities.EditPartnerPreferencesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.OnePageProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.PreviewOthersProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.PreviewProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AccountSettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.RegisterPhotoUploadActivity"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".activities.RegisterActivity"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".activities.BlockListActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ViewedContactActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.RecentlyLoginActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.RecentlyJoinActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.NotificationListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AddReviewActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ReviewListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SendInquiryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.VendorDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.VendorListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.FirstVendorCategoryListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.MatchFromAdminActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChatConversationActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AddSuccessStoryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SuccessActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar_login" />
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.IntroActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBarSplash">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.active_act" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- android:theme="@style/AppTheme.NoActionBar_registration" -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:parentActivityName=".activities.IntroActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matriapp.mobile.activities.IntroActivity" />
+        </activity>
+        <activity
+            android:name=".activities.RegisterFirstActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_deshboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.DashboardTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="milann.in"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.DashboardActivityCopy"
+            android:exported="true"
+            android:label="@string/title_activity_deshboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.DashboardTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="milann.in"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar_forgot" />
+        <activity
+            android:name=".activities.ViewMyProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.ManagePhotosActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SearchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.DeleteProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.ContactUsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AllCmsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ReportMissuseActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.LikeProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ShortlistedProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.MessagesActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ConversationActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.QuickMessageActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.message" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matriapp.mobile.activities.QuickMessageActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ManageAccountActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.SavedSearchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ExpressInterestActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.interest_receive" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ViewedProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.CurrentPlanActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.PlanListActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SearchResultActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.OtherUserProfileActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.other" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".activities.MakePaymentsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- <activity -->
+        <!-- android:name=".activities.SuccessActivity" -->
+        <!-- android:screenOrientation="locked" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+        <activity
+            android:name=".activities.PhotoPasswordActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.mkr.matrimony.photo_password" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".activities.UploadVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.UploadIdAndHoroscopeActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.CustomMatchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LoginWithOtpActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.LoginWithOtpActivityWithFirebase"
+            android:theme="@style/AppTheme.NoActionBar_registration"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.EditPreferenceActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.GallaryNewActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.PaymentWebView"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.QuickMessageActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+        </activity> <!-- File provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- End File provider -->
+        <!-- fcm -->
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="General" />
+
+        <receiver
+            android:name=".broadcastreciever.MySMSBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

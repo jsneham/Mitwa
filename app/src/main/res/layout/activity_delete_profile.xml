@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/container"
+    tools:context="com.matriapp.mobile.activities.DeleteProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_toolbar"
+        android:theme="@style/toolbar_theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/dp18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_above="@+id/btn_id"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_text_background">
+            <EditText
+                android:id="@+id/et_about"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:background="@null"
+                android:fontFamily="@font/regular_slnt"
+                android:gravity="top"
+                android:hint="@string/delete_profile"
+                android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:textColorHint="@color/description_text1" />
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                app:tint="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/about_pink" />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_id"
+            style="@style/primary_action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp24"
+            android:background="@drawable/round_effect"
+            android:text="Delete Account"
+            android:textAllCaps="false"
+            android:textColor="@color/White" />
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp18"
+            android:background="@color/text_divider_line" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp24"
+            android:layout_marginBottom="@dimen/dp24"
+            android:fontFamily="@font/regular_slnt"
+            android:text="Submit the below form with reason for deleting your profile."
+            android:textColor="@color/description_text1"
+            android:textSize="13sp" />
+
+        <include
+            layout="@layout/layout_loader"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

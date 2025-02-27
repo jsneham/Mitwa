@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_baseline_add_24"
+        android:gravity="center"
+        android:bottom="125dp"
+        android:left="125dp"
+        android:right="125dp"
+        android:top="125dp">
+
+
+    </item>
+
+</layer-list>
+
+    <!--    <item-->
+    <!--        android:drawable="@drawable/ic_baseline_add_24"-->
+    <!--        android:gravity="center"-->
+    <!--        android:bottom="125dp"-->
+    <!--        android:left="125dp"-->
+    <!--        android:right="125dp"-->
+    <!--        android:top="125dp">-->
+
+
+    <!--    </item>-->
+
+
+    <!--    <item>-->
+    <!--        <shape android:shape="rectangle">-->
+    <!--            <stroke-->
+    <!--                android:width="1dp"-->
+    <!--                android:color="#6c90a9" />-->
+    <!--            <corners android:radius="8dp" />-->
+    <!--            &lt;!&ndash;            <solid android:color="#e6ebed" />&ndash;&gt;-->
+    <!--        </shape>-->
+    <!--    </item>-->
+
+

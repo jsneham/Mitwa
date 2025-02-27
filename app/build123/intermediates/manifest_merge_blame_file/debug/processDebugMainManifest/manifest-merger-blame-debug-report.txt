@@ -1,0 +1,1888 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.matriapp.mobile"
+4    android:versionCode="55"
+5    android:versionName="1.0.56" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:6:5-79
+12-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:7:5-65
+13-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:7:22-62
+14
+15    <uses-feature android:name="android.hardware.camera" />
+15-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:9:5-60
+15-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:9:19-57
+16    <uses-feature android:name="android.hardware.camera.autofocus" />
+16-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:10:5-70
+16-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:10:19-67
+17
+18    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+18-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:11:5-79
+18-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:11:22-76
+19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+19-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:12:5-81
+19-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:12:22-78
+20    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- App hardware permission -->
+20-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:13:5-98
+20-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:13:22-95
+21    <queries>
+21-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:14:5-18:15
+22        <intent>
+22-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:15:9-17:18
+23            <action android:name="android.media.action.IMAGE_CAPTURE" />
+23-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:16:13-73
+23-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:16:21-70
+24        </intent>
+25        <!-- Needs to be explicitly declared on Android R+ -->
+26        <package android:name="com.google.android.apps.maps" />
+26-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:33:9-64
+26-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:33:18-61
+27    </queries>
+28
+29    <!-- Devices running Android 12L (API level 32) or lower -->
+30    <uses-permission
+30-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:22:5-107
+31        android:name="android.permission.READ_EXTERNAL_STORAGE"
+31-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:22:22-77
+32        android:maxSdkVersion="32" />
+32-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:22:78-104
+33
+34    <!-- Devices running Android 13 (API level 33) or higher -->
+35    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+35-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:25:5-76
+35-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:25:22-73
+36    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+36-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:26:5-75
+36-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:26:22-72
+37
+38    <!--
+39         To handle the reselection within the app on devices running Android 14
+40         or higher if your app targets Android 14 (API level 34) or higher.
+41    -->
+42    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+42-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:30:5-90
+42-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:30:22-87
+43    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+43-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:32:5-76
+43-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:32:22-74
+44    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+44-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:11:5-76
+44-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:11:22-73
+45    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+45-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:24:5-68
+45-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:24:22-65
+46    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+46-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:5-82
+46-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:22-79
+47    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+47-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:25:5-79
+47-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:25:22-76
+48    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+48-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:26:5-88
+48-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:26:22-85
+49    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+49-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:27:5-82
+49-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:27:22-79
+50
+51    <uses-feature
+51-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:26:5-28:35
+52        android:glEsVersion="0x00020000"
+52-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:27:9-41
+53        android:required="true" />
+53-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:28:9-32
+54
+55    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+55-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:26:5-110
+55-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:26:22-107
+56
+57    <permission
+57-->[androidx.core:core:1.15.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\a00f594e5e244504ef8b16441ef06bbd\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+58        android:name="com.matriapp.mobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+58-->[androidx.core:core:1.15.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\a00f594e5e244504ef8b16441ef06bbd\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+59        android:protectionLevel="signature" />
+59-->[androidx.core:core:1.15.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\a00f594e5e244504ef8b16441ef06bbd\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+60
+61    <uses-permission android:name="com.matriapp.mobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+61-->[androidx.core:core:1.15.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\a00f594e5e244504ef8b16441ef06bbd\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+61-->[androidx.core:core:1.15.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\a00f594e5e244504ef8b16441ef06bbd\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+62
+63    <application
+63-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:35:5-697:19
+64        android:name="com.matriapp.mobile.application.MyApplication"
+64-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:36:9-50
+65        android:allowBackup="true"
+65-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:37:9-35
+66        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+66-->[androidx.core:core:1.15.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\a00f594e5e244504ef8b16441ef06bbd\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+67        android:debuggable="true"
+68        android:extractNativeLibs="false"
+69        android:icon="@mipmap/ic_launcher_round"
+69-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:38:9-49
+70        android:label="@string/app_name"
+70-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:39:9-41
+71        android:largeHeap="true"
+71-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:40:9-33
+72        android:requestLegacyExternalStorage="true"
+72-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:41:9-52
+73        android:supportsRtl="true"
+73-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:42:9-35
+74        android:theme="@style/AppTheme"
+74-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:43:9-40
+75        android:usesCleartextTraffic="true" >
+75-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:44:9-44
+76        <activity
+76-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:45:9-48:60
+77            android:name="com.matriapp.mobile.activities.ProfileVerificationActivity"
+77-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:46:13-67
+78            android:screenOrientation="locked"
+78-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:47:13-47
+79            android:theme="@style/AppTheme.NoActionBar" />
+79-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:48:13-56
+80        <activity
+80-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:49:9-52:72
+81            android:name="com.matriapp.mobile.activities.NewWelcomeTwoActivity"
+81-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:50:13-61
+82            android:exported="false"
+82-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:51:13-37
+83            android:theme="@style/AppTheme.NoActionBar_registration" />
+83-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:52:13-69
+84        <!-- <activity -->
+85        <!-- android:name=".activities.NewWelcomeActivity" -->
+86        <!-- android:exported="false" -->
+87        <!-- android:theme="@style/AppTheme.NoActionBar_registration" /> -->
+88        <activity
+88-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:57:9-60:68
+89            android:name="com.matriapp.mobile.activities.NewWelcomeActivity"
+89-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:58:13-58
+90            android:exported="false"
+90-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:59:13-37
+91            android:theme="@style/AppTheme.TransparentStatusBar" />
+91-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:60:13-65
+92
+93        <!-- <activity -->
+94        <!-- android:name=".activities.Registration.RegisterWelcomeActivity" -->
+95        <!-- android:exported="false" -->
+96        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+97        <activity
+97-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:66:9-69:68
+98            android:name="com.matriapp.mobile.activities.Registration.RegisterWelcomeActivity"
+98-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:67:13-76
+99            android:exported="false"
+99-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:68:13-37
+100            android:theme="@style/AppTheme.TransparentStatusBar" />
+100-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:69:13-65
+101        <activity
+101-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:74:9-77:72
+102            android:name="com.matriapp.mobile.activities.Registration.RegistrationTotalChildrenActivity"
+102-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:75:13-86
+103            android:exported="false"
+103-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:76:13-37
+104            android:theme="@style/AppTheme.NoActionBar_registration" />
+104-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:77:13-69
+105        <activity
+105-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:78:9-81:72
+106            android:name="com.matriapp.mobile.activities.Registration.RegistrationChildrenStatusActivity"
+106-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:79:13-87
+107            android:exported="false"
+107-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:80:13-37
+108            android:theme="@style/AppTheme.NoActionBar_registration" />
+108-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:81:13-69
+109        <activity
+109-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:82:9-86:58
+110            android:name="com.matriapp.mobile.activities.Registration.RegistrationLastActivity"
+110-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:83:13-77
+111            android:exported="false"
+111-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:84:13-37
+112            android:theme="@style/AppTheme.NoActionBar_registration"
+112-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:85:13-69
+113            android:windowSoftInputMode="adjustResize" />
+113-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:86:13-55
+114        <activity
+114-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:87:9-91:58
+115            android:name="com.matriapp.mobile.activities.Registration.RegistrationAboutFamilyActivity"
+115-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:88:13-84
+116            android:exported="false"
+116-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:89:13-37
+117            android:theme="@style/AppTheme.NoActionBar_registration"
+117-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:90:13-69
+118            android:windowSoftInputMode="adjustResize" />
+118-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:91:13-55
+119        <activity
+119-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:92:9-95:72
+120            android:name="com.matriapp.mobile.activities.Registration.RegistrationSistersMarriedActivity"
+120-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:93:13-87
+121            android:exported="false"
+121-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:94:13-37
+122            android:theme="@style/AppTheme.NoActionBar_registration" />
+122-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:95:13-69
+123        <activity
+123-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:96:9-99:72
+124            android:name="com.matriapp.mobile.activities.Registration.RegistrationNoOfSistersActivity"
+124-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:97:13-84
+125            android:exported="false"
+125-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:98:13-37
+126            android:theme="@style/AppTheme.NoActionBar_registration" />
+126-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:99:13-69
+127        <activity
+127-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:100:9-103:72
+128            android:name="com.matriapp.mobile.activities.Registration.RegistrationBrotherMarriedActivity"
+128-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:101:13-87
+129            android:exported="false"
+129-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:102:13-37
+130            android:theme="@style/AppTheme.NoActionBar_registration" />
+130-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:103:13-69
+131        <activity
+131-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:104:9-107:72
+132            android:name="com.matriapp.mobile.activities.Registration.RegistrationNoOFBrothersActivity"
+132-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:105:13-85
+133            android:exported="false"
+133-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:106:13-37
+134            android:theme="@style/AppTheme.NoActionBar_registration" />
+134-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:107:13-69
+135        <activity
+135-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:108:9-111:71
+136            android:name="com.matriapp.mobile.activities.Registration.RegistrationFamilyDetailsActivity"
+136-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:109:13-86
+137            android:theme="@style/AppTheme.NoActionBar_registration"
+137-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:110:13-69
+138            android:windowSoftInputMode="stateVisible|adjustResize" />
+138-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:111:13-68
+139        <activity
+139-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:112:9-115:72
+140            android:name="com.matriapp.mobile.activities.Registration.RegistrationFamilyTypeActivity"
+140-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:113:13-83
+141            android:exported="false"
+141-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:114:13-37
+142            android:theme="@style/AppTheme.NoActionBar_registration" />
+142-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:115:13-69
+143        <activity
+143-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:116:9-119:72
+144            android:name="com.matriapp.mobile.activities.Registration.RegistrationFamilyStatusActivity"
+144-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:117:13-85
+145            android:exported="false"
+145-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:118:13-37
+146            android:theme="@style/AppTheme.NoActionBar_registration" />
+146-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:119:13-69
+147        <activity
+147-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:120:9-123:72
+148            android:name="com.matriapp.mobile.activities.Registration.RegistrationResidentActivity"
+148-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:121:13-81
+149            android:exported="false"
+149-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:122:13-37
+150            android:theme="@style/AppTheme.NoActionBar_registration" />
+150-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:123:13-69
+151        <activity
+151-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:124:9-128:58
+152            android:name="com.matriapp.mobile.activities.Registration.RegistrationBirthActivity"
+152-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:125:13-78
+153            android:exported="false"
+153-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:126:13-37
+154            android:theme="@style/AppTheme.NoActionBar_registration"
+154-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:127:13-69
+155            android:windowSoftInputMode="adjustResize" />
+155-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:128:13-55
+156        <activity
+156-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:129:9-132:72
+157            android:name="com.matriapp.mobile.activities.Registration.RegistrationMoonActivity"
+157-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:130:13-77
+158            android:exported="false"
+158-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:131:13-37
+159            android:theme="@style/AppTheme.NoActionBar_registration" />
+159-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:132:13-69
+160        <activity
+160-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:133:9-136:72
+161            android:name="com.matriapp.mobile.activities.Registration.RegistrationStarActivity"
+161-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:134:13-77
+162            android:exported="false"
+162-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:135:13-37
+163            android:theme="@style/AppTheme.NoActionBar_registration" />
+163-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:136:13-69
+164        <activity
+164-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:137:9-140:72
+165            android:name="com.matriapp.mobile.activities.Registration.RegistrationHoroscopeActivity"
+165-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:138:13-82
+166            android:exported="false"
+166-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:139:13-37
+167            android:theme="@style/AppTheme.NoActionBar_registration" />
+167-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:140:13-69
+168        <activity
+168-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:141:9-144:72
+169            android:name="com.matriapp.mobile.activities.Registration.RegistrationLanguageActivity"
+169-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:142:13-81
+170            android:exported="false"
+170-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:143:13-37
+171            android:theme="@style/AppTheme.NoActionBar_registration" />
+171-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:144:13-69
+172        <activity
+172-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:145:9-149:58
+173            android:name="com.matriapp.mobile.activities.Registration.RegistrationHobbyActivity"
+173-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:146:13-78
+174            android:exported="false"
+174-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:147:13-37
+175            android:theme="@style/AppTheme.NoActionBar_registration"
+175-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:148:13-69
+176            android:windowSoftInputMode="adjustResize" />
+176-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:149:13-55
+177        <activity
+177-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:150:9-154:58
+178            android:name="com.matriapp.mobile.activities.Registration.RegistrationAboutActivity"
+178-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:151:13-78
+179            android:exported="false"
+179-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:152:13-37
+180            android:theme="@style/AppTheme.NoActionBar_registration"
+180-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:153:13-69
+181            android:windowSoftInputMode="adjustResize" />
+181-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:154:13-55
+182        <activity
+182-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:155:9-158:72
+183            android:name="com.matriapp.mobile.activities.Registration.RegistrationBloodGroupActivity"
+183-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:156:13-83
+184            android:exported="false"
+184-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:157:13-37
+185            android:theme="@style/AppTheme.NoActionBar_registration" />
+185-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:158:13-69
+186        <activity
+186-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:159:9-162:72
+187            android:name="com.matriapp.mobile.activities.Registration.RegistrationDrinkingActivity"
+187-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:160:13-81
+188            android:exported="false"
+188-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:161:13-37
+189            android:theme="@style/AppTheme.NoActionBar_registration" />
+189-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:162:13-69
+190        <activity
+190-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:163:9-166:72
+191            android:name="com.matriapp.mobile.activities.Registration.RegistrationSmokingActivity"
+191-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:164:13-80
+192            android:exported="false"
+192-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:165:13-37
+193            android:theme="@style/AppTheme.NoActionBar_registration" />
+193-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:166:13-69
+194        <activity
+194-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:167:9-170:72
+195            android:name="com.matriapp.mobile.activities.Registration.RegistrationEatingActivity"
+195-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:168:13-79
+196            android:exported="false"
+196-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:169:13-37
+197            android:theme="@style/AppTheme.NoActionBar_registration" />
+197-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:170:13-69
+198        <activity
+198-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:171:9-174:72
+199            android:name="com.matriapp.mobile.activities.Registration.RegistrationWeightActivity"
+199-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:172:13-79
+200            android:exported="false"
+200-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:173:13-37
+201            android:theme="@style/AppTheme.NoActionBar_registration" />
+201-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:174:13-69
+202        <activity
+202-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:175:9-178:72
+203            android:name="com.matriapp.mobile.activities.Registration.RegistrationBodyActivity"
+203-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:176:13-77
+204            android:exported="false"
+204-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:177:13-37
+205            android:theme="@style/AppTheme.NoActionBar_registration" />
+205-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:178:13-69
+206        <activity
+206-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:179:9-182:72
+207            android:name="com.matriapp.mobile.activities.Registration.RegistrationSkinActivity"
+207-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:180:13-77
+208            android:exported="false"
+208-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:181:13-37
+209            android:theme="@style/AppTheme.NoActionBar_registration" />
+209-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:182:13-69
+210        <activity
+210-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:183:9-186:72
+211            android:name="com.matriapp.mobile.activities.Registration.RegistrationHealthActivity"
+211-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:184:13-79
+212            android:exported="false"
+212-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:185:13-37
+213            android:theme="@style/AppTheme.NoActionBar_registration" />
+213-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:186:13-69
+214        <activity
+214-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:187:9-191:58
+215            android:name="com.matriapp.mobile.activities.Registration.RegistrationAdditionProfessionActivity"
+215-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:188:13-91
+216            android:exported="false"
+216-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:189:13-37
+217            android:theme="@style/AppTheme.NoActionBar_registration"
+217-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:190:13-69
+218            android:windowSoftInputMode="adjustResize" />
+218-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:191:13-55
+219        <activity
+219-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:192:9-195:72
+220            android:name="com.matriapp.mobile.activities.Registration.RegistrationDesignationActivity"
+220-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:193:13-84
+221            android:exported="false"
+221-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:194:13-37
+222            android:theme="@style/AppTheme.NoActionBar_registration" />
+222-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:195:13-69
+223        <activity
+223-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:196:9-199:72
+224            android:name="com.matriapp.mobile.activities.Registration.RegistrationAnnualIncomeActivity"
+224-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:197:13-85
+225            android:exported="false"
+225-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:198:13-37
+226            android:theme="@style/AppTheme.NoActionBar_registration" />
+226-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:199:13-69
+227        <activity
+227-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:200:9-203:72
+228            android:name="com.matriapp.mobile.activities.Registration.RegistrationProfessionActivity"
+228-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:201:13-83
+229            android:exported="false"
+229-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:202:13-37
+230            android:theme="@style/AppTheme.NoActionBar_registration" />
+230-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:203:13-69
+231        <activity
+231-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:204:9-207:72
+232            android:name="com.matriapp.mobile.activities.Registration.RegistrationWorkingSectorActivity"
+232-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:205:13-86
+233            android:exported="false"
+233-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:206:13-37
+234            android:theme="@style/AppTheme.NoActionBar_registration" />
+234-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:207:13-69
+235        <activity
+235-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:208:9-211:72
+236            android:name="com.matriapp.mobile.activities.Registration.RegistrationHighEducationActivity"
+236-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:209:13-86
+237            android:exported="false"
+237-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:210:13-37
+238            android:theme="@style/AppTheme.NoActionBar_registration" />
+238-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:211:13-69
+239        <activity
+239-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:212:9-215:72
+240            android:name="com.matriapp.mobile.activities.Registration.RegistrationCityActivity"
+240-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:213:13-77
+241            android:exported="false"
+241-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:214:13-37
+242            android:theme="@style/AppTheme.NoActionBar_registration" />
+242-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:215:13-69
+243        <activity
+243-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:216:9-219:72
+244            android:name="com.matriapp.mobile.activities.Registration.RegistrationStateActivity"
+244-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:217:13-78
+245            android:exported="false"
+245-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:218:13-37
+246            android:theme="@style/AppTheme.NoActionBar_registration" />
+246-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:219:13-69
+247        <activity
+247-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:220:9-223:72
+248            android:name="com.matriapp.mobile.activities.Registration.RegistrationCountryActivity"
+248-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:221:13-80
+249            android:exported="false"
+249-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:222:13-37
+250            android:theme="@style/AppTheme.NoActionBar_registration" />
+250-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:223:13-69
+251        <activity
+251-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:224:9-227:72
+252            android:name="com.matriapp.mobile.activities.Registration.RegistrationPhotoActivity"
+252-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:225:13-78
+253            android:exported="false"
+253-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:226:13-37
+254            android:theme="@style/AppTheme.NoActionBar_registration" />
+254-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:227:13-69
+255        <activity
+255-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:228:9-231:72
+256            android:name="com.matriapp.mobile.activities.Registration.RegistrationPartnerActivity"
+256-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:229:13-80
+257            android:exported="false"
+257-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:230:13-37
+258            android:theme="@style/AppTheme.NoActionBar_registration" />
+258-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:231:13-69
+259        <activity
+259-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:232:9-235:72
+260            android:name="com.matriapp.mobile.activities.Registration.RegistrationMotherToungeActivity"
+260-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:233:13-85
+261            android:exported="false"
+261-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:234:13-37
+262            android:theme="@style/AppTheme.NoActionBar_registration" />
+262-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:235:13-69
+263        <activity
+263-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:236:9-240:58
+264            android:name="com.matriapp.mobile.activities.Registration.RegistrationSubCasteActivity"
+264-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:237:13-81
+265            android:exported="false"
+265-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:238:13-37
+266            android:theme="@style/AppTheme.NoActionBar_registration"
+266-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:239:13-69
+267            android:windowSoftInputMode="adjustResize" />
+267-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:240:13-55
+268        <activity
+268-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:241:9-244:72
+269            android:name="com.matriapp.mobile.activities.Registration.RegistrationCasteActivity"
+269-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:242:13-78
+270            android:exported="false"
+270-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:243:13-37
+271            android:theme="@style/AppTheme.NoActionBar_registration" />
+271-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:244:13-69
+272        <activity
+272-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:245:9-248:72
+273            android:name="com.matriapp.mobile.activities.Registration.RegistrationReligionActivity"
+273-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:246:13-81
+274            android:exported="false"
+274-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:247:13-37
+275            android:theme="@style/AppTheme.NoActionBar_registration" />
+275-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:248:13-69
+276        <activity
+276-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:249:9-252:72
+277            android:name="com.matriapp.mobile.activities.Registration.RegistrationHeightActivity"
+277-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:250:13-79
+278            android:exported="false"
+278-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:251:13-37
+279            android:theme="@style/AppTheme.NoActionBar_registration" />
+279-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:252:13-69
+280        <activity
+280-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:253:9-256:72
+281            android:name="com.matriapp.mobile.activities.Registration.RegistrationMaritalStatusActivity"
+281-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:254:13-86
+282            android:exported="false"
+282-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:255:13-37
+283            android:theme="@style/AppTheme.NoActionBar_registration" />
+283-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:256:13-69
+284        <activity
+284-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:257:9-261:58
+285            android:name="com.matriapp.mobile.activities.Registration.RegistrationEmailActivity"
+285-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:258:13-78
+286            android:exported="false"
+286-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:259:13-37
+287            android:theme="@style/AppTheme.NoActionBar_registration"
+287-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:260:13-69
+288            android:windowSoftInputMode="adjustResize" />
+288-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:261:13-55
+289        <activity
+289-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:262:9-266:58
+290            android:name="com.matriapp.mobile.activities.Registration.RegistrationMainActivity"
+290-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:263:13-77
+291            android:exported="false"
+291-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:264:13-37
+292            android:theme="@style/AppTheme.NoActionBar_registration"
+292-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:265:13-69
+293            android:windowSoftInputMode="adjustResize" />
+293-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:266:13-55
+294        <activity
+294-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:267:9-270:72
+295            android:name="com.matriapp.mobile.activities.Registration.RegistrationCreatedByActivity"
+295-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:268:13-82
+296            android:exported="false"
+296-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:269:13-37
+297            android:theme="@style/AppTheme.NoActionBar_registration" />
+297-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:270:13-69
+298        <activity
+298-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:271:9-274:72
+299            android:name="com.matriapp.mobile.activities.Registration.RegistrationReferredByActivity"
+299-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:272:13-83
+300            android:exported="false"
+300-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:273:13-37
+301            android:theme="@style/AppTheme.NoActionBar_registration" />
+301-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:274:13-69
+302        <activity
+302-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:275:9-280:58
+303            android:name="com.matriapp.mobile.activities.EditPartnerPreferencesActivity"
+303-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:276:13-70
+304            android:exported="false"
+304-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:277:13-37
+305            android:screenOrientation="portrait"
+305-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:278:13-49
+306            android:theme="@style/AppTheme.NoActionBar"
+306-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:279:13-56
+307            android:windowSoftInputMode="adjustResize" />
+307-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:280:13-55
+308        <activity
+308-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:281:9-285:59
+309            android:name="com.matriapp.mobile.activities.OnePageProfileActivity"
+309-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:282:13-62
+310            android:exported="false"
+310-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:283:13-37
+311            android:screenOrientation="portrait"
+311-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:284:13-49
+312            android:theme="@style/AppTheme.NoActionBar" />
+312-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:285:13-56
+313        <activity
+313-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:286:9-289:59
+314            android:name="com.matriapp.mobile.activities.PreviewOthersProfileActivity"
+314-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:287:13-68
+315            android:screenOrientation="portrait"
+315-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:288:13-49
+316            android:theme="@style/AppTheme.NoActionBar" />
+316-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:289:13-56
+317        <activity
+317-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:290:9-294:59
+318            android:name="com.matriapp.mobile.activities.PreviewProfileActivity"
+318-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:291:13-62
+319            android:exported="false"
+319-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:292:13-37
+320            android:screenOrientation="portrait"
+320-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:293:13-49
+321            android:theme="@style/AppTheme.NoActionBar" />
+321-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:294:13-56
+322        <activity
+322-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:295:9-297:59
+323            android:name="com.matriapp.mobile.activities.AccountSettingsActivity"
+323-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:296:13-63
+324            android:theme="@style/AppTheme.NoActionBar" />
+324-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:297:13-56
+325        <activity
+325-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:298:9-300:40
+326            android:name="com.matriapp.mobile.activities.RegisterPhotoUploadActivity"
+326-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:299:13-67
+327            android:exported="false" />
+327-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:300:13-37
+328        <!-- <activity -->
+329        <!-- android:name=".activities.RegisterActivity" -->
+330        <!-- android:exported="false" /> -->
+331        <activity
+331-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:304:9-307:59
+332            android:name="com.matriapp.mobile.activities.BlockListActivity"
+332-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:305:13-57
+333            android:exported="true"
+333-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:306:13-36
+334            android:theme="@style/AppTheme.NoActionBar" />
+334-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:307:13-56
+335        <activity
+335-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:308:9-312:59
+336            android:name="com.matriapp.mobile.activities.ViewedContactActivity"
+336-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:309:13-61
+337            android:exported="true"
+337-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:310:13-36
+338            android:screenOrientation="locked"
+338-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:311:13-47
+339            android:theme="@style/AppTheme.NoActionBar" />
+339-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:312:13-56
+340        <activity
+340-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:313:9-317:59
+341            android:name="com.matriapp.mobile.activities.RecentlyLoginActivity"
+341-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:314:13-61
+342            android:exported="true"
+342-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:315:13-36
+343            android:screenOrientation="locked"
+343-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:316:13-47
+344            android:theme="@style/AppTheme.NoActionBar" />
+344-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:317:13-56
+345        <activity
+345-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:318:9-322:59
+346            android:name="com.matriapp.mobile.activities.RecentlyJoinActivity"
+346-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:319:13-60
+347            android:exported="true"
+347-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:320:13-36
+348            android:screenOrientation="locked"
+348-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:321:13-47
+349            android:theme="@style/AppTheme.NoActionBar" />
+349-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:322:13-56
+350        <activity
+350-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:323:9-327:59
+351            android:name="com.matriapp.mobile.activities.NotificationListActivity"
+351-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:324:13-64
+352            android:exported="true"
+352-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:325:13-36
+353            android:screenOrientation="locked"
+353-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:326:13-47
+354            android:theme="@style/AppTheme.NoActionBar" />
+354-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:327:13-56
+355        <activity
+355-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:328:9-332:59
+356            android:name="com.matriapp.mobile.activities.AddReviewActivity"
+356-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:329:13-57
+357            android:exported="true"
+357-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:330:13-36
+358            android:screenOrientation="locked"
+358-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:331:13-47
+359            android:theme="@style/AppTheme.NoActionBar" />
+359-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:332:13-56
+360        <activity
+360-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:333:9-337:59
+361            android:name="com.matriapp.mobile.activities.ReviewListActivity"
+361-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:334:13-58
+362            android:exported="true"
+362-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:335:13-36
+363            android:screenOrientation="locked"
+363-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:336:13-47
+364            android:theme="@style/AppTheme.NoActionBar" />
+364-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:337:13-56
+365        <activity
+365-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:338:9-342:59
+366            android:name="com.matriapp.mobile.activities.SendInquiryActivity"
+366-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:339:13-59
+367            android:exported="true"
+367-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:340:13-36
+368            android:screenOrientation="locked"
+368-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:341:13-47
+369            android:theme="@style/AppTheme.NoActionBar" />
+369-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:342:13-56
+370        <activity
+370-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:343:9-347:59
+371            android:name="com.matriapp.mobile.activities.VendorDetailsActivity"
+371-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:344:13-61
+372            android:exported="true"
+372-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:345:13-36
+373            android:screenOrientation="locked"
+373-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:346:13-47
+374            android:theme="@style/AppTheme.NoActionBar" />
+374-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:347:13-56
+375        <activity
+375-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:348:9-352:59
+376            android:name="com.matriapp.mobile.activities.VendorListActivity"
+376-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:349:13-58
+377            android:exported="true"
+377-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:350:13-36
+378            android:screenOrientation="locked"
+378-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:351:13-47
+379            android:theme="@style/AppTheme.NoActionBar" />
+379-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:352:13-56
+380        <activity
+380-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:353:9-357:59
+381            android:name="com.matriapp.mobile.activities.FirstVendorCategoryListActivity"
+381-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:354:13-71
+382            android:exported="true"
+382-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:355:13-36
+383            android:screenOrientation="locked"
+383-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:356:13-47
+384            android:theme="@style/AppTheme.NoActionBar" />
+384-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:357:13-56
+385        <activity
+385-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:358:9-362:59
+386            android:name="com.matriapp.mobile.activities.MatchFromAdminActivity"
+386-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:359:13-62
+387            android:exported="true"
+387-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:360:13-36
+388            android:screenOrientation="locked"
+388-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:361:13-47
+389            android:theme="@style/AppTheme.NoActionBar" />
+389-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:362:13-56
+390        <activity
+390-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:363:9-367:59
+391            android:name="com.matriapp.mobile.activities.ChatConversationActivity"
+391-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:364:13-64
+392            android:exported="true"
+392-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:365:13-36
+393            android:screenOrientation="locked"
+393-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:366:13-47
+394            android:theme="@style/AppTheme.NoActionBar" />
+394-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:367:13-56
+395        <activity
+395-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:368:9-372:59
+396            android:name="com.matriapp.mobile.activities.ChatActivity"
+396-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:369:13-52
+397            android:exported="true"
+397-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:370:13-36
+398            android:screenOrientation="locked"
+398-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:371:13-47
+399            android:theme="@style/AppTheme.NoActionBar" />
+399-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:372:13-56
+400        <activity
+400-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:373:9-377:59
+401            android:name="com.matriapp.mobile.activities.AddSuccessStoryActivity"
+401-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:374:13-63
+402            android:exported="true"
+402-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:375:13-36
+403            android:screenOrientation="locked"
+403-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:376:13-47
+404            android:theme="@style/AppTheme.NoActionBar" />
+404-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:377:13-56
+405        <activity
+405-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:378:9-382:59
+406            android:name="com.matriapp.mobile.activities.SuccessActivity"
+406-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:379:13-55
+407            android:exported="true"
+407-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:380:13-36
+408            android:screenOrientation="locked"
+408-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:381:13-47
+409            android:theme="@style/AppTheme.NoActionBar" />
+409-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:382:13-56
+410        <activity
+410-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:383:9-387:65
+411            android:name="com.matriapp.mobile.activities.WelcomeActivity"
+411-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:384:13-55
+412            android:exported="true"
+412-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:385:13-36
+413            android:screenOrientation="locked"
+413-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:386:13-47
+414            android:theme="@style/AppTheme.NoActionBar_login" />
+414-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:387:13-62
+415        <activity
+415-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:388:9-398:20
+416            android:name="com.matriapp.mobile.activities.SplashScreenActivity"
+416-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:389:13-60
+417            android:exported="true"
+417-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:390:13-36
+418            android:screenOrientation="locked"
+418-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:391:13-47
+419            android:theme="@style/AppTheme.NoActionBar" >
+419-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:392:13-56
+420            <intent-filter>
+420-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:393:13-397:29
+421                <action android:name="android.intent.action.MAIN" />
+421-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:394:17-69
+421-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:394:25-66
+422
+423                <category android:name="android.intent.category.LAUNCHER" />
+423-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:396:17-77
+423-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:396:27-74
+424            </intent-filter>
+425        </activity>
+426        <activity
+426-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:399:9-409:20
+427            android:name="com.matriapp.mobile.activities.IntroActivity"
+427-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:400:13-53
+428            android:exported="true"
+428-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:401:13-36
+429            android:screenOrientation="locked"
+429-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:402:13-47
+430            android:theme="@style/AppTheme.NoActionBarSplash" >
+430-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:403:13-62
+431            <intent-filter>
+431-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:404:13-408:29
+432                <action android:name="com.mkr.matrimony.active_act" />
+432-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:405:17-71
+432-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:405:25-68
+433
+434                <category android:name="android.intent.category.DEFAULT" />
+434-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+434-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+435            </intent-filter>
+436        </activity> <!-- android:theme="@style/AppTheme.NoActionBar_registration" -->
+437        <activity
+437-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:410:9-419:20
+438            android:name="com.matriapp.mobile.activities.LoginActivity"
+438-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:411:13-53
+439            android:parentActivityName="com.matriapp.mobile.activities.IntroActivity"
+439-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:412:13-67
+440            android:screenOrientation="locked"
+440-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:413:13-47
+441            android:theme="@style/AppTheme.NoActionBar"
+441-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:414:13-56
+442            android:windowSoftInputMode="stateVisible|adjustPan" >
+442-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:415:13-65
+443            <meta-data
+443-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:416:13-418:80
+444                android:name="android.support.PARENT_ACTIVITY"
+444-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:417:17-63
+445                android:value="com.matriapp.mobile.activities.IntroActivity" />
+445-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:418:17-77
+446        </activity>
+447        <activity
+447-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:420:9-424:58
+448            android:name="com.matriapp.mobile.activities.RegisterFirstActivity"
+448-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:421:13-61
+449            android:screenOrientation="locked"
+449-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:422:13-47
+450            android:theme="@style/AppTheme.NoActionBar_registration"
+450-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:423:13-69
+451            android:windowSoftInputMode="adjustResize" />
+451-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:424:13-55
+452        <activity
+452-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:425:9-442:20
+453            android:name="com.matriapp.mobile.activities.DashboardActivity"
+453-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:426:13-57
+454            android:exported="true"
+454-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:427:13-36
+455            android:label="@string/title_activity_deshboard"
+455-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:428:13-61
+456            android:launchMode="singleTask"
+456-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:429:13-44
+457            android:screenOrientation="locked"
+457-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:430:13-47
+458            android:theme="@style/AppTheme.DashboardTheme" >
+458-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:431:13-59
+459            <intent-filter>
+459-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:432:13-441:29
+460                <action android:name="android.intent.action.VIEW" />
+460-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:17-69
+460-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:25-66
+461
+462                <category android:name="android.intent.category.DEFAULT" />
+462-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+462-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+463                <category android:name="android.intent.category.BROWSABLE" />
+463-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:17-78
+463-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:27-75
+464
+465                <data
+465-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:438:17-440:45
+466                    android:host="milann.in"
+466-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:439:21-45
+467                    android:scheme="http" />
+467-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:440:21-42
+468            </intent-filter>
+469        </activity>
+470        <activity
+470-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:443:9-460:20
+471            android:name="com.matriapp.mobile.activities.DashboardActivityCopy"
+471-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:444:13-61
+472            android:exported="true"
+472-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:445:13-36
+473            android:label="@string/title_activity_deshboard"
+473-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:446:13-61
+474            android:launchMode="singleTask"
+474-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:447:13-44
+475            android:screenOrientation="locked"
+475-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:448:13-47
+476            android:theme="@style/AppTheme.DashboardTheme" >
+476-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:449:13-59
+477            <intent-filter>
+477-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:432:13-441:29
+478                <action android:name="android.intent.action.VIEW" />
+478-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:17-69
+478-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:25-66
+479
+480                <category android:name="android.intent.category.DEFAULT" />
+480-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+480-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+481                <category android:name="android.intent.category.BROWSABLE" />
+481-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:17-78
+481-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:27-75
+482
+483                <data
+483-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:438:17-440:45
+484                    android:host="milann.in"
+484-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:439:21-45
+485                    android:scheme="http" />
+485-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:440:21-42
+486            </intent-filter>
+487        </activity>
+488        <activity
+488-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:461:9-464:66
+489            android:name="com.matriapp.mobile.activities.ForgotPasswordActivity"
+489-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:462:13-62
+490            android:screenOrientation="locked"
+490-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:463:13-47
+491            android:theme="@style/AppTheme.NoActionBar_forgot" />
+491-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:464:13-63
+492        <activity
+492-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:465:9-468:59
+493            android:name="com.matriapp.mobile.activities.ViewMyProfileActivity"
+493-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:466:13-61
+494            android:screenOrientation="locked"
+494-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:467:13-47
+495            android:theme="@style/AppTheme.NoActionBar" />
+495-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:468:13-56
+496        <activity
+496-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:469:9-473:58
+497            android:name="com.matriapp.mobile.activities.EditProfileActivity"
+497-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:470:13-59
+498            android:screenOrientation="locked"
+498-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:471:13-47
+499            android:theme="@style/AppTheme.NoActionBar"
+499-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:472:13-56
+500            android:windowSoftInputMode="adjustResize" />
+500-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:473:13-55
+501        <activity
+501-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:474:9-477:59
+502            android:name="com.matriapp.mobile.activities.ManagePhotosActivity"
+502-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:475:13-60
+503            android:screenOrientation="locked"
+503-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:476:13-47
+504            android:theme="@style/AppTheme.NoActionBar" />
+504-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:477:13-56
+505        <activity
+505-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:478:9-481:59
+506            android:name="com.matriapp.mobile.activities.ChangePasswordActivity"
+506-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:479:13-62
+507            android:screenOrientation="locked"
+507-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:480:13-47
+508            android:theme="@style/AppTheme.NoActionBar" />
+508-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:481:13-56
+509        <activity
+509-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:482:9-486:58
+510            android:name="com.matriapp.mobile.activities.SearchActivity"
+510-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:483:13-54
+511            android:screenOrientation="locked"
+511-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:484:13-47
+512            android:theme="@style/AppTheme.NoActionBar"
+512-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:485:13-56
+513            android:windowSoftInputMode="adjustResize" />
+513-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:486:13-55
+514        <activity
+514-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:487:9-491:58
+515            android:name="com.matriapp.mobile.activities.DeleteProfileActivity"
+515-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:488:13-61
+516            android:screenOrientation="locked"
+516-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:489:13-47
+517            android:theme="@style/AppTheme.NoActionBar"
+517-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:490:13-56
+518            android:windowSoftInputMode="adjustResize" />
+518-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:491:13-55
+519        <activity
+519-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:492:9-495:59
+520            android:name="com.matriapp.mobile.activities.ContactUsActivity"
+520-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:493:13-57
+521            android:screenOrientation="locked"
+521-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:494:13-47
+522            android:theme="@style/AppTheme.NoActionBar" />
+522-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:495:13-56
+523        <activity
+523-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:496:9-499:59
+524            android:name="com.matriapp.mobile.activities.AllCmsActivity"
+524-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:497:13-54
+525            android:screenOrientation="locked"
+525-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:498:13-47
+526            android:theme="@style/AppTheme.NoActionBar" />
+526-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:499:13-56
+527        <activity
+527-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:500:9-504:58
+528            android:name="com.matriapp.mobile.activities.ReportMissuseActivity"
+528-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:501:13-61
+529            android:screenOrientation="locked"
+529-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:502:13-47
+530            android:theme="@style/AppTheme.NoActionBar"
+530-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:503:13-56
+531            android:windowSoftInputMode="adjustResize" />
+531-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:504:13-55
+532        <activity
+532-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:505:9-508:59
+533            android:name="com.matriapp.mobile.activities.LikeProfileActivity"
+533-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:506:13-59
+534            android:screenOrientation="locked"
+534-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:507:13-47
+535            android:theme="@style/AppTheme.NoActionBar" />
+535-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:508:13-56
+536        <activity
+536-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:509:9-512:59
+537            android:name="com.matriapp.mobile.activities.ShortlistedProfileActivity"
+537-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:510:13-66
+538            android:screenOrientation="locked"
+538-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:511:13-47
+539            android:theme="@style/AppTheme.NoActionBar" />
+539-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:512:13-56
+540        <activity
+540-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:513:9-516:59
+541            android:name="com.matriapp.mobile.activities.MessagesActivity"
+541-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:514:13-56
+542            android:screenOrientation="locked"
+542-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:515:13-47
+543            android:theme="@style/AppTheme.NoActionBar" />
+543-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:516:13-56
+544        <activity
+544-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:517:9-533:20
+545            android:name="com.matriapp.mobile.activities.ConversationActivity"
+545-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:518:13-60
+546            android:exported="true"
+546-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:519:13-36
+547            android:launchMode="singleTop"
+547-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:520:13-43
+548            android:parentActivityName="com.matriapp.mobile.activities.QuickMessageActivity"
+548-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:521:13-74
+549            android:screenOrientation="locked"
+549-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:522:13-47
+550            android:theme="@style/AppTheme.NoActionBar" >
+550-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:523:13-56
+551            <intent-filter>
+551-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:524:13-528:29
+552                <action android:name="com.mkr.matrimony.message" />
+552-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:525:17-68
+552-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:525:25-65
+553
+554                <category android:name="android.intent.category.DEFAULT" />
+554-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+554-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+555            </intent-filter>
+556
+557            <meta-data
+557-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:416:13-418:80
+558                android:name="android.support.PARENT_ACTIVITY"
+558-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:417:17-63
+559                android:value="com.matriapp.mobile.activities.QuickMessageActivity" />
+559-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:418:17-77
+560        </activity>
+561        <activity
+561-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:534:9-537:58
+562            android:name="com.matriapp.mobile.activities.ManageAccountActivity"
+562-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:535:13-61
+563            android:screenOrientation="locked"
+563-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:536:13-47
+564            android:theme="@style/AppTheme.NoActionBar" />
+564-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:537:13-56
+565        <activity
+565-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:538:9-541:59
+566            android:name="com.matriapp.mobile.activities.SavedSearchActivity"
+566-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:539:13-59
+567            android:screenOrientation="locked"
+567-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:540:13-47
+568            android:theme="@style/AppTheme.NoActionBar" />
+568-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:541:13-56
+569        <activity
+569-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:542:9-557:20
+570            android:name="com.matriapp.mobile.activities.ExpressInterestActivity"
+570-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:543:13-63
+571            android:exported="true"
+571-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:544:13-36
+572            android:parentActivityName="com.matriapp.mobile.activities.DashboardActivity"
+572-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:545:13-71
+573            android:screenOrientation="locked"
+573-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:546:13-47
+574            android:theme="@style/AppTheme.NoActionBar" >
+574-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:547:13-56
+575            <intent-filter>
+575-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:548:13-552:29
+576                <action android:name="com.mkr.matrimony.interest_receive" />
+576-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:549:17-77
+576-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:549:25-74
+577
+578                <category android:name="android.intent.category.DEFAULT" />
+578-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+578-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+579            </intent-filter>
+580
+581            <meta-data
+581-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:416:13-418:80
+582                android:name="android.support.PARENT_ACTIVITY"
+582-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:417:17-63
+583                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+583-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:418:17-77
+584        </activity>
+585        <activity
+585-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:558:9-561:59
+586            android:name="com.matriapp.mobile.activities.ViewedProfileActivity"
+586-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:559:13-61
+587            android:screenOrientation="locked"
+587-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:560:13-47
+588            android:theme="@style/AppTheme.NoActionBar" />
+588-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:561:13-56
+589        <activity
+589-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:562:9-565:59
+590            android:name="com.matriapp.mobile.activities.CurrentPlanActivity"
+590-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:563:13-59
+591            android:screenOrientation="locked"
+591-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:564:13-47
+592            android:theme="@style/AppTheme.NoActionBar" />
+592-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:565:13-56
+593        <activity
+593-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:566:9-569:59
+594            android:name="com.matriapp.mobile.activities.PlanListActivity"
+594-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:567:13-56
+595            android:screenOrientation="locked"
+595-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:568:13-47
+596            android:theme="@style/AppTheme.NoActionBar" />
+596-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:569:13-56
+597        <activity
+597-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:570:9-573:59
+598            android:name="com.matriapp.mobile.activities.SearchResultActivity"
+598-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:571:13-60
+599            android:screenOrientation="locked"
+599-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:572:13-47
+600            android:theme="@style/AppTheme.NoActionBar" />
+600-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:573:13-56
+601        <activity
+601-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:574:9-589:20
+602            android:name="com.matriapp.mobile.activities.OtherUserProfileActivity"
+602-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:575:13-64
+603            android:exported="true"
+603-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:576:13-36
+604            android:parentActivityName="com.matriapp.mobile.activities.DashboardActivity"
+604-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:577:13-71
+605            android:screenOrientation="locked"
+605-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:578:13-47
+606            android:theme="@style/AppTheme.NoActionBar" >
+606-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:579:13-56
+607            <intent-filter>
+607-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:580:13-584:29
+608                <action android:name="com.mkr.matrimony.other" />
+608-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:581:17-66
+608-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:581:25-63
+609
+610                <category android:name="android.intent.category.DEFAULT" />
+610-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+610-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+611            </intent-filter>
+612
+613            <meta-data
+613-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:416:13-418:80
+614                android:name="android.support.PARENT_ACTIVITY"
+614-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:417:17-63
+615                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+615-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:418:17-77
+616        </activity>
+617        <activity
+617-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:590:9-593:59
+618            android:name="com.matriapp.mobile.activities.MakePaymentsActivity"
+618-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:591:13-60
+619            android:screenOrientation="locked"
+619-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:592:13-47
+620            android:theme="@style/AppTheme.NoActionBar" />
+620-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:593:13-56
+621        <activity
+621-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:594:9-597:72
+622            android:name="com.yalantis.ucrop.UCropActivity"
+622-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:595:13-60
+623            android:screenOrientation="locked"
+623-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:596:13-47
+624            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- <activity -->
+624-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:597:13-69
+625        <!-- android:name=".activities.SuccessActivity" -->
+626        <!-- android:screenOrientation="locked" -->
+627        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+628        <activity
+628-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:601:9-616:20
+629            android:name="com.matriapp.mobile.activities.PhotoPasswordActivity"
+629-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:602:13-61
+630            android:exported="true"
+630-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:603:13-36
+631            android:parentActivityName="com.matriapp.mobile.activities.DashboardActivity"
+631-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:604:13-71
+632            android:screenOrientation="locked"
+632-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:605:13-47
+633            android:theme="@style/AppTheme.NoActionBar" >
+633-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:606:13-56
+634            <intent-filter>
+634-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:607:13-611:29
+635                <action android:name="com.mkr.matrimony.photo_password" />
+635-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:608:17-75
+635-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:608:25-72
+636
+637                <category android:name="android.intent.category.DEFAULT" />
+637-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+637-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+638            </intent-filter>
+639
+640            <meta-data
+640-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:416:13-418:80
+641                android:name="android.support.PARENT_ACTIVITY"
+641-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:417:17-63
+642                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+642-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:418:17-77
+643        </activity>
+644        <activity
+644-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:617:9-621:59
+645            android:name="com.matriapp.mobile.activities.UploadVideoActivity"
+645-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:618:13-59
+646            android:configChanges="keyboardHidden|orientation|screenSize"
+646-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:619:13-74
+647            android:screenOrientation="locked"
+647-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:620:13-47
+648            android:theme="@style/AppTheme.NoActionBar" />
+648-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:621:13-56
+649        <activity
+649-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:622:9-625:59
+650            android:name="com.matriapp.mobile.activities.UploadIdAndHoroscopeActivity"
+650-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:623:13-68
+651            android:screenOrientation="locked"
+651-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:624:13-47
+652            android:theme="@style/AppTheme.NoActionBar" />
+652-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:625:13-56
+653        <activity
+653-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:626:9-629:59
+654            android:name="com.matriapp.mobile.activities.CustomMatchActivity"
+654-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:627:13-59
+655            android:screenOrientation="locked"
+655-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:628:13-47
+656            android:theme="@style/AppTheme.NoActionBar" />
+656-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:629:13-56
+657        <activity
+657-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:630:9-634:58
+658            android:name="com.matriapp.mobile.activities.LoginWithOtpActivity"
+658-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:631:13-60
+659            android:exported="false"
+659-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:632:13-37
+660            android:theme="@style/AppTheme.NoActionBar_registration"
+660-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:633:13-69
+661            android:windowSoftInputMode="adjustResize" />
+661-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:634:13-55
+662        <activity
+662-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:635:9-638:58
+663            android:name="com.matriapp.mobile.activities.LoginWithOtpActivityWithFirebase"
+663-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:636:13-72
+664            android:theme="@style/AppTheme.NoActionBar_registration"
+664-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:637:13-69
+665            android:windowSoftInputMode="adjustResize" />
+665-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:638:13-55
+666        <activity
+666-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:639:9-643:58
+667            android:name="com.matriapp.mobile.activities.EditPreferenceActivity"
+667-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:640:13-62
+668            android:screenOrientation="locked"
+668-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:641:13-47
+669            android:theme="@style/AppTheme.NoActionBar"
+669-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:642:13-56
+670            android:windowSoftInputMode="adjustResize" />
+670-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:643:13-55
+671        <activity
+671-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:644:9-647:59
+672            android:name="com.matriapp.mobile.activities.GallaryNewActivity"
+672-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:645:13-58
+673            android:screenOrientation="locked"
+673-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:646:13-47
+674            android:theme="@style/AppTheme.NoActionBar" />
+674-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:647:13-56
+675        <activity
+675-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:648:9-651:59
+676            android:name="com.matriapp.mobile.activities.PaymentWebView"
+676-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:649:13-54
+677            android:screenOrientation="locked"
+677-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:650:13-47
+678            android:theme="@style/AppTheme.NoActionBar" />
+678-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:651:13-56
+679        <activity
+679-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:652:9-659:20
+680            android:name="com.matriapp.mobile.activities.QuickMessageActivity"
+680-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:653:13-60
+681            android:screenOrientation="locked"
+681-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:654:13-47
+682            android:theme="@style/AppTheme.NoActionBar" >
+682-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:655:13-56
+683            <meta-data
+683-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:416:13-418:80
+684                android:name="android.support.PARENT_ACTIVITY"
+684-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:417:17-63
+685                android:value="com.matriapp.mobile.activities.DashboardActivity" />
+685-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:418:17-77
+686        </activity> <!-- File provider -->
+687        <provider
+688            android:name="androidx.core.content.FileProvider"
+688-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:661:13-62
+689            android:authorities="com.matriapp.mobile.fileprovider"
+689-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:662:13-64
+690            android:exported="false"
+690-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:663:13-37
+691            android:grantUriPermissions="true" >
+691-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:664:13-47
+692            <meta-data
+692-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:665:13-667:54
+693                android:name="android.support.FILE_PROVIDER_PATHS"
+693-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:666:17-67
+694                android:resource="@xml/file_paths" />
+694-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:667:17-51
+695        </provider> <!-- End File provider -->
+696        <!-- fcm -->
+697        <service
+697-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:670:9-677:19
+698            android:name="com.matriapp.mobile.fcm.MyFirebaseMessagingService"
+698-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:671:13-59
+699            android:exported="true" >
+699-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:672:13-36
+700            <intent-filter>
+700-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:674:13-676:29
+701                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+701-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:675:17-78
+701-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:675:25-75
+702            </intent-filter>
+703        </service>
+704
+705        <meta-data
+705-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:679:9-681:62
+706            android:name="com.google.firebase.messaging.default_notification_icon"
+706-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:680:13-83
+707            android:resource="@drawable/notification_icon" />
+707-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:681:13-59
+708        <meta-data
+708-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:682:9-684:53
+709            android:name="com.google.firebase.messaging.default_notification_color"
+709-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:683:13-84
+710            android:resource="@color/colorAccent" />
+710-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:684:13-50
+711        <meta-data
+711-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:685:9-687:39
+712            android:name="com.google.firebase.messaging.default_notification_channel_id"
+712-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:686:13-89
+713            android:value="General" />
+713-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:687:13-36
+714
+715        <receiver
+715-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:689:9-696:20
+716            android:name="com.matriapp.mobile.broadcastreciever.MySMSBroadcastReceiver"
+716-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:690:13-69
+717            android:exported="true"
+717-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:691:13-36
+718            android:permission="com.google.android.gms.auth.api.phone.permission.SEND" >
+718-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:692:13-87
+719            <intent-filter>
+719-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:693:13-695:29
+720                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+720-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:694:17-94
+720-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:694:25-91
+721            </intent-filter>
+722        </receiver>
+723
+724        <activity
+724-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:15:9-21:20
+725            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+725-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:16:13-91
+726            android:exported="false"
+726-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:17:13-37
+727            android:label="@string/places_autocomplete_label"
+727-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:18:13-62
+728            android:theme="@style/PlacesAutocompleteOverlay"
+728-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:19:13-61
+729            android:windowSoftInputMode="adjustResize" >
+729-->[com.google.android.libraries.places:places:4.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\009791907046bf14ccbd4ab972e41fcd\transformed\jetified-places-4.1.0\AndroidManifest.xml:20:13-55
+730        </activity>
+731        <activity
+731-->[pub.devrel:easypermissions:3.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b2dac4e2bd3b26b999e7e6ab6b6cab90\transformed\jetified-easypermissions-3.0.0\AndroidManifest.xml:12:9-16:66
+732            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+732-->[pub.devrel:easypermissions:3.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b2dac4e2bd3b26b999e7e6ab6b6cab90\transformed\jetified-easypermissions-3.0.0\AndroidManifest.xml:13:13-86
+733            android:exported="false"
+733-->[pub.devrel:easypermissions:3.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b2dac4e2bd3b26b999e7e6ab6b6cab90\transformed\jetified-easypermissions-3.0.0\AndroidManifest.xml:14:13-37
+734            android:label=""
+734-->[pub.devrel:easypermissions:3.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b2dac4e2bd3b26b999e7e6ab6b6cab90\transformed\jetified-easypermissions-3.0.0\AndroidManifest.xml:15:13-29
+735            android:theme="@style/EasyPermissions.Transparent" />
+735-->[pub.devrel:easypermissions:3.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b2dac4e2bd3b26b999e7e6ab6b6cab90\transformed\jetified-easypermissions-3.0.0\AndroidManifest.xml:16:13-63
+736
+737        <receiver
+737-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:29:9-40:20
+738            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+738-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:30:13-78
+739            android:exported="true"
+739-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:31:13-36
+740            android:permission="com.google.android.c2dm.permission.SEND" >
+740-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:32:13-73
+741            <intent-filter>
+741-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:33:13-35:29
+742                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+742-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:34:17-81
+742-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:34:25-78
+743            </intent-filter>
+744
+745            <meta-data
+745-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:37:13-39:40
+746                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+746-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:38:17-92
+747                android:value="true" />
+747-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:39:17-37
+748        </receiver>
+749        <!--
+750             FirebaseMessagingService performs security checks at runtime,
+751             but set to not exported to explicitly avoid allowing another app to call it.
+752        -->
+753        <service
+753-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:46:9-53:19
+754            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+754-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:47:13-82
+755            android:directBootAware="true"
+755-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:48:13-43
+756            android:exported="false" >
+756-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:49:13-37
+757            <intent-filter android:priority="-500" >
+757-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:674:13-676:29
+758                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+758-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:675:17-78
+758-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:675:25-75
+759            </intent-filter>
+760        </service>
+761        <service
+761-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:54:9-63:19
+762            android:name="com.google.firebase.components.ComponentDiscoveryService"
+762-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:55:13-84
+763            android:directBootAware="true"
+763-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+764            android:exported="false" >
+764-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:56:13-37
+765            <meta-data
+765-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:57:13-59:85
+766                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+766-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:58:17-122
+767                android:value="com.google.firebase.components.ComponentRegistrar" />
+767-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:59:17-82
+768            <meta-data
+768-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:60:13-62:85
+769                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+769-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:61:17-119
+770                android:value="com.google.firebase.components.ComponentRegistrar" />
+770-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\52a0897da8f0cf5ecc9dc5a2577d6f02\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:62:17-82
+771            <meta-data
+771-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:33:13-35:85
+772                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+772-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:34:17-139
+773                android:value="com.google.firebase.components.ComponentRegistrar" />
+773-->[com.google.android.gms:play-services-measurement-api:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\023179417b33e7e8217416c88f1df780\transformed\jetified-play-services-measurement-api-22.2.0\AndroidManifest.xml:35:17-82
+774            <meta-data
+774-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\adfa473dabc372fef03a54f59e5e3ff5\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+775                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+775-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\adfa473dabc372fef03a54f59e5e3ff5\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+776                android:value="com.google.firebase.components.ComponentRegistrar" />
+776-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\adfa473dabc372fef03a54f59e5e3ff5\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+777            <meta-data
+777-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\adfa473dabc372fef03a54f59e5e3ff5\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+778                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+778-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\adfa473dabc372fef03a54f59e5e3ff5\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+779                android:value="com.google.firebase.components.ComponentRegistrar" />
+779-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\adfa473dabc372fef03a54f59e5e3ff5\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+780            <meta-data
+780-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:69:13-71:85
+781                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+781-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:70:17-109
+782                android:value="com.google.firebase.components.ComponentRegistrar" />
+782-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:71:17-82
+783            <meta-data
+783-->[com.google.firebase:firebase-appcheck-playintegrity:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\d35f3312c03659ac850a7db08f0cabb2\transformed\jetified-firebase-appcheck-playintegrity-18.0.0\AndroidManifest.xml:25:13-27:85
+784                android:name="com.google.firebase.components:com.google.firebase.appcheck.playintegrity.FirebaseAppCheckPlayIntegrityRegistrar"
+784-->[com.google.firebase:firebase-appcheck-playintegrity:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\d35f3312c03659ac850a7db08f0cabb2\transformed\jetified-firebase-appcheck-playintegrity-18.0.0\AndroidManifest.xml:26:17-144
+785                android:value="com.google.firebase.components.ComponentRegistrar" />
+785-->[com.google.firebase:firebase-appcheck-playintegrity:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\d35f3312c03659ac850a7db08f0cabb2\transformed\jetified-firebase-appcheck-playintegrity-18.0.0\AndroidManifest.xml:27:17-82
+786            <meta-data
+786-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b3c7b3a66fe048161c680e4ac61db028\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+787                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+787-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b3c7b3a66fe048161c680e4ac61db028\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+788                android:value="com.google.firebase.components.ComponentRegistrar" />
+788-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b3c7b3a66fe048161c680e4ac61db028\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+789            <meta-data
+789-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b3c7b3a66fe048161c680e4ac61db028\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+790                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+790-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b3c7b3a66fe048161c680e4ac61db028\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+791                android:value="com.google.firebase.components.ComponentRegistrar" />
+791-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b3c7b3a66fe048161c680e4ac61db028\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+792            <meta-data
+792-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\2679efb29922109693f22d892933c59a\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+793                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+793-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\2679efb29922109693f22d892933c59a\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+794                android:value="com.google.firebase.components.ComponentRegistrar" />
+794-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\2679efb29922109693f22d892933c59a\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+795            <meta-data
+795-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+796                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+796-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+797                android:value="com.google.firebase.components.ComponentRegistrar" />
+797-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+798            <meta-data
+798-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\dae7c607a69cc59440d4586615625168\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:25:13-27:85
+799                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+799-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\dae7c607a69cc59440d4586615625168\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:26:17-115
+800                android:value="com.google.firebase.components.ComponentRegistrar" />
+800-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\dae7c607a69cc59440d4586615625168\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:27:17-82
+801        </service>
+802
+803        <activity
+803-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:29:9-46:20
+804            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+804-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:30:13-80
+805            android:excludeFromRecents="true"
+805-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:31:13-46
+806            android:exported="true"
+806-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:32:13-36
+807            android:launchMode="singleTask"
+807-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:33:13-44
+808            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+808-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:34:13-72
+809            <intent-filter>
+809-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:35:13-45:29
+810                <action android:name="android.intent.action.VIEW" />
+810-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:17-69
+810-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:25-66
+811
+812                <category android:name="android.intent.category.DEFAULT" />
+812-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+812-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+813                <category android:name="android.intent.category.BROWSABLE" />
+813-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:17-78
+813-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:27-75
+814
+815                <data
+815-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:438:17-440:45
+816                    android:host="firebase.auth"
+816-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:439:21-45
+817                    android:path="/"
+818                    android:scheme="genericidp" />
+818-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:440:21-42
+819            </intent-filter>
+820        </activity>
+821        <activity
+821-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:47:9-64:20
+822            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+822-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:48:13-79
+823            android:excludeFromRecents="true"
+823-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:49:13-46
+824            android:exported="true"
+824-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:50:13-36
+825            android:launchMode="singleTask"
+825-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:51:13-44
+826            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+826-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:52:13-72
+827            <intent-filter>
+827-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\5facc300d7f98b24b3b3e903f5caabd5\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:53:13-63:29
+828                <action android:name="android.intent.action.VIEW" />
+828-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:17-69
+828-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:433:25-66
+829
+830                <category android:name="android.intent.category.DEFAULT" />
+830-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:17-76
+830-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:407:27-73
+831                <category android:name="android.intent.category.BROWSABLE" />
+831-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:17-78
+831-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:436:27-75
+832
+833                <data
+833-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:438:17-440:45
+834                    android:host="firebase.auth"
+834-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:439:21-45
+835                    android:path="/"
+836                    android:scheme="recaptcha" />
+836-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:440:21-42
+837            </intent-filter>
+838        </activity> <!-- Needs to be explicitly declared on P+ -->
+839        <uses-library
+839-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:39:9-41:40
+840            android:name="org.apache.http.legacy"
+840-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:40:13-50
+841            android:required="false" />
+841-->[com.google.android.gms:play-services-maps:19.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\bb5c5139eb4533883f81f3dc5db15742\transformed\jetified-play-services-maps-19.0.0\AndroidManifest.xml:41:13-37
+842
+843        <provider
+843-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\8.10.2\transforms\5947aeda58e7e24bef9f30d1ad15c8cf\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+844            android:name="com.squareup.picasso.PicassoProvider"
+844-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\8.10.2\transforms\5947aeda58e7e24bef9f30d1ad15c8cf\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+845            android:authorities="com.matriapp.mobile.com.squareup.picasso"
+845-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\8.10.2\transforms\5947aeda58e7e24bef9f30d1ad15c8cf\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+846            android:exported="false" />
+846-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\8.10.2\transforms\5947aeda58e7e24bef9f30d1ad15c8cf\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+847        <provider
+847-->[com.github.jkwiecien:EasyImage:3.0.4] C:\Users\hp\.gradle\caches\8.10.2\transforms\882cc1536b6ba2f6b52d72938f14a50d\transformed\jetified-EasyImage-3.0.4\AndroidManifest.xml:12:9-20:20
+848            android:name="pl.aprilapps.easyphotopicker.EasyImageFileProvider"
+848-->[com.github.jkwiecien:EasyImage:3.0.4] C:\Users\hp\.gradle\caches\8.10.2\transforms\882cc1536b6ba2f6b52d72938f14a50d\transformed\jetified-EasyImage-3.0.4\AndroidManifest.xml:13:13-78
+849            android:authorities="com.matriapp.mobile.easyphotopicker.fileprovider"
+849-->[com.github.jkwiecien:EasyImage:3.0.4] C:\Users\hp\.gradle\caches\8.10.2\transforms\882cc1536b6ba2f6b52d72938f14a50d\transformed\jetified-EasyImage-3.0.4\AndroidManifest.xml:14:13-80
+850            android:exported="false"
+850-->[com.github.jkwiecien:EasyImage:3.0.4] C:\Users\hp\.gradle\caches\8.10.2\transforms\882cc1536b6ba2f6b52d72938f14a50d\transformed\jetified-EasyImage-3.0.4\AndroidManifest.xml:15:13-37
+851            android:grantUriPermissions="true" >
+851-->[com.github.jkwiecien:EasyImage:3.0.4] C:\Users\hp\.gradle\caches\8.10.2\transforms\882cc1536b6ba2f6b52d72938f14a50d\transformed\jetified-EasyImage-3.0.4\AndroidManifest.xml:16:13-47
+852            <meta-data
+852-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:665:13-667:54
+853                android:name="android.support.FILE_PROVIDER_PATHS"
+853-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:666:17-67
+854                android:resource="@xml/easyimage_filepaths" />
+854-->D:\Android_SJ\MitwaNew\app\src\main\AndroidManifest.xml:667:17-51
+855        </provider>
+856        <provider
+856-->[androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\ba3dba653727ab9cee940ec224464ce6\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+857            android:name="androidx.startup.InitializationProvider"
+857-->[androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\ba3dba653727ab9cee940ec224464ce6\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+858            android:authorities="com.matriapp.mobile.androidx-startup"
+858-->[androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\ba3dba653727ab9cee940ec224464ce6\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+859            android:exported="false" >
+859-->[androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\ba3dba653727ab9cee940ec224464ce6\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+860            <meta-data
+860-->[androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\ba3dba653727ab9cee940ec224464ce6\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+861                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+861-->[androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\ba3dba653727ab9cee940ec224464ce6\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+862                android:value="androidx.startup" />
+862-->[androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\ba3dba653727ab9cee940ec224464ce6\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+863            <meta-data
+863-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\hp\.gradle\caches\8.10.2\transforms\a5ec4fdc206c230995a5b9f894851762\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+864                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+864-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\hp\.gradle\caches\8.10.2\transforms\a5ec4fdc206c230995a5b9f894851762\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+865                android:value="androidx.startup" />
+865-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\hp\.gradle\caches\8.10.2\transforms\a5ec4fdc206c230995a5b9f894851762\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+866            <meta-data
+866-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+867                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+867-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+868                android:value="androidx.startup" />
+868-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+869        </provider>
+870
+871        <service
+871-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+872            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+872-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+873            android:enabled="true"
+873-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+874            android:exported="false" >
+874-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+875            <meta-data
+875-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+876                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+876-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+877                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+877-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+878        </service>
+879
+880        <activity
+880-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+881            android:name="androidx.credentials.playservices.HiddenActivity"
+881-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+882            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+882-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+883            android:enabled="true"
+883-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+884            android:exported="false"
+884-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+885            android:fitsSystemWindows="true"
+885-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+886            android:theme="@style/Theme.Hidden" >
+886-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\hp\.gradle\caches\8.10.2\transforms\171bfcf4bd9679f58338fe022db3ced8\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+887        </activity>
+888        <activity
+888-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+889            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+889-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+890            android:excludeFromRecents="true"
+890-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+891            android:exported="false"
+891-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+892            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+892-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+893        <!--
+894            Service handling Google Sign-In user revocation. For apps that do not integrate with
+895            Google Sign-In, this service will never be started.
+896        -->
+897        <service
+897-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+898            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+898-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+899            android:exported="true"
+899-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+900            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+900-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+901            android:visibleToInstantApps="true" />
+901-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\425d4b5d73eb0f176fdc6a6118019dff\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+902
+903        <receiver
+903-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:29:9-33:20
+904            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+904-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:30:13-85
+905            android:enabled="true"
+905-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:31:13-35
+906            android:exported="false" >
+906-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:32:13-37
+907        </receiver>
+908
+909        <service
+909-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:35:9-38:40
+910            android:name="com.google.android.gms.measurement.AppMeasurementService"
+910-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:36:13-84
+911            android:enabled="true"
+911-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:37:13-35
+912            android:exported="false" />
+912-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:38:13-37
+913        <service
+913-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:39:9-43:72
+914            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+914-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:40:13-87
+915            android:enabled="true"
+915-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:41:13-35
+916            android:exported="false"
+916-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:42:13-37
+917            android:permission="android.permission.BIND_JOB_SERVICE" />
+917-->[com.google.android.gms:play-services-measurement:22.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\7f277c92efbdfd0231c639aa29759d7a\transformed\jetified-play-services-measurement-22.2.0\AndroidManifest.xml:43:13-69
+918
+919        <activity
+919-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\87c2dc1e3974fc53188ecaafe28d0dac\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+920            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+920-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\87c2dc1e3974fc53188ecaafe28d0dac\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+921            android:exported="false"
+921-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\87c2dc1e3974fc53188ecaafe28d0dac\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+922            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+922-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\87c2dc1e3974fc53188ecaafe28d0dac\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+923
+924        <provider
+924-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+925            android:name="com.google.firebase.provider.FirebaseInitProvider"
+925-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+926            android:authorities="com.matriapp.mobile.firebaseinitprovider"
+926-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+927            android:directBootAware="true"
+927-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+928            android:exported="false"
+928-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+929            android:initOrder="100" />
+929-->[com.google.firebase:firebase-common:21.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\c35fa7e05f2a6394d2852e765d01dd92\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+930
+931        <uses-library
+931-->[androidx.window:window:1.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\e717340b88c91240ddf73b48c38c135c\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+932            android:name="androidx.window.extensions"
+932-->[androidx.window:window:1.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\e717340b88c91240ddf73b48c38c135c\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+933            android:required="false" />
+933-->[androidx.window:window:1.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\e717340b88c91240ddf73b48c38c135c\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+934        <uses-library
+934-->[androidx.window:window:1.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\e717340b88c91240ddf73b48c38c135c\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+935            android:name="androidx.window.sidecar"
+935-->[androidx.window:window:1.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\e717340b88c91240ddf73b48c38c135c\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+936            android:required="false" />
+936-->[androidx.window:window:1.0.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\e717340b88c91240ddf73b48c38c135c\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+937        <uses-library
+937-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\hp\.gradle\caches\8.10.2\transforms\5852600509e4a449f8ba82eea1b614c3\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:23:9-25:40
+938            android:name="android.ext.adservices"
+938-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\hp\.gradle\caches\8.10.2\transforms\5852600509e4a449f8ba82eea1b614c3\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:24:13-50
+939            android:required="false" />
+939-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\hp\.gradle\caches\8.10.2\transforms\5852600509e4a449f8ba82eea1b614c3\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:25:13-37
+940
+941        <meta-data
+941-->[com.google.android.gms:play-services-basement:18.5.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\72f1b2e6aac95867b5c5e9bdecd3ad50\transformed\jetified-play-services-basement-18.5.0\AndroidManifest.xml:21:9-23:69
+942            android:name="com.google.android.gms.version"
+942-->[com.google.android.gms:play-services-basement:18.5.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\72f1b2e6aac95867b5c5e9bdecd3ad50\transformed\jetified-play-services-basement-18.5.0\AndroidManifest.xml:22:13-58
+943            android:value="@integer/google_play_services_version" />
+943-->[com.google.android.gms:play-services-basement:18.5.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\72f1b2e6aac95867b5c5e9bdecd3ad50\transformed\jetified-play-services-basement-18.5.0\AndroidManifest.xml:23:13-66
+944
+945        <receiver
+945-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+946            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+946-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+947            android:directBootAware="false"
+947-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+948            android:enabled="true"
+948-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+949            android:exported="true"
+949-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+950            android:permission="android.permission.DUMP" >
+950-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+951            <intent-filter>
+951-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+952                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+952-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+952-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+953            </intent-filter>
+954            <intent-filter>
+954-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+955                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+955-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+955-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+956            </intent-filter>
+957            <intent-filter>
+957-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+958                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+958-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+958-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+959            </intent-filter>
+960            <intent-filter>
+960-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+961                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+961-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+961-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\01518f3cb5859277202c4ebd9ab4d0b3\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+962            </intent-filter>
+963        </receiver>
+964
+965        <service
+965-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\170e07fb105d0e761c96e7574aa01981\transformed\jetified-transport-backend-cct-3.2.0\AndroidManifest.xml:26:9-32:19
+966            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+966-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\170e07fb105d0e761c96e7574aa01981\transformed\jetified-transport-backend-cct-3.2.0\AndroidManifest.xml:27:13-103
+967            android:exported="false" >
+967-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\170e07fb105d0e761c96e7574aa01981\transformed\jetified-transport-backend-cct-3.2.0\AndroidManifest.xml:28:13-37
+968            <meta-data
+968-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\170e07fb105d0e761c96e7574aa01981\transformed\jetified-transport-backend-cct-3.2.0\AndroidManifest.xml:29:13-31:39
+969                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+969-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\170e07fb105d0e761c96e7574aa01981\transformed\jetified-transport-backend-cct-3.2.0\AndroidManifest.xml:30:17-94
+970                android:value="cct" />
+970-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\170e07fb105d0e761c96e7574aa01981\transformed\jetified-transport-backend-cct-3.2.0\AndroidManifest.xml:31:17-36
+971        </service>
+972        <service
+972-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b98c156ee8e80b4aae7aaeb015caea1a\transformed\jetified-transport-runtime-3.2.0\AndroidManifest.xml:24:9-28:19
+973            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+973-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b98c156ee8e80b4aae7aaeb015caea1a\transformed\jetified-transport-runtime-3.2.0\AndroidManifest.xml:25:13-117
+974            android:exported="false"
+974-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b98c156ee8e80b4aae7aaeb015caea1a\transformed\jetified-transport-runtime-3.2.0\AndroidManifest.xml:26:13-37
+975            android:permission="android.permission.BIND_JOB_SERVICE" >
+975-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b98c156ee8e80b4aae7aaeb015caea1a\transformed\jetified-transport-runtime-3.2.0\AndroidManifest.xml:27:13-69
+976        </service>
+977
+978        <receiver
+978-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b98c156ee8e80b4aae7aaeb015caea1a\transformed\jetified-transport-runtime-3.2.0\AndroidManifest.xml:30:9-32:40
+979            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+979-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b98c156ee8e80b4aae7aaeb015caea1a\transformed\jetified-transport-runtime-3.2.0\AndroidManifest.xml:31:13-132
+980            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+980-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\hp\.gradle\caches\8.10.2\transforms\b98c156ee8e80b4aae7aaeb015caea1a\transformed\jetified-transport-runtime-3.2.0\AndroidManifest.xml:32:13-37
+981        <activity
+981-->[com.google.android.play:core-common:2.0.3] C:\Users\hp\.gradle\caches\8.10.2\transforms\1b753b042b2d1ce8487c4cb906985d72\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+982            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+982-->[com.google.android.play:core-common:2.0.3] C:\Users\hp\.gradle\caches\8.10.2\transforms\1b753b042b2d1ce8487c4cb906985d72\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:15:13-93
+983            android:exported="false"
+983-->[com.google.android.play:core-common:2.0.3] C:\Users\hp\.gradle\caches\8.10.2\transforms\1b753b042b2d1ce8487c4cb906985d72\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:16:13-37
+984            android:stateNotNeeded="true"
+984-->[com.google.android.play:core-common:2.0.3] C:\Users\hp\.gradle\caches\8.10.2\transforms\1b753b042b2d1ce8487c4cb906985d72\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:17:13-42
+985            android:theme="@style/Theme.PlayCore.Transparent" />
+985-->[com.google.android.play:core-common:2.0.3] C:\Users\hp\.gradle\caches\8.10.2\transforms\1b753b042b2d1ce8487c4cb906985d72\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:18:13-62
+986    </application>
+987
+988</manifest>

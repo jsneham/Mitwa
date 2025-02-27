@@ -1,0 +1,186 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin:  'com.google.gms.google-services'
+
+//shared on github on 22nd OCt//
+
+android {
+    signingConfigs {
+        ReleaseConfig {
+            storeFile file('D:\\Android_SJ\\SJ new\\Milan\\milan_new.jks')
+            storePassword 'Abcd@1234'
+            keyAlias 'key0'
+            keyPassword 'Abcd@1234'
+        }
+    }
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.matriapp.mobile"
+        minSdkVersion 26
+        targetSdkVersion 34
+        versionCode 55
+        versionName "1.0.56"
+        multiDexEnabled true
+        signingConfig signingConfigs.ReleaseConfig
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        //TODO Firebase Phone Auth step2 18/09/2021 milandeveloper
+        debug {
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+        }
+    }
+
+    //add for apk name
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach { output ->
+            def project = "Mitwa_"
+            def date = new Date()
+            def formattedDate = date.format('MMM_dd')
+//            def version = "_version_1.0.21_"
+            def newApkName = project + formattedDate + ".apk"
+            outputFileName = new File(newApkName)
+        }
+    }
+
+    //06/10/2017 add for lamda support
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    //TODO Firebase Phone Auth step3 18/09/2021 milandeveloper
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
+    namespace 'com.matriapp.mobile'
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+}
+
+tasks.withType(KotlinCompile).configureEach {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+
+    //firebase notification
+    implementation platform('com.google.firebase:firebase-bom:33.9.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.google.firebase:firebase-installations:18.0.0'
+    //TODO Firebase Phone Auth step1 18/09/2021 milandeveloper
+    implementation 'com.google.firebase:firebase-auth:23.2.0'
+    implementation 'androidx.browser:browser:1.8.0'
+
+    //Google map
+    implementation 'com.google.android.gms:play-services-maps:19.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+    implementation 'com.google.android.libraries.places:places:4.1.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //youtube player
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+    //country code picker
+//    implementation 'com.github.joielechong:countrycodepicker:2.4.1'
+
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //rounded imageview
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //crop
+    implementation 'com.github.yalantis:ucrop:2.2.6'
+
+    //Added by milandeveloper
+    //Gson
+    implementation 'com.google.code.gson:gson:2.10.1'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    //Lottie animation
+    implementation 'com.airbnb.android:lottie:3.6.0'
+
+    //Country code picker
+    implementation 'com.hbb20:ccp:2.5.1'
+
+    //image chooser
+    implementation 'com.github.jkwiecien:EasyImage:3.0.4'
+
+    //Permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.google.firebase:firebase-appcheck:18.0.0'
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity:18.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation 'com.github.shallcheek:RatingBar:v1.0'
+
+    //fab with actions
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+
+    //Card Slider
+    implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
+
+    //alert
+    implementation 'com.github.tapadoo:alerter:7.2.4'
+
+    //youtube video player
+//    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    implementation "androidx.core:core-ktx:1.15.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //otp edittext
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.8.7'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.8.7'
+
+    //for compressor
+    //    implementation 'id.zelory:compressor:2.1.0'
+    implementation "io.reactivex.rxjava2:rxjava:2.1.0"
+
+    //country code picker
+    api 'io.michaelrocks:libphonenumber-android:8.12.19-2'
+
+
+
+}
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    mavenCentral()
+}

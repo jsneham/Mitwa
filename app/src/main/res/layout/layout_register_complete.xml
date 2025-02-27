@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:id="@+id/lay_second"
+    >
+    <!--    android:background="@drawable/splashone_new"-->
+
+
+    <TextView
+        android:id="@+id/textView17"
+        style="@style/registration_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:text="Great! Looks Good."
+        android:textColor="@color/actual_black"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_below="@+id/textView17"
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp18"
+        android:layout_marginEnd="@dimen/dp18"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/semi_bold_slnt"
+            android:gravity="left"
+            android:text="You can login to your account once your account is verified and approved. After login, please go to the settings section, update your profile and set your partner preferences.
+            \nWishing you the best in your partner search."
+            android:textColor="@color/black" />
+        <Button
+            style="@style/primary_action_button"
+            android:id="@+id/btnSkip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="false"
+            android:background="@drawable/round_effect"
+            android:text="@string/login"
+            android:textColor="@color/White"
+            android:onClick="OpenLoginScreen"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

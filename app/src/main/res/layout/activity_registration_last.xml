@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp18"
+    android:background="@color/registration_background1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:layout_marginBottom="@dimen/dp12">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goBack"
+                android:src="@drawable/back" />
+
+            <TextView
+                style="@style/skip_now_small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:onClick="onSkipClick"
+                android:text="@string/skip_new"
+                android:textColor="@color/skip_now"
+                android:textStyle="italic"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                style="@style/small_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="Profile Details"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/registration_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlMain"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp18"
+            android:text="Alternate Contact No."
+            android:textColor="@color/actual_black" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llTwo"
+        android:layout_below="@+id/llOne"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/registration_background2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/registration_background2"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="left|center_vertical"
+                android:id="@+id/l1"
+                style="@style/registration_text_last_page"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:orientation="horizontal">
+
+                <com.matriapp.mobile.countrycodepicker.CountryCodePicker
+                    android:id="@+id/spin_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    app:ccp_defaultNameCode="IN"
+                    app:ccp_textColor="@color/registration_active_color"
+                    app:ccp_textFont="@font/medium_slnt" />
+
+                <EditText
+                    android:background="@null"
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:hint="Alternate Contact No."
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="@dimen/sp17"
+                    android:textColor="@color/registration_active_color"
+                    android:textColorHint="@color/registration_hint_color" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et_time_call"
+                style="@style/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@+id/v1"
+                android:background="@null"
+                android:hint="Matchmaker's Contact No."
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@color/registration_active_color"
+                android:textColorHint="@color/registration_hint_color"
+                android:visibility="gone">
+
+            </EditText>
+
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/layout_loader"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/registration_background2">
+
+        <Button
+            android:id="@+id/btn_first_submit"
+            style="@style/primary_action_button_with_elevation"
+            android:onClick="validFirst"
+            android:text="Continue" />
+
+    </LinearLayout>
+
+</RelativeLayout>
