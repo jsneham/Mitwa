@@ -39,7 +39,7 @@ import java.util.List;
 public class RegistrationSmokingActivity extends AppCompatActivity implements  CustomHeightAdapter.ListItemClickListener{
 
     private Common common;
-    private SessionManager session;
+    public SessionManager session;
     private RecyclerView rvList;
     private RelativeLayout progressBar,llProfileCreate;
     private ProgressBar pbState;
@@ -91,10 +91,8 @@ public class RegistrationSmokingActivity extends AppCompatActivity implements  C
         try {
             JsonParser jsonParser = new JsonParser();
             JsonObject gsonObject = (JsonObject) jsonParser.parse(MyApplication.getSpinData().toString());
-            return common.getSpinnerListFromArray(gsonObject.get(listJsonKey).getAsJsonArray());
-        } catch (JsonSyntaxException e) {
-            e.printStackTrace();
-        } catch (JsonIOException e) {
+            return Common.getSpinnerListFromArray(gsonObject.get(listJsonKey).getAsJsonArray());
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

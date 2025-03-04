@@ -23,22 +23,19 @@ import com.matriapp.mobile.crystalrangeseekbar.interfaces.OnRangeSeekbarChangeLi
 import com.matriapp.mobile.crystalrangeseekbar.interfaces.OnRangeSeekbarFinalValueListener;
 
 
+
+
+
+/**
+ * Created by owais.ali on 6/20/2016.
+ */
 public class CrystalRangeSeekbar extends View {
 
-    //////////////////////////////////////////
-    // PRIVATE CONSTANTS
-    //////////////////////////////////////////
-
     private static final int INVALID_POINTER_ID = 255;
-    //private static final int DEFAULT_THUMB_WIDTH = 80;
-    //private static final int DEFAULT_THUMB_HEIGHT = 80;
 
     private final float NO_STEP = -1f;
     private final float NO_FIXED_GAP = -1f;
 
-    //////////////////////////////////////////
-    // PUBLIC CONSTANTS CLASS
-    //////////////////////////////////////////
 
     public static final class DataType{
         public static final int LONG        = 0;
@@ -1150,4 +1147,3 @@ public class CrystalRangeSeekbar extends View {
 
     }
 }
-

@@ -40,8 +40,8 @@ public class RegistrationBloodGroupActivity extends AppCompatActivity implements
 
     private Common common;
     private SessionManager session;
-    private RecyclerView rvList,llProfileCreate;
-    private RelativeLayout progressBar;
+    private RecyclerView rvList;
+    private RelativeLayout progressBar,llProfileCreate;
     private ProgressBar pbState;
     private String blood_id = "", ragister_id;
     private EditText editText;

@@ -177,6 +177,9 @@ public class AdvanceSearchFragment extends Fragment implements SpinnerListener {
             tv_max_age = view.findViewById(R.id.search_tv_max_age);
             range_age = view.findViewById(R.id.search_range_age);
 
+
+
+
             JSONArray arr = MyApplication.getSpinData().getJSONArray("height_list");
             JSONObject obj = arr.getJSONObject(0);
             JSONObject obj1 = arr.getJSONObject(arr.length() - 1);
