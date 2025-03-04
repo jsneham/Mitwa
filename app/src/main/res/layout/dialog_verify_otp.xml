@@ -1,243 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:id="@+id/llView"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/cardView"
+    app:cardCornerRadius="@dimen/dp10">
 
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="0dp"
-        app:cardUseCompatPadding="true">
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp16">
 
         <LinearLayout
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvMessage"
+                style="@style/verify_header_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:drawableEnd="@drawable/close_pop"
+                android:text="Verify Mobile Number" />
 
-                <TextView
-                    android:id="@+id/tvMessage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="Verify Mobile Number" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp16"
+                android:background="@color/lighter_gray" />
+
+            <LinearLayout
+
+                android:id="@+id/llOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
 
                 <LinearLayout
                     android:id="@+id/layoutMobileNumber"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp36"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:gravity="center|center_vertical"
                     android:orientation="horizontal">
 
-                    <com.matriapp.mobile.countrycodepicker.CountryCodePicker
+                    <com.matri.app.countrycodepicker.CountryCodePicker
                         android:id="@+id/spin_code"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="0.40"
-                        android:background="@drawable/background_with_shadow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:background="@null"
                         android:focusable="false"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
                         app:ccp_clickable="false"
-                        app:ccp_defaultNameCode="IN"/>
+                        app:ccp_defaultNameCode="IN"
+                        app:ccp_textColor="@color/llTerms"
+                        app:ccp_textFont="@font/medium_slnt" />
 
-                    <View
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"/>
 
                     <EditText
                         android:id="@+id/txtPhoneNumber"
-                        style="@style/register_edittext_style"
-                        android:layout_width="0dp"
-                        android:layout_weight=".60"
-                        android:layout_height="50dp"
-                        android:hint="Mobile Number*"
-                        android:focusable="false"
-                        android:inputType="numberDecimal"/>
-
+                        style="@style/verify_mobile_text_first_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginRight="@dimen/dp16"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:hint="Mobile Number"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10"
+                        android:textColor="@color/llTerms" />
                 </LinearLayout>
 
-
-                <TextView
-                    android:id="@+id/tvMobileNumber"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="15dp"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    android:textColor="@color/black"
-                    android:text="OTP sent to " />
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp36"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNeedHelp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_primary_button_border"
+                        android:fontFamily="@font/semi_bold_slnt"
+                        android:text="@string/need_help"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp14" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_primary_button"
+                        android:fontFamily="@font/semi_bold_slnt"
+                        android:text="Send OTP"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp20">
+
+                    <TextView
+                        android:id="@+id/tvMobileNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/medium_slnt"
+                        android:text="OTP sent to "
+                        android:textColor="@color/llTerms"
+                        android:textSize="@dimen/sp11"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/btnResend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/medium_slnt"
+                        android:text="Resend OTP"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp11"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
 
                 <com.mukesh.OtpView
                     android:id="@+id/otpView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/dp36"
                     android:gravity="center"
                     android:inputType="number"
                     android:itemBackground="@color/white"
                     android:textColor="@color/colorAccent"
                     app:OtpItemCount="6"
-                    app:OtpItemWidth="40dp"
-                    app:OtpItemHeight="40dp"
+                    app:OtpItemHeight="@dimen/dp40"
+                    app:OtpItemWidth="@dimen/dp40"
                     app:OtpLineColor="@color/colorPrimary"
-                    app:OtpViewType="rectangle"/>
-
-                <TextView
-                    android:id="@+id/btnResendOTP"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:textSize="14sp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/blue_color"
-                    android:visibility="gone"
-                    android:gravity="center"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textStyle="bold"
-                    android:text="Resend OTP" />
+                    app:OtpViewType="rectangle" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp36"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-                    <TextView
-                        android:id="@+id/lblGetOtp"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNeedHelp2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="Get OTP on Call "
-                        android:textSize="14sp"
-                        android:visibility="gone"/>
-
-<!--                    <com.app.findurbizness.customview.TimerTextView-->
-<!--                        android:id="@+id/timerTextView"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:gravity="center_vertical"-->
-<!--                        android:textSize="@dimen/small_font"/>-->
-
-                    <TextView
-                        android:id="@+id/btnResend"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text=" Resend OTP?"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_primary_button_border"
+                        android:fontFamily="@font/semi_bold_slnt"
+                        android:text="@string/need_help"
+                        android:textAllCaps="false"
                         android:textColor="@color/colorAccent"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:visibility="gone"/>
+                        android:textSize="@dimen/sp14" />
 
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnVerify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_primary_button"
+                        android:fontFamily="@font/semi_bold_slnt"
+                        android:text="Verify"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp14" />
                 </LinearLayout>
 
-
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="0dp"
-                android:background="@color/lighter_gray"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:visibility="gone">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btnVerify"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:background="@color/colorPrimary"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Verify"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true">
 
-                <Button
-                    android:id="@+id/btnVerifyCancel"
-                    android:layout_width="0dp"
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/progressBar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="loader.json"
+                        app:lottie_loop="true"
+                        app:lottie_speed="1.5" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!--            <com.wang.avi.AVLoadingIndicatorView-->
+                <!--                android:id="@+id/progressBar1"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                app:indicatorColor="@color/white"-->
+                <!--                app:indicatorName="BallSpinFadeLoaderIndicator" />-->
+
+                <TextView
+                    android:id="@+id/lblLoading"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:textColor="@color/black"
-                    android:background="@color/transparent"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Cancel"
-                    android:textAllCaps="false"/>
+                    android:layout_below="@+id/progressBar1"
+                    android:fontFamily="@font/regular_slnt"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp15"
+                    android:text="Please Wait...."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14"
+                    android:visibility="gone" />
 
             </LinearLayout>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <RelativeLayout
-        android:id="@+id/layoutProgressBar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:visibility="gone"
-        android:background="@color/transparent_black50"
-        android:clickable="true">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <com.matriapp.mobile.avi.AVLoadingIndicatorView
-                android:id="@+id/progressBar1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:indicatorColor="@color/white"
-                app:indicatorName="BallSpinFadeLoaderIndicator" />
-
-            <TextView
-                android:id="@+id/lblLoading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/progressBar1"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/roboto_regular"
-                android:gravity="center"
-                android:paddingTop="15dp"
-                android:text="Please Wait...."
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-        </LinearLayout>
 
 
-    </RelativeLayout>
-</FrameLayout>
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

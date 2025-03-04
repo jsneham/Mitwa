@@ -45,7 +45,6 @@ public class OTPRequestDialogFragment extends DialogFragment {
     private CountryCodePicker spin_code;
     private EditText txtPhoneNumber;
     private TextView btnResendOTP;
-    private FrameLayout llView;
     private String mVerificationId;
 
     public static OTPRequestDialogFragment newInstance() {
@@ -65,13 +64,14 @@ public class OTPRequestDialogFragment extends DialogFragment {
         common = new Common(getActivity());
 
         Button btnVerify = view.findViewById(R.id.btnVerify);
-        Button btnCancel = view.findViewById(R.id.btnVerifyCancel);
+//        Button btnCancel = view.findViewById(R.id.btnVerifyCancel);
+        Button btnCancel = view.findViewById(R.id.btnVerify);
         tvMobileNumber = view.findViewById(R.id.tvMobileNumber);
         spin_code = view.findViewById(R.id.spin_code);
         layoutMobileNumber = view.findViewById(R.id.layoutMobileNumber);
         txtPhoneNumber = view.findViewById(R.id.txtPhoneNumber);
-        btnResendOTP = view.findViewById(R.id.btnResendOTP);
-        llView = view.findViewById(R.id.llView);
+//        btnResendOTP = view.findViewById(R.id.btnResendOTP);
+        btnResendOTP = view.findViewById(R.id.btnVerify);
 
         otpView = view.findViewById(R.id.otpView);
 
@@ -189,7 +189,7 @@ public class OTPRequestDialogFragment extends DialogFragment {
         common.makePostRequest(AppConstants.set_mobile_verify, param, response -> {
             try {
                 JSONObject object = new JSONObject(response);
-                common.showToast(object.getString("errmessage"),llView);
+                common.showToast(object.getString("errmessage"),view);
                 hideProgressLayout();
                 if(object.getString("status").equalsIgnoreCase("success")) {
                     dialog.dismiss();
@@ -197,13 +197,13 @@ public class OTPRequestDialogFragment extends DialogFragment {
             } catch (JSONException e) {
                 hideProgressLayout();
                 e.printStackTrace();
-                common.showToast(getString(R.string.err_msg_try_again_later),llView);
+                common.showToast(getString(R.string.err_msg_try_again_later),view);
             }
         }, error -> {
             hideProgressLayout();
             if (error.networkResponse != null) {
-                common.showToast(Common.getErrorMessageFromErrorCode(error.networkResponse.statusCode),llView);
+                common.showToast(Common.getErrorMessageFromErrorCode(error.networkResponse.statusCode),view);
             }
-        },llView);
+        },view);
     }
 }

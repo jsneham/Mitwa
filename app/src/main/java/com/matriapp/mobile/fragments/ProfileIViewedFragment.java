@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -48,7 +49,7 @@ public class ProfileIViewedFragment extends Fragment implements ViewListAdapter.
     private RelativeLayout loader;
     private boolean continue_request;
     private TextView tv_no_data;
-    private FrameLayout llView;
+    private ConstraintLayout llView;
     private int page = 0;
     private Context context;
 
@@ -233,7 +234,7 @@ public class ProfileIViewedFragment extends Fragment implements ViewListAdapter.
             common.hideProgressRelativeLayout(loader);
             try {
                 JSONObject object = new JSONObject(response);
-                 common.showToast( object.getString("errmessage"),llView);
+                common.showToast( object.getString("errmessage"),llView);
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -420,14 +421,14 @@ public class ProfileIViewedFragment extends Fragment implements ViewListAdapter.
                     context.startActivity(new Intent(context, ReportMissuseActivity.class));
                     return true;
                 case R.id.view_profile:
-                 //   if (MyApplication.getPlan()) {
-                        Intent i = new Intent(context, OtherUserProfileActivity.class);
-                        i.putExtra("other_id", id);
-                        context.startActivity(i);
-               //     } else {
-                //        common.showToast("Please upgrade your membership to view this profile.");
-                //        context.startActivity(new Intent(context, PlanListActivity.class));
-                //    }
+                    //   if (MyApplication.getPlan()) {
+                    Intent i = new Intent(context, OtherUserProfileActivity.class);
+                    i.putExtra("other_id", id);
+                    context.startActivity(i);
+                    //     } else {
+                    //        common.showToast("Please upgrade your membership to view this profile.");
+                    //        context.startActivity(new Intent(context, PlanListActivity.class));
+                    //    }
                     return true;
                 default:
                     return false;

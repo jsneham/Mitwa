@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,7 +47,7 @@ public class ViewedMyProfileFragment extends Fragment implements ViewListAdapter
     private Common common;
     private SessionManager session;
     private RelativeLayout loader;
-    private FrameLayout llView;
+    private ConstraintLayout llView;
     private boolean continue_request;
     private TextView tv_no_data;
     private int page = 0;
@@ -429,13 +430,13 @@ public class ViewedMyProfileFragment extends Fragment implements ViewListAdapter
                     context.startActivity(new Intent(context, ReportMissuseActivity.class));
                     return true;
                 case R.id.view_profile:
-                //    if (!common.getIsUserPaid(session.getLoginData(SessionManager.KEY_PLAN_STATUS))) {
-                        Intent i = new Intent(context, OtherUserProfileActivity.class);
-                        i.putExtra("other_id", id);
-                        context.startActivity(i);
-                 //   } else {
-                   //     common.showToast("Please upgrade your membership to view this profile.");
-                     //   context.startActivity(new Intent(context, PlanListActivity.class));
+                    //    if (!common.getIsUserPaid(session.getLoginData(SessionManager.KEY_PLAN_STATUS))) {
+                    Intent i = new Intent(context, OtherUserProfileActivity.class);
+                    i.putExtra("other_id", id);
+                    context.startActivity(i);
+                    //   } else {
+                    //     common.showToast("Please upgrade your membership to view this profile.");
+                    //   context.startActivity(new Intent(context, PlanListActivity.class));
                     //}
                     return true;
                 default:

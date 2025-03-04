@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -55,9 +56,9 @@ public class ViewListAdapter extends RecyclerView.Adapter<ViewListAdapter.ViewHo
     int placeHolder = 0;
     private Common common;
     private SessionManager session;
-    private FrameLayout llView;
+    private ConstraintLayout llView;
 
-    public ViewListAdapter(Context mContext, List<DashboardItem> arrayList, FrameLayout llView) {
+    public ViewListAdapter(Context mContext, List<DashboardItem> arrayList, ConstraintLayout llView) {
         if (mContext == null) return;
         this.mContext = mContext;
         this.arrayList = arrayList;
@@ -128,7 +129,7 @@ public class ViewListAdapter extends RecyclerView.Adapter<ViewListAdapter.ViewHo
 
         String description = Common.getDetails(item.getAge().toLowerCase(), item.getHeight().replace("ft", "\'").replace("in", "\""),
                 item.getMTongueName(), item.getCaste(),
-                item.getEducation(), item.getOccupation(), item.getCity(), item.getState(), 28);
+                item.getEducation(), item.getOccupation(), item.getCity(), item.getState(), 31);
         holder.tv_detail.setText(description);
 
         common.setImage(item.getPhoto_view_count(), item.getPhoto_view_status(), item.getImage_approval(),
@@ -176,16 +177,16 @@ public class ViewListAdapter extends RecyclerView.Adapter<ViewListAdapter.ViewHo
                 holder.tvShortlist.setText("Shortlist");
             }
 
-                if (!item.getAction().getString("is_interest").equals("")) {
-                    holder.ivConnected.setImageResource(R.drawable.rl_connected);
-                    //btnInterest.setBackground(getResources().getDrawable(R.drawable.btn_inter_filled));
-                    holder.btn_interest.setText(R.string.requested);
-                    holder.btn_interest.setTextColor(mContext.getResources().getColor(R.color.online));
-                    // btn_interest.setLiked(true);
-                } else {
-                    holder.btn_interest.setText(R.string.send_interest);
-                    //btn_interest.setLiked(false);
-                }
+            if (!item.getAction().getString("is_interest").equals("")) {
+                holder.ivConnected.setImageResource(R.drawable.rl_connected);
+                //btnInterest.setBackground(getResources().getDrawable(R.drawable.btn_inter_filled));
+                holder.btn_interest.setText(R.string.requested);
+                holder.btn_interest.setTextColor(mContext.getResources().getColor(R.color.online));
+                // btn_interest.setLiked(true);
+            } else {
+                holder.btn_interest.setText(R.string.send_interest);
+                //btn_interest.setLiked(false);
+            }
 
 
 
@@ -445,7 +446,7 @@ public class ViewListAdapter extends RecyclerView.Adapter<ViewListAdapter.ViewHo
                         i.putExtra("other_id", id);
                         mContext.startActivity(i);
                     } else {
-                       Intent in = new Intent(mContext, PreviewOthersProfileActivity.class);
+                        Intent in = new Intent(mContext, PreviewOthersProfileActivity.class);
                         in.putExtra("other_id", id);
                         mContext.startActivity(in);
                     }

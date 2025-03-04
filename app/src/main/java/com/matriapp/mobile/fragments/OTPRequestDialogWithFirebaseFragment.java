@@ -1,6 +1,8 @@
 package com.matriapp.mobile.fragments;
 
 import android.app.Dialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -8,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -16,8 +19,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.matriapp.mobile.utility.AppDebugLog;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,10 +47,10 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
-public class OTPRequestDialogWithFirebaseFragment extends DialogFragment {
+public class OTPRequestDialogWithFirebaseFragment extends BottomSheetDialogFragment {
     private static final String RESEND_OTP_REQUEST = "resend_otp_request";
 
-    private Dialog dialog;
+    private BottomSheetDialog dialog;
     private RelativeLayout layoutProgressBar;
     private View view;
     private FirebaseAuth mAuth;
@@ -53,16 +60,17 @@ public class OTPRequestDialogWithFirebaseFragment extends DialogFragment {
 
     private OtpView otpView;
     private TextView tvMobileNumber;
-    private LinearLayout layoutMobileNumber;
+    private LinearLayout layoutMobileNumber, llOne, llTwo;
     private CountryCodePicker spin_code;
     private EditText txtPhoneNumber;
-    private TextView btnResendOTP;
-    private FrameLayout llView;
+    private Button btnSend, btnNeedHelp1, btnNeedHelp2, btnVerify;
+    private TextView btnResend;
+    private CardView cardView;
     private String mVerificationId;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
 
     public static OTPRequestDialogWithFirebaseFragment newInstance() {
-        return  new OTPRequestDialogWithFirebaseFragment();
+        return new OTPRequestDialogWithFirebaseFragment();
     }
 
     @Override
@@ -72,95 +80,135 @@ public class OTPRequestDialogWithFirebaseFragment extends DialogFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.dialog_verify_otp, container, false);
+        try {
+            view = inflater.inflate(R.layout.dialog_verify_otp, container, false);
 
-        session = new SessionManager(getActivity());
-        common = new Common(getActivity());
+            session = new SessionManager(getActivity());
+            common = new Common(getActivity());
 
-        Button btnVerify = view.findViewById(R.id.btnVerify);
-        Button btnCancel = view.findViewById(R.id.btnVerifyCancel);
-        tvMobileNumber = view.findViewById(R.id.tvMobileNumber);
-        spin_code = view.findViewById(R.id.spin_code);
-        layoutMobileNumber = view.findViewById(R.id.layoutMobileNumber);
-        txtPhoneNumber = view.findViewById(R.id.txtPhoneNumber);
-        btnResendOTP = view.findViewById(R.id.btnResendOTP);
-        llView = view.findViewById(R.id.llView);
+            TextView tvMessage = view.findViewById(R.id.tvMessage);
+            tvMessage.setOnClickListener(view1 -> {
+                dismiss();
+            });
+            cardView = view.findViewById(R.id.cardView);
+            btnVerify = view.findViewById(R.id.btnVerify);
+            btnSend = view.findViewById(R.id.btnSend);
+//            Button btnCancel = view.findViewById(R.id.btnVerifyCancel);
+            llOne = view.findViewById(R.id.llOne);
+            llTwo = view.findViewById(R.id.llTwo);
+            tvMobileNumber = view.findViewById(R.id.tvMobileNumber);
+            spin_code = view.findViewById(R.id.spin_code);
+            layoutMobileNumber = view.findViewById(R.id.layoutMobileNumber);
+            txtPhoneNumber = view.findViewById(R.id.txtPhoneNumber);
+//            btnResendOTP = view.findViewById(R.id.btnResendOTP);
 
-        otpView = view.findViewById(R.id.otpView);
+            otpView = view.findViewById(R.id.otpView);
+//            FirebaseApp.initializeApp(getContext());
+            mAuth = FirebaseAuth.getInstance();
 
-        mAuth = FirebaseAuth.getInstance();
+            btnResend = view.findViewById(R.id.btnResend);
+            btnNeedHelp1 = view.findViewById(R.id.btnNeedHelp1);
+            btnNeedHelp2 = view.findViewById(R.id.btnNeedHelp2);
 
-//        btnResend = view.findViewById(R.id.btnResend);
+            btnNeedHelp1.setOnClickListener(view -> {
+                onWhatsAppCall();
+            });
+
+            btnNeedHelp1.setOnClickListener(view -> {
+                onWhatsAppCall();
+            });
 //        btnResend.setOnClickListener(view -> {
 //        });
 
-        otpView.setVisibility(View.GONE);
-        tvMobileNumber.setVisibility(View.GONE);
-        btnResendOTP.setVisibility(View.GONE);
-        layoutMobileNumber.setVisibility(View.VISIBLE);
+            llTwo.setVisibility(View.GONE);
+//            otpView.setVisibility(View.GONE);
+//            tvMobileNumber.setVisibility(View.GONE);
+//            btnResendOTP.setVisibility(View.GONE);
+//            layoutMobileNumber.setVisibility(View.VISIBLE);
 
-        btnVerify.setText("Send OTP");
+//            btnVerify.setText("Send OTP");
 
-        SessionManager session = new SessionManager(getActivity());
-        tvMobileNumber.setText("OTP sent to "+session.getLoginData("full_mobile"));
+            SessionManager session = new SessionManager(getActivity());
+            tvMobileNumber.setText("OTP sent to " + session.getLoginData("full_mobile"));
 
-        String[] arr_mob = session.getLoginData("full_mobile").split("-");
+            String[] arr_mob = session.getLoginData("full_mobile").split("-");
 
-        if (arr_mob.length == 2) {
-            txtPhoneNumber.setText(arr_mob[1]);
-            try {
-                spin_code.setCountryForPhoneCode(Integer.parseInt(arr_mob[0].replace(" ", "")));
-            }catch(Exception e) {
-                AppDebugLog.print("exception in parsing");
-            }
-        }
-
-        otpView.addTextChangedListener(new TextWatcher() {
-            @Override public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override public void afterTextChanged(Editable editable) {
-                if(editable.length() == 6) {
-                    showProgressLayout();
-                    verifyPhoneNumberWithCode(mVerificationId, otpView.getText().toString());
+            if (arr_mob.length == 2) {
+                txtPhoneNumber.setText(arr_mob[1]);
+                try {
+                    spin_code.setCountryForPhoneCode(Integer.parseInt(arr_mob[0].replace(" ", "")));
+                } catch (Exception e) {
+                    AppDebugLog.print("exception in parsing");
                 }
             }
-        });
 
-        btnVerify.setOnClickListener(view -> {
-            if (dialog != null) {
-                if(btnVerify.getText().toString().equalsIgnoreCase("Send OTP")) {
-                    sendOTP(session.getLoginData("full_mobile"));
-                }else{
-                    if (otpView.length() == 6) {
+            otpView.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable editable) {
+                    if (editable.length() == 6) {
                         showProgressLayout();
                         verifyPhoneNumberWithCode(mVerificationId, otpView.getText().toString());
                     }
                 }
-            }
-        });
+            });
 
-        btnCancel.setOnClickListener(view1 -> {
-            dialog.dismiss();
-        });
+            btnSend.setOnClickListener(view -> {
+                if (dialog != null) {
 
-        btnResendOTP.setOnClickListener(view1 -> {
-            showProgressLayout();
-            resendVerificationCode(session.getLoginData("full_mobile"), mResendToken);
-        });
+                    sendOTP(session.getLoginData("full_mobile"));
 
-        return view;
+                }
+            });
+            btnVerify.setOnClickListener(view -> {
+                if (dialog != null) {
+
+                    if (otpView.length() == 6) {
+                        showProgressLayout();
+                        verifyPhoneNumberWithCode(mVerificationId, otpView.getText().toString());
+                    }
+
+                }
+            });
+
+//            btnCancel.setOnClickListener(view1 -> {
+//                dialog.dismiss();
+//            });
+
+            btnResend.setOnClickListener(view1 -> {
+                showProgressLayout();
+                resendVerificationCode(session.getLoginData("full_mobile"), mResendToken);
+            });
+
+            return view;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void onWhatsAppCall() {
+
+        String phoneNumber = getString(R.string.phone_number_help); // Phone number with country code
+        Uri uri = Uri.parse(getString(R.string.whatsapp) + phoneNumber);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        dialog = getDialog();
+        dialog = (BottomSheetDialog) getDialog();
         if (dialog != null) {
             int width = ViewGroup.LayoutParams.MATCH_PARENT;
             int height = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -170,12 +218,21 @@ public class OTPRequestDialogWithFirebaseFragment extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        dialog = super.onCreateDialog(savedInstanceState);
+//        dialog = super.onCreateDialog(savedInstanceState);
+//
+//        dialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
+//        //request a window without the title
+//        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+//
+//        return dialog;
 
-        dialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
-        //request a window without the title
-        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-
+        dialog = (BottomSheetDialog) super.onCreateDialog(savedInstanceState);
+        dialog.getBehavior().setState(BottomSheetBehavior.STATE_EXPANDED);
+        dialog.getBehavior().setSkipCollapsed(true);
+        dialog.setOnShowListener(d -> {
+            BottomSheetDialog bottomSheetDialog = (BottomSheetDialog) d;
+            bottomSheetDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        });
         return dialog;
     }
 
@@ -235,10 +292,13 @@ public class OTPRequestDialogWithFirebaseFragment extends DialogFragment {
             hideProgressLayout();
             mVerificationId = verificationId;
             mResendToken = token;
-            otpView.setVisibility(View.VISIBLE);
-            tvMobileNumber.setVisibility(View.VISIBLE);
-            btnResendOTP.setVisibility(View.VISIBLE);
-            layoutMobileNumber.setVisibility(View.GONE);
+//            otpView.setVisibility(View.VISIBLE);
+//            tvMobileNumber.setVisibility(View.VISIBLE);
+//            btnResendOTP.setVisibility(View.VISIBLE);
+//            layoutMobileNumber.setVisibility(View.GONE);
+            llOne.setVisibility(View.GONE);
+            llTwo.setVisibility(View.VISIBLE);
+
         }
     };
 
@@ -258,7 +318,7 @@ public class OTPRequestDialogWithFirebaseFragment extends DialogFragment {
             } else {
                 hideProgressLayout();
                 if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                    common.showToast( task.getException().getMessage(), llView);
+                    Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -271,22 +331,22 @@ public class OTPRequestDialogWithFirebaseFragment extends DialogFragment {
         common.makePostRequest(AppConstants.verify_otp_firebase, param, response -> {
             try {
                 JSONObject object = new JSONObject(response);
-                common.showToast(object.getString("errmessage"),llView);
+                common.showToast(object.getString("errmessage"), cardView );
                 hideProgressLayout();
-                if(object.getString("status").equalsIgnoreCase("success")) {
-                    common.showToast("Congratulations!! Your mobile number has been verified.",llView);
+                if (object.getString("status").equalsIgnoreCase("success")) {
+                    common.showToast("Congratulations!! Your mobile number has been verified.",cardView);
                     dialog.dismiss();
                 }
             } catch (JSONException e) {
                 hideProgressLayout();
                 e.printStackTrace();
-                common.showToast(getString(R.string.err_msg_try_again_later),llView);
+                common.showToast(getString(R.string.err_msg_try_again_later),cardView);
             }
         }, error -> {
             hideProgressLayout();
             if (error.networkResponse != null) {
-                common.showToast(Common.getErrorMessageFromErrorCode(error.networkResponse.statusCode),llView);
+                common.showToast(Common.getErrorMessageFromErrorCode(error.networkResponse.statusCode), cardView);
             }
-        },llView);
+        }, cardView);
     }
 }
