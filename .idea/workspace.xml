@@ -15,7 +15,42 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register_welcome.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration_about.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration_addition_profession.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration_hobby.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration_last.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration_partner.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration_photo.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration_sub_caste.xml">
         <config>
           <theme>@style/AppTheme</theme>
         </config>
@@ -42,13 +77,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69b603c2-45a5-4906-bc2b-47bb35f8a67d" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/adapter/ViewListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/adapter/ViewListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/OTPRequestDialogWithFirebaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/OTPRequestDialogWithFirebaseFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ProfileIViewedFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ProfileIViewedFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ViewedMyProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ViewedMyProfileFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_verify_otp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_verify_otp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/Registration/RegisterWelcomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/Registration/RegisterWelcomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_addition_profession.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_addition_profession.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_hobby.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_hobby.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_photo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_sub_caste.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_sub_caste.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +98,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=RZ8N724NDTW)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -96,18 +136,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Android App.app.executor": "Debug",
+    "Android App.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "D:/Knayadaan_1909/MitwaNew_FromMilan/MitwaNew_FromMilan/app/src/main/res/layout",
     "last_opened_file_path": "D:/Knayadaan_1909/MitwaNew_FromMilan/MitwaNew_FromMilan"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Knayadaan_1909\MitwaNew_FromMilan\MitwaNew_FromMilan" />
+      <recent name="D:\Knayadaan_1909\MitwaNew_FromMilan\MitwaNew_FromMilan\app\src\main\res\layout" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="MitwaNew_FromMilan.app" />
@@ -223,20 +271,60 @@
           <line>244</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
+          <line>414</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
+          <line>446</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
+          <line>471</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
+          <line>506</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
+          <line>851</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
+          <line>945</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
+        <entry key="com.crystal.rangeseekbar.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1741248014329" />
+          </value>
+        </entry>
+        <entry key="com.example.crystalrangeseekbar.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1741248122566" />
+          </value>
+        </entry>
         <entry key="com.matriapp.mobile">
           <value>
-            <CheckInfo lastCheckTimestamp="1741098782203" />
+            <CheckInfo lastCheckTimestamp="1741242265237" />
           </value>
         </entry>
         <entry key="com.matriapp.mobile.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1741098782203" />
+            <CheckInfo lastCheckTimestamp="1741242265247" />
           </value>
         </entry>
       </map>

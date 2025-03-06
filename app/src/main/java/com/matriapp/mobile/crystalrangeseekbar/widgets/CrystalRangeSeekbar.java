@@ -938,6 +938,9 @@ public class CrystalRangeSeekbar extends View {
 
     private void setNormalizedMaxValue(double value) {
         normalizedMaxValue = Math.max(0d, Math.min(100d, Math.max(value, normalizedMinValue)));
+        if(normalizedMaxValue == 0.0){
+            normalizedMaxValue = 100d;
+        }
         if(fixGap != NO_FIXED_GAP && fixGap > 0){
             addFixGap(false);
         }

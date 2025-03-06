@@ -1,6 +1,7 @@
 package com.matriapp.mobile.activities.Registration;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -30,6 +31,15 @@ public class RegisterWelcomeActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+
+    }
+
+    public void onWhatsAppCall(View view) {
+
+        String phoneNumber = getString(R.string.phone_number_help); // Phone number with country code
+        Uri uri = Uri.parse(getString(R.string.whatsapp) + phoneNumber);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
 
     }
 }

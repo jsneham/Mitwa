@@ -128,7 +128,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/White"
                 android:background="@drawable/round_background"
-                android:fontFamily="@font/medium_slnt"
+                android:fontFamily="@font/semi_bold_slnt"
                 android:textSize="@dimen/sp15"
                 android:elevation="0dp"
                 android:layout_height="wrap_content"

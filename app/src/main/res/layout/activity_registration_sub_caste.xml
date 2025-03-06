@@ -5,8 +5,8 @@
     android:id="@+id/lay_first"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/dp18"
 
+    android:layout_marginBottom="0dp"
     android:background="@color/registration_background1"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp18"
         android:layout_marginRight="@dimen/dp18"
-        android:layout_marginBottom="@dimen/dp12">
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="@dimen/dp18">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -31,7 +32,7 @@
             android:layout_alignParentRight="true"
             android:gravity="center_vertical"
             android:onClick="onSkipClick"
-                android:text="@string/skip_new"
+            android:text="@string/skip_new"
             android:textColor="@color/skip_now"
             android:textStyle="italic" />
     </RelativeLayout>
@@ -81,32 +82,44 @@
 
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/registration_background2"
-            android:orientation="vertical">
-
+            android:background="@color/registration_background2">
 
             <EditText
+                android:layout_marginTop="@dimen/dp20"
                 android:id="@+id/et_sub_caste"
-                style="@style/registration_text"
+                style="@style/registration_text_with_editText_background"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp50"
-                android:background="@null"
-                android:hint="Sub-Caste"
-                android:inputType="text"
-                android:textColor="@color/registration_active_color"
-                android:textColorHint="@color/registration_hint_color">
+                android:layout_height="@dimen/dp60"
+                android:hint="Sub-Caste" />
 
-            </EditText>
+<!--            <EditText-->
+<!--                android:id="@+id/et_sub_caste"-->
+<!--                style="@style/registration_text_with_editText_background"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="@dimen/dp18"-->
+<!--                android:layout_marginRight="@dimen/dp18"-->
+<!--                android:layout_marginTop="@dimen/dp18"-->
+<!--                android:background="@null"-->
+<!--                android:hint="Sub-Caste"-->
+<!--                android:inputType="text"-->
+<!--                android:textColor="@color/registration_active_color"-->
+<!--                android:textColorHint="@color/registration_hint_color"/>-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/et_sub_caste"
-                android:layout_marginLeft="@dimen/dp18"
-                android:layout_marginRight="@dimen/dp18"
-                android:background="@color/text_divider_line" />
+
+
+
+
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_below="@+id/et_sub_caste"-->
+<!--                android:layout_marginLeft="@dimen/dp18"-->
+<!--                android:layout_marginRight="@dimen/dp18"-->
+<!--                android:background="@color/text_divider_line" />-->
 
 
             <Button
@@ -115,8 +128,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="@dimen/dp18"
-                android:layout_marginTop="@dimen/dp9"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="@dimen/dp18"
+                android:layout_marginBottom="@dimen/dp12"
                 android:background="@drawable/round_background"
                 android:elevation="0dp"
                 android:fontFamily="@font/medium_slnt"
@@ -124,10 +138,9 @@
                 android:text="Continue"
                 android:textAllCaps="false"
                 android:textColor="@color/White"
-                android:textSize="@dimen/sp18"
+                style="@style/primary_action_button_with_elevation"/>
 
 
-                />
 
 
             <include
@@ -136,6 +149,6 @@
                 android:visibility="gone" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
-    >
+
 
 </LinearLayout>
