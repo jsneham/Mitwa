@@ -126,97 +126,101 @@ public class ViewedMyProfileFragment extends Fragment implements ViewListAdapter
     }
 
     private void getListData(int page) {
-        common.showProgressRelativeLayout(loader);
+        try {
+            common.showProgressRelativeLayout(loader);
 
-        HashMap<String, String> param = new HashMap<>();
-        param.put("matri_id", session.getLoginData(SessionManager.KEY_MATRI_ID));
-        param.put("member_id", session.getLoginData(SessionManager.KEY_USER_ID));
+            HashMap<String, String> param = new HashMap<>();
+            param.put("matri_id", session.getLoginData(SessionManager.KEY_MATRI_ID));
+            param.put("member_id", session.getLoginData(SessionManager.KEY_USER_ID));
 
-        common.makePostRequestTime(AppConstants.who_viewed_list + page, param, response -> {
-            common.hideProgressRelativeLayout(loader);
-            swipe.setRefreshing(false);
-            Log.d("resp", response);
-            try {
-                JSONObject object = new JSONObject(response);
-                int total_count = object.getInt("total_count");
-                if (total_count != 0) {
-                    tv_no_data.setVisibility(View.GONE);
-                    recyclerView.setVisibility(View.VISIBLE);
-                    continue_request = object.getBoolean("continue_request");
-                    if (list.size() != total_count) {
-                        JSONArray data = object.getJSONArray("data");
-                        for (int i = 0; i < data.length(); i++) {
-                            JSONObject obj = data.getJSONObject(i);
-                            if (common.isNotNullOrEmpty(obj.getString("matri_id"))) {
-                                DashboardItem item = new DashboardItem();
-                                item.setId(obj.getString("user_id"));
-                                item.setMatri_id(obj.getString("matri_id"));
-                                item.setUser_id(obj.getString("user_id"));
-                                item.setName(obj.getString("username"));
-                                item.setProfileby(obj.getString("profileby"));
-//                            item.setName(obj.getString("username"));
+            common.makePostRequestTime(AppConstants.who_viewed_list + page, param, response -> {
+                common.hideProgressRelativeLayout(loader);
+                swipe.setRefreshing(false);
+                Log.d("resp", response);
+                try {
+                    JSONObject object = new JSONObject(response);
+                    int total_count = object.getInt("total_count");
+                    if (total_count != 0) {
+                        tv_no_data.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
+                        continue_request = object.getBoolean("continue_request");
+                        if (list.size() != total_count) {
+                            JSONArray data = object.getJSONArray("data");
+                            for (int i = 0; i < data.length(); i++) {
+                                JSONObject obj = data.getJSONObject(i);
+                                if (common.isNotNullOrEmpty(obj.getString("matri_id"))) {
+                                    DashboardItem item = new DashboardItem();
+                                    item.setId(obj.getString("user_id"));
+                                    item.setMatri_id(obj.getString("matri_id"));
+                                    item.setUser_id(obj.getString("user_id"));
+                                    item.setName(obj.getString("username"));
+                                    item.setProfileby(obj.getString("profileby"));
+    //                            item.setName(obj.getString("username"));
 
-//                            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-//                            String description = Common.getDetailsFromValue(obj.getString("profileby"),common.getAge(obj.getString("birthdate"), sdf) + " Years ", obj.getString("height"),
-//                                        obj.getString("caste_name"), obj.getString("religion_name"),
-//                                        obj.getString("city_name"), obj.getString("country_name"),obj.getString("education_name"));
-//                            item.setAbout(description);
+    //                            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+    //                            String description = Common.getDetailsFromValue(obj.getString("profileby"),common.getAge(obj.getString("birthdate"), sdf) + " Years ", obj.getString("height"),
+    //                                        obj.getString("caste_name"), obj.getString("religion_name"),
+    //                                        obj.getString("city_name"), obj.getString("country_name"),obj.getString("education_name"));
+    //                            item.setAbout(description);
 
-                                item.setImage_approval(obj.getString("photo1_approve"));
-                                item.setImage(obj.getString("photo1"));
-                                item.setPhoto_view_count(obj.getString("photo_view_count"));
-                                item.setPhoto_view_status(obj.getString("photo_view_status"));
-                                item.setBadge(obj.getString("badge"));
-                                item.setBadgeUrl(obj.getString("badgeUrl"));
-                                item.setColor(obj.getString("color"));
-                                item.setPhotoUrl(obj.getString("photoUrl"));
+                                    item.setImage_approval(obj.getString("photo1_approve"));
+                                    item.setImage(obj.getString("photo1"));
+                                    item.setPhoto_view_count(obj.getString("photo_view_count"));
+                                    item.setPhoto_view_status(obj.getString("photo_view_status"));
+                                    item.setBadge(obj.getString("badge"));
+                                    item.setBadgeUrl(obj.getString("badgeUrl"));
+                                    item.setColor(obj.getString("color"));
+                                    item.setPhotoUrl(obj.getString("photoUrl"));
 
-                                item.setState(obj.getString("state_name"));
-                                item.setProfileCreatedBy(obj.getString("profileby"));
-                                item.setAge(obj.getString("age"));
-                                item.setHeight(obj.getString("height"));
-                                item.setCaste(obj.getString("caste_name"));
-                                item.setReligion(obj.getString("religion_name"));
-                                item.setCity(obj.getString("city_name"));
-                                item.setCountry(obj.getString("country_name"));
+                                    item.setState(obj.getString("state_name"));
+                                    item.setProfileCreatedBy(obj.getString("profileby"));
+                                    item.setAge(obj.getString("age"));
+                                    item.setHeight(obj.getString("height"));
+                                    item.setCaste(obj.getString("caste_name"));
+                                    item.setReligion(obj.getString("religion_name"));
+                                    item.setCity(obj.getString("city_name"));
+                                    item.setCountry(obj.getString("country_name"));
 
-//                            item.setOccupation(obj.getString("occupation_name"));
-                                item.setOccupation("");
-//                            item.setMTongueName(obj.getString("mtongue_name"));
-                                item.setMTongueName("");
-                                item.setEducation(obj.getString("education_name"));
-                                item.setPlan_status(obj.getString("plan_status"));
-                                JSONArray action = obj.getJSONArray("action");
-                                item.setAction(action.getJSONObject(0));
+    //                            item.setOccupation(obj.getString("occupation_name"));
+                                    item.setOccupation("");
+    //                            item.setMTongueName(obj.getString("mtongue_name"));
+                                    item.setMTongueName("");
+                                    item.setEducation(obj.getString("education_name"));
+                                    item.setPlan_status(obj.getString("plan_status"));
+                                    JSONArray action = obj.getJSONArray("action");
+                                    item.setAction(action.getJSONObject(0));
 
-                                list.add(item);
+                                    list.add(item);
+                                }
+                            }
+                            removeItemById(list);
+                            if(list.size() < 10) {
+                                continue_request = false;
+                                adapter.notifyDataSetChanged();
+                            }
+                            if(list.size()==0){
+                                tv_no_data.setVisibility(View.VISIBLE);
+                                recyclerView.setVisibility(View.GONE);
                             }
                         }
-                        removeItemById(list);
-                        if(list.size() < 10) {
-                            continue_request = false;
-                            adapter.notifyDataSetChanged();
-                        }
-                        if(list.size()==0){
-                            tv_no_data.setVisibility(View.VISIBLE);
-                            recyclerView.setVisibility(View.GONE);
-                        }
-                    }
 
-                } else {
-                    tv_no_data.setVisibility(View.VISIBLE);
-                    recyclerView.setVisibility(View.GONE);
+                    } else {
+                        tv_no_data.setVisibility(View.VISIBLE);
+                        recyclerView.setVisibility(View.GONE);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    common.showToast(getString(R.string.err_msg_try_again_later),llView);
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
-                common.showToast(getString(R.string.err_msg_try_again_later),llView);
-            }
-        }, error -> {
-            common.hideProgressRelativeLayout(loader);
-            if (error.networkResponse != null) {
-                common.showToast(Common.getErrorMessageFromErrorCode(error.networkResponse.statusCode),llView);
-            }
-        },llView);
+            }, error -> {
+                common.hideProgressRelativeLayout(loader);
+                if (error.networkResponse != null) {
+                    common.showToast(Common.getErrorMessageFromErrorCode(error.networkResponse.statusCode),llView);
+                }
+            },llView);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private  void removeItemById(List<DashboardItem> itemList) {

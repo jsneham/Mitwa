@@ -221,10 +221,10 @@ public class CurrentPlanFragment extends Fragment {
             }
 
             if (item.getOffer_per().equals("0")) {
-                lblOffer.setText("Offer Amount");
+                lblOffer.setText("Discounted Price");
                 tv_offer.setText("N/A");
             } else {
-                lblOffer.setText("Offer Amount (" + item.getOffer_per() + "% Off)");
+                lblOffer.setText("Discounted Price (" + item.getOffer_per() + "% Off)");
 
                 float planAmount = Float.parseFloat(item.getPlan_amount());
                 float planDiscount = Float.parseFloat(item.getOffer_per());
@@ -309,10 +309,10 @@ public class CurrentPlanFragment extends Fragment {
             }
 
             if (item.getOffer_per().equals("0")) {
-                holder.lblOffer.setText("Offer Amount");
+                holder.lblOffer.setText("Discounted Price");
                 holder.tv_offer.setText("N/A");
             } else {
-                holder.lblOffer.setText("Offer Amount (" + item.getOffer_per() + "% Off)");
+                holder.lblOffer.setText("Discounted Price (" + item.getOffer_per() + "% Off)");
 
                 float planAmount = Float.parseFloat(item.getPlan_amount());
                 float planDiscount = Float.parseFloat(item.getOffer_per());

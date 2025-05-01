@@ -412,7 +412,7 @@
                     android:layout_weight="2"
                     android:fontFamily="@font/medium_slnt"
                     android:gravity="center|left"
-                    android:text="Offer Amount"
+                    android:text="Discounted Price"
                     android:textColor="@color/sub_tab_default_color"
                     android:textSize="@dimen/sp13" />
 

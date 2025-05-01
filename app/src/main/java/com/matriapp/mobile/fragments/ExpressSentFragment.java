@@ -75,6 +75,9 @@ public class ExpressSentFragment extends Fragment {
     private int placeHolder, photoProtectPlaceHolder;
     private SwipeRefreshLayout swipe;
 
+    public ExpressSentFragment(){
+
+    }
     public ExpressSentFragment(String tag) {
         this.tag=tag;
     }

@@ -2395,6 +2395,6 @@ public class Common {
     }
 
     public static boolean isNotNullOrEmpty(String str) {
-        return str != null && !str.isEmpty();
+        return str != null && !str.isEmpty() && !str.equals("null");
     }
 }

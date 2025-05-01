@@ -638,7 +638,7 @@ public class MyProfileFragment extends Fragment implements View.OnClickListener,
                         int dataSize = data.length() >= 5 ? 5 : data.length();
                         for (int i = 0; i < dataSize; i++) {
                             JSONObject obj = data.getJSONObject(i);
-                            if (common.isNotNullOrEmpty(obj.getString("matri_id"))) {
+                            if (Common.isNotNullOrEmpty(obj.getString("matri_id"))) {
                                 DashboardItem item = new DashboardItem();
                                 item.setId(obj.getString("user_id"));
                                 item.setMatri_id(obj.getString("matri_id"));

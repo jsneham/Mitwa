@@ -5,6 +5,11 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml">
+        <config>
+          <theme>@style/AppTheme.NoActionBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -55,6 +60,11 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/current_plan_item.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_verify_otp.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -65,7 +75,27 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_message.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_iviewed.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_saved_search.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_viewed_my_profile.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml">
         <config>
           <theme>@style/AppTheme</theme>
         </config>
@@ -78,17 +108,19 @@
   <component name="ChangeListManager">
     <list default="true" id="69b603c2-45a5-4906-bc2b-47bb35f8a67d" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/Registration/RegisterWelcomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/Registration/RegisterWelcomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_about.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_addition_profession.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_addition_profession.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_hobby.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_hobby.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_photo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_sub_caste.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_sub_caste.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/CurrentPlanActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/CurrentPlanActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/CurrentPlanFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/CurrentPlanFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ExpressReceivedFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ExpressReceivedFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ExpressSentFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ExpressSentFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/MyProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/MyProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ProfileIViewedFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ProfileIViewedFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ViewedMyProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ViewedMyProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/utility/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/utility/Common.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/current_plan_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/current_plan_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_iviewed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_iviewed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_viewed_my_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_viewed_my_profile.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,11 +168,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Android App.app.executor": "Run",
+    "Android App.app.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "android.gradle.sync.needed": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
@@ -257,49 +288,49 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/AdvanceSearchFragment.java</url>
-          <line>205</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/ProfileIViewedFragment.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>464</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/MyProfileFragment.java</url>
+          <line>702</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>244</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/MyProfileFragment.java</url>
+          <line>707</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>414</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/MessagesFragment.java</url>
+          <line>304</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>446</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/MessagesFragment.java</url>
+          <line>300</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>471</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/MessagesFragment.java</url>
+          <line>296</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>506</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/fragments/CurrentPlanFragment.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>851</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/CurrentPlanActivity.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/crystalrangeseekbar/src/main/java/com/crystal/crystalrangeseekbar/widgets/CrystalRangeSeekbar.java</url>
-          <line>945</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/matriapp/mobile/activities/CurrentPlanActivity.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -319,12 +350,12 @@
         </entry>
         <entry key="com.matriapp.mobile">
           <value>
-            <CheckInfo lastCheckTimestamp="1741242265237" />
+            <CheckInfo lastCheckTimestamp="1746081974886" />
           </value>
         </entry>
         <entry key="com.matriapp.mobile.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1741242265247" />
+            <CheckInfo lastCheckTimestamp="1746081974936" />
           </value>
         </entry>
       </map>

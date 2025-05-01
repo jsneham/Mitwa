@@ -79,7 +79,9 @@ public class ExpressReceivedFragment extends Fragment {
     private SwipeRefreshLayout swipe;
     private FrameLayout llView;
 
+public  ExpressReceivedFragment() {
 
+}
     public ExpressReceivedFragment(String tag) {
         this.tag=tag;
     }
